@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Sizes } from '~/enums/vuetify';
-import { EXPERIENCE_ITEMS } from '~/constants/experienceTimeline';
 import ExperienceTimelineCard from '~/components/experienceTimeline/ExperienceTimelineCard.vue';
+import { EXPERIENCES } from '~/constants/experiences.constants';
+import { Sizes } from '~/enums/vuetify.enums';
 </script>
 
 <template>
@@ -12,7 +12,7 @@ import ExperienceTimelineCard from '~/components/experienceTimeline/ExperienceTi
     justify="left"
   >
     <VTimelineItem
-      v-for="item in EXPERIENCE_ITEMS"
+      v-for="item in EXPERIENCES"
       :key="item.position"
       :dot-color="item.color"
       density="compact"

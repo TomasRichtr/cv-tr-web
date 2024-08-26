@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
-import type { Experience } from '~/types/data';
+import type { Experience } from '~/types/data.types';
 
-export const EXPERIENCE_ITEMS: Experience[] = [
+export const EXPERIENCES: Experience[] = [
   {
     position: 'Front-end developer',
     color: 'easy',

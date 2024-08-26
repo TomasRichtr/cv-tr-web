@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useUiStore } from '~/store/uiStore';
-import { BtnsVariants, Locations } from '~/enums/vuetify';
-import { navigationDrawerItems } from '~/constants/navigationDrawer';
+import { useUiStore } from '~/store/ui.store.';
+import { BtnsVariants, Locations } from '~/enums/vuetify.enums';
+import { NAVIGATION_OPTS } from '~/constants/navigation_opts.constants';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
@@ -16,7 +16,7 @@ const route = useRoute();
   >
     <VList>
       <VListItem
-        v-for="item in navigationDrawerItems"
+        v-for="item in NAVIGATION_OPTS"
         :key="item.to"
       >
         <VBtn

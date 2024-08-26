@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { BtnsVariants, Colors, Sizes } from '~/enums/vuetify';
-import type { Routes } from '~/enums/routes';
+import { BtnsVariants, Colors, Sizes } from '~/enums/vuetify.enums';
+import type { RoutesEnums } from '~/enums/routes.enums';
 
 interface Props {
   icon: string;
-  to?: Routes;
+  to?: RoutesEnums;
 }
 
 const props = defineProps<Props>();

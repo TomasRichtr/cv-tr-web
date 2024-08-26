@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import myPhoto from '@/assets/images/myPhoto.png';
-import myPhotoLowRes from '@/assets/images/myPhotoLowRes.png';
-import { STRINGS } from '~/constants/strings';
+import myPhoto from 'assets/images/my_photo.png';
+import myPhotoLowRes from 'assets/images/my_photo_low_res.png';
+import { STRINGS } from '~/constants/strings.constants';
 </script>
 
 <template>

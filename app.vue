@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
 import FooterBtns from '~/components/FooterBtns.vue';
+import HeaderBar from '~/components/HeaderBar.vue';
 import NavigationDrawer from '~/components/NavigationDrawer.vue';
-import { Routes } from '~/enums/routes';
-import { STRINGS } from '~/constants/strings';
+import { RoutesEnums } from '~/enums/routes.enums';
+import { STRINGS } from '~/constants/strings.constants';
 
 const route = useRoute();
 
 watch(() => route.name, () => {
-  const page = route.name === Routes.Index ? STRINGS.home : route.name;
+  const page = route.name === RoutesEnums.Index ? STRINGS.home : route.name;
   useHead({
     title: `Tomas Richtr / ${capitalize(String(page))}`,
   });

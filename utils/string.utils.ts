@@ -1,6 +1,6 @@
 import dayjs, { type Dayjs } from 'dayjs';
-import { PeriodUnits } from '~/enums/date.enum';
-import { STRINGS } from '~/constants/strings';
+import { PeriodUnits } from '~/enums/date.enums';
+import { STRINGS } from '~/constants/strings.constants';
 
 class StringUtils {
   resolvePeriodLength(item: { startDate: Dayjs; endDate?: Dayjs }) {

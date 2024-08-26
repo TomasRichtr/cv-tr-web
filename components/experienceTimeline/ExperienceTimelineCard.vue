@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import { STRINGS } from '~/constants/strings';
-import { Colors, Sizes } from '~/enums/vuetify';
-import type { Experience } from '~/types/data';
 import dateUtils from '~/utils/date.utils';
 import stringUtils from '~/utils/string.utils';
+import type { Experience } from '~/types/data.types';
+import { Colors, Sizes } from '~/enums/vuetify.enums';
+import { STRINGS } from '~/constants/strings.constants';
 
 const props = defineProps<Experience>();
 </script>

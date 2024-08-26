@@ -1,4 +1,4 @@
-export enum Routes {
+export enum RoutesEnums {
   Index = 'index',
   Introduction = 'introduction',
   Experience = 'experience',

@@ -1,6 +1,6 @@
 import type { Dayjs } from 'dayjs';
-import { STRINGS } from '~/constants/strings';
-import { Formats } from '~/enums/date.enum';
+import { STRINGS } from '~/constants/strings.constants';
+import { Formats } from '~/enums/date.enums';
 
 class DateUtils {
   resolveDateString(date?: Dayjs) {

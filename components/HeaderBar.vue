@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import cv from 'assets/files/t_richtr_cv.pdf';
 import IconBtn from '~/components/IconBtn.vue';
-import { Colors } from '~/enums/vuetify';
-import { useUiStore } from '~/store/uiStore';
-import { Routes } from '~/enums/routes';
-import { STRINGS } from '~/constants/strings';
+import { Colors } from '~/enums/vuetify.enums';
+import { useUiStore } from '~/store/ui.store.';
+import { RoutesEnums } from '~/enums/routes.enums';
+import { STRINGS } from '~/constants/strings.constants';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
@@ -26,10 +26,10 @@ const route = useRoute();
     </template>
 
     <IconBtn
-      v-if="route.name !== Routes.Index"
+      v-if="route.name !== RoutesEnums.Index"
       icon="mdi-home"
       class="mr-2"
-      :to="Routes.Index"
+      :to="RoutesEnums.Index"
     />
 
     <IconBtn
