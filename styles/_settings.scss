@@ -1,0 +1,5 @@
+@use 'utils' as *;
+
+@use 'vuetify/settings' with (
+  $timeline-item-padding: px(5)
+);
