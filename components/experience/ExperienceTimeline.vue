@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ExperienceTimelineCard from '~/components/experienceTimeline/ExperienceTimelineCard.vue';
+import ExperienceTimelineCard from '~/components/experience/ExperienceTimelineCard.vue';
 import { EXPERIENCES } from '~/constants/experiences.constants';
 import { Sizes } from '~/enums/vuetify.enums';
 </script>

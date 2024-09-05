@@ -6,7 +6,7 @@ import { STRINGS } from '~/constants/strings.constants';
 
 <template>
   <div class="fixed bottom-0 h-full w-full">
-    <div class="text-3xl z-0 fixed left-4 top-48 w-52 text-primary font-semibold">
+    <div class="text-3xl z-0 fixed left-4 top-48 w-52 sm:w-full text-primary font-semibold capitalize">
       {{ STRINGS.description }}
     </div>
     <div class="fixed z-0 bottom-0 left-24 scale-150 -scale-x-150 w-full">

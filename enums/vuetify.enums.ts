@@ -1,4 +1,4 @@
-export enum BtnsVariants {
+export enum Variants {
   Elevated = 'elevated',
   Outlined = 'outlined',
   Flat = 'flat',
@@ -7,13 +7,20 @@ export enum BtnsVariants {
   Plain = 'plain',
 }
 
+export enum Density {
+  Compact = 'compact',
+}
+
 export enum Colors {
   Info = 'info',
   Warning = 'warning',
   Secondary = 'secondary',
   Primary = 'primary',
   Background = 'background',
+  Success = 'success',
   Easy = 'easy',
+  Amio = 'amio',
+  Equiradar = 'equiradar',
 }
 
 export enum Sizes {

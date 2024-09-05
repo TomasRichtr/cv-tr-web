@@ -1,20 +1,37 @@
 import dayjs from 'dayjs';
 import type { Experience } from '~/types/data.types';
+import { Skills } from '~/enums/skills.enum';
+import { Colors } from '~/enums/vuetify.enums';
 
 export const EXPERIENCES: Experience[] = [
   {
     position: 'Front-end developer',
-    color: 'easy',
+    color: Colors.Easy,
     place: 'Easy Software / Prague',
     description: `Development of Easy Project, a comprehensive project management tool. Their solutions help 
     organizations manage tasks, resources, and time tracking, enhancing productivity and efficiency.`,
     link: 'https://www.easysoftware.com/',
     startDate: dayjs('2023-10-01'),
     size: 80,
+    skills: [
+      Skills.CSS,
+      Skills.Git,
+      Skills.GraphQL,
+      Skills.HTML,
+      Skills.JQuery,
+      Skills.Javascript,
+      Skills.Playwright,
+      Skills.RestApi,
+      Skills.Sass,
+      Skills.Tailwind,
+      Skills.TypeScript,
+      Skills.Vitest,
+      Skills.Vue,
+    ],
   },
   {
     position: 'Full-stack developer',
-    color: 'amio',
+    color: Colors.Amio,
     place: 'Amio / Prague',
     description: `Development of messaging platform that integrates multiple communication channels into a single 
     interface. Their solution enables businesses to manage customer interactions across platforms like WhatsApp, 
@@ -23,10 +40,25 @@ export const EXPERIENCES: Experience[] = [
     startDate: dayjs('2022-04-01'),
     endDate: dayjs('2023-09-30'),
     size: 10,
+    skills: [
+      Skills.Cypress,
+      Skills.Git,
+      Skills.HTML,
+      Skills.Javascript,
+      Skills.Jest,
+      Skills.Knex,
+      Skills.Mocha,
+      Skills.MySQL,
+      Skills.NodeJs,
+      Skills.RestApi,
+      Skills.Sass,
+      Skills.Tailwind,
+      Skills.Vue,
+    ],
   },
   {
     position: 'Full-stack developer',
-    color: 'equiradar',
+    color: Colors.Equiradar,
     place: 'Equiradar / Prague',
     description: `Developing software solutions for the equine industry. Their platform provides tools for managing 
     horse health, training, and performance data, helping equine professionals optimize care and training processes.`,
@@ -34,10 +66,22 @@ export const EXPERIENCES: Experience[] = [
     startDate: dayjs('2021-05-01'),
     endDate: dayjs('2022-08-31'),
     size: 5,
+    skills: [
+      Skills.CSS,
+      Skills.Git,
+      Skills.HTML,
+      Skills.Javascript,
+      Skills.Sass,
+      Skills.Tailwind,
+      Skills.Vue,
+      Skills.Cypress,
+      Skills.NetlifyFunctions,
+      Skills.ElasticSearch,
+    ],
   },
   {
     position: 'Front-end developer',
-    color: 'easy',
+    color: Colors.Easy,
     place: 'Easy Software / Prague',
     description: `Development of Easy Project, a comprehensive project management tool. Their solutions help 
     organizations manage tasks, resources, and time tracking, enhancing productivity and efficiency.`,
@@ -45,5 +89,20 @@ export const EXPERIENCES: Experience[] = [
     startDate: dayjs('2020-10-01'),
     endDate: dayjs('2022-04-30'),
     size: 80,
+    skills: [
+      Skills.CSS,
+      Skills.Git,
+      Skills.GraphQL,
+      Skills.JQuery,
+      Skills.HTML,
+      Skills.Javascript,
+      Skills.Playwright,
+      Skills.RestApi,
+      Skills.Sass,
+      Skills.Tailwind,
+      Skills.TypeScript,
+      Skills.Vue,
+      Skills.Vitest,
+    ],
   },
 ];

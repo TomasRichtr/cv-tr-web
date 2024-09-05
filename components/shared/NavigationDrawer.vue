@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useUiStore } from '~/store/ui.store.';
-import { BtnsVariants, Locations } from '~/enums/vuetify.enums';
+import { useUiStore } from '~/store/ui.store';
+import { Variants, Locations } from '~/enums/vuetify.enums';
 import { NAVIGATION_OPTS } from '~/constants/navigation_opts.constants';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
@@ -21,7 +21,7 @@ const route = useRoute();
       >
         <VBtn
           :to="{ name: item.to }"
-          :variant="BtnsVariants.Plain"
+          :variant="Variants.Plain"
           class="flex items-center"
           :disabled="route.name === item.to
           "

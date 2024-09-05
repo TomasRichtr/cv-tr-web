@@ -1,6 +1,6 @@
 import { RoutesEnums } from '~/enums/routes.enums';
 import { STRINGS } from '~/constants/strings.constants';
-import { BtnsVariants, Colors } from '~/enums/vuetify.enums';
+import { Variants, Colors } from '~/enums/vuetify.enums';
 import type { FooterBtn } from '~/types/ui.types';
 
 export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
@@ -10,7 +10,7 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
       label: STRINGS.btnLabels.introduction,
       color: Colors.Info,
       to: RoutesEnums.Introduction,
-      variant: BtnsVariants.Elevated,
+      variant: Variants.Elevated,
     },
   ],
   [RoutesEnums.Introduction]: [
@@ -18,12 +18,13 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
       label: STRINGS.btnLabels.introduction,
       color: Colors.Info,
       to: RoutesEnums.Experience,
-      variant: BtnsVariants.Elevated,
+      variant: Variants.Elevated,
     },
     {
       label: STRINGS.btnLabels.home,
       to: RoutesEnums.Index,
-      variant: BtnsVariants.Outlined,
+      color: Colors.Background,
+      variant: Variants.Outlined,
     },
   ],
   [RoutesEnums.Experience]: [
@@ -31,46 +32,36 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
       label: STRINGS.btnLabels.skills,
       color: Colors.Info,
       to: RoutesEnums.Skills,
-      variant: BtnsVariants.Elevated,
+      variant: Variants.Elevated,
     },
     {
       label: STRINGS.btnLabels.introduction,
       to: RoutesEnums.Introduction,
-      variant: BtnsVariants.Outlined,
+      variant: Variants.Outlined,
+      color: Colors.Background,
     },
   ],
   [RoutesEnums.Skills]: [
     {
-      label: STRINGS.btnLabels.tools,
+      label: STRINGS.btnLabels.contacts,
       color: Colors.Info,
-      to: RoutesEnums.Tools,
-      variant: BtnsVariants.Elevated,
+      to: RoutesEnums.Contacts,
+      variant: Variants.Elevated,
     },
     {
       label: STRINGS.btnLabels.experience,
       to: RoutesEnums.Experience,
-      variant: BtnsVariants.Outlined,
+      variant: Variants.Outlined,
+      color: Colors.Background,
     },
   ],
-  [RoutesEnums.Tools]: [
-    {
-      label: STRINGS.btnLabels.contact,
-      color: Colors.Info,
-      to: RoutesEnums.Contact,
-      variant: BtnsVariants.Elevated,
-    },
+  [RoutesEnums.Contacts]: [
+    {},
     {
       label: STRINGS.btnLabels.skills,
       to: RoutesEnums.Skills,
-      variant: BtnsVariants.Outlined,
-    },
-  ],
-  [RoutesEnums.Contact]: [
-    {},
-    {
-      label: STRINGS.btnLabels.tools,
-      to: RoutesEnums.Tools,
-      variant: BtnsVariants.Outlined,
+      variant: Variants.Outlined,
+      color: Colors.Background,
     },
   ],
 };

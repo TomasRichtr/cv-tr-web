@@ -3,6 +3,5 @@ export enum RoutesEnums {
   Introduction = 'introduction',
   Experience = 'experience',
   Skills = 'skills',
-  Tools = 'tools',
-  Contact = 'contact',
+  Contacts = 'contacts',
 }

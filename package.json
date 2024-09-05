@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@nuxt/eslint": "^0.5.2",
+    "@nuxtjs/axios": "^5.13.6",
     "@pinia/nuxt": "^0.5.4",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/nuxt": "^11.0.3",
+    "devicon": "^2.16.0",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vuetify-nuxt-module": "^0.17.1"
@@ -23,6 +27,7 @@
     "@nuxtjs/tailwindcss": "^6.12.1",
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^9.9.0",
+    "nuxt-lodash": "^2.5.3",
     "sass": "^1.77.8"
   }
 }

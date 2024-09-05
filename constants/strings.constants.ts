@@ -1,14 +1,13 @@
 export const STRINGS = {
   name: 'Tomas',
   surname: 'Richtr',
-  description: 'Self-taught web developer',
+  description: 'self-taught web developer',
   btnLabels: {
     introduction: 'introduction',
     home: 'home',
     experience: 'experience',
     skills: 'skills',
-    tools: 'tools',
-    contact: 'contact',
+    contacts: 'contacts',
   },
   period: {
     month: 'month',
@@ -20,4 +19,18 @@ export const STRINGS = {
   size: 'size',
   employees: 'employees',
   home: 'home',
+  skillsDegree: {
+    definition: 'how often I use:',
+    fewTimes: 'few times',
+    often: 'often',
+    daily: 'daily',
+  },
+  404: {
+    title: '',
+  },
+  selections: 'selections',
+  sorting: {
+    title: 'sorting',
+    alphabetically: 'name',
+  },
 };

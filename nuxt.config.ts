@@ -2,13 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  css: ['@/assets/main.css'],
+  css: ['@/styles/main.scss'],
   modules: [
     'vuetify-nuxt-module',
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
     '@pinia/nuxt',
     'dayjs-nuxt',
+    'nuxt-lodash',
+    '@vueuse/nuxt',
   ],
   vuetify: {
     moduleOptions: {
@@ -28,11 +30,6 @@ export default defineNuxtConfig({
   app: {
     pageTransition: {
       name: 'slide-x-transition',
-      mode: 'out-in', // default
-    },
-    layoutTransition: {
-      name: 'slide',
-      mode: 'out-in', // default
     },
   },
   pinia: {

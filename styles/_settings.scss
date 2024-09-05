@@ -1,5 +1,6 @@
 @use 'utils' as *;
 
 @use 'vuetify/settings' with (
-  $timeline-item-padding: px(5)
+  $timeline-item-padding: px(5),
+  $chip-padding-ratio: 3
 );

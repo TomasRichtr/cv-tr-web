@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
+import SkillTag from '~/components/shared/SkillTag.vue';
 import dateUtils from '~/utils/date.utils';
 import stringUtils from '~/utils/string.utils';
 import type { Experience } from '~/types/data.types';
 import { Colors, Sizes } from '~/enums/vuetify.enums';
 import { STRINGS } from '~/constants/strings.constants';
+import { RoutesEnums } from '~/enums/routes.enums';
 
 const props = defineProps<Experience>();
+
+const { isSmallScreen } = useBreakpoints();
 </script>
 
 <template>
@@ -47,6 +51,21 @@ const props = defineProps<Experience>();
           :size="Sizes.Small"
         />
       </a>
+    </VCardText>
+
+    <VCardText class="pt-0">
+      <NuxtLink
+        class="flex flex-wrap gap-x-2 gap-y-1 cursor-pointer"
+        :to="{ name: RoutesEnums.Skills, query: { skills: props.skills } }"
+      >
+        <SkillTag
+          v-for="skill in props.skills"
+          :key="skill"
+          :skill="skill"
+          :color="props.color"
+          :hide-label="!isSmallScreen"
+        />
+      </NuxtLink>
     </VCardText>
   </VCard>
 </template>

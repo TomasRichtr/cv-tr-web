@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { FOOTER_BTNS_MAP } from '~/constants/ui.constants';
 import { RoutesEnums } from '~/enums/routes.enums';
-import { useUiStore } from '~/store/ui.store.';
+import { useUiStore } from '~/store/ui.store';
+import { Colors } from '~/enums/vuetify.enums';
 
 const route = useRoute();
 
@@ -13,10 +14,12 @@ const { showNavDrawer } = storeToRefs(useUiStore());
 </script>
 
 <template>
-  <div
+  <VFooter
     v-if="!showNavDrawer"
-    class="flex justify-between p-4 z-float fixed bottom-0 right-0 w-full"
-    :class="route.name === RoutesEnums.Contact ? 'flex-row' : 'flex-row-reverse'"
+    class="flex justify-between p-4 z-float w-full"
+    :class="route.name === RoutesEnums.Contacts ? 'flex-row' : 'flex-row-reverse'"
+    :app="true"
+    :color="Colors.Primary"
   >
     <template v-for="btn in footerBtnsProps">
       <VBtn
@@ -29,5 +32,5 @@ const { showNavDrawer } = storeToRefs(useUiStore());
         :variant="btn.variant"
       />
     </template>
-  </div>
+  </VFooter>
 </template>
