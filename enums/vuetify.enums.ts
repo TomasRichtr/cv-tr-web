@@ -18,6 +18,7 @@ export enum Colors {
   Primary = 'primary',
   Background = 'background',
   Success = 'success',
+  Error = 'error',
   Easy = 'easy',
   Amio = 'amio',
   Equiradar = 'equiradar',

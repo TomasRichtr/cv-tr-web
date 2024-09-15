@@ -49,7 +49,7 @@ const iconColor = computed(() => {
         <VIcon
           :color="iconColor"
           :icon="icon"
-          class="px-9 cursor-default"
+          class="px-7 md:px-9 cursor-default"
         />
       </template>
     </VRating>

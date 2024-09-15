@@ -1,9 +1,9 @@
 export const COLOR_HEX_CODES = {
   primary: '#00BCD1',
   background: '#E8F3F1',
-  error: '#FFFFFF',
+  error: '#cc0202',
   info: '#334B48',
-  success: '#CFF880',
+  success: '#02CC3B',
   warning: '#A7F594',
   secondary: '#40E0D0',
   easy: '#0D65F2',

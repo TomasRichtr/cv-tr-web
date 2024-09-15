@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
     class="icon-btn"
     :to="props.to && { name: props.to }"
     :href="props.href"
-    target="_blank"
+    :target="props.href ? '_blank' : null"
   >
     <VIcon
       :icon="props.icon"

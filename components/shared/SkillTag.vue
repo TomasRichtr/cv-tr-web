@@ -47,9 +47,13 @@ const tag = ref<ComponentPublicInstance<typeof VChip>>();
     target="_blank"
     @click:close="emit('remove-tag')"
   >
-    <div class="flex gap-1">
+    <div class="flex gap-1 line-clamp-1">
       <SkillIcon :skill="props.skill" />
-      <span v-if="!props.hideLabel">{{ props.skill }}</span>
+      <span
+        v-if="!props.hideLabel"
+      >
+        {{ props.skill }}
+      </span>
       <VIcon
         v-if="props.externalLink"
         icon="mdi-open-in-new"

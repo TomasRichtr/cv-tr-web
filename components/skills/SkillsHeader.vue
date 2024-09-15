@@ -13,7 +13,7 @@ import { HEADER_LABELS } from '~/constants/skills.constants';
       <span
         v-for="label in HEADER_LABELS"
         :key="label"
-        class="w-[72px] cursor-pointer"
+        class="w-[56px] md:w-[72px] cursor-pointer"
       >
         {{ capitalize(label) }}
       </span>

@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { capitalize } from 'vue';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import { Colors, Sizes, Variants } from '~/enums/vuetify.enums';
 import { STRINGS } from '~/constants/strings.constants';
+import PageSection from '~/components/shared/PageSection.vue';
 
 const CONTACTS_INFO = [
   {
@@ -33,25 +35,39 @@ const CONTACTS_INFO = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 justify-center">
-    <div class="flex flex-col gap-2 ml-2">
-      <div
-        v-for="(contact, i) in CONTACTS_INFO"
-        :key="contact.text"
-        class="flex gap-2 items-center"
-        :class="{ 'ml-1': i !== 0 }"
+  <PageSection
+    :title="capitalize(STRINGS.pageSections.contacts)"
+    class="gap-y-1"
+  >
+    <div
+      v-for="(contact, i) in CONTACTS_INFO"
+      :key="contact.text"
+      class="flex gap-x-2 items-center"
+      :class="{ 'ml-2': i !== 0 }"
+    >
+      <IconBtn
+        :icon="contact.icon"
+        :variant="Variants.Elevated"
+        :color="Colors.Primary"
+        :size="contact.size || Sizes.XSmall"
+        :href="contact.to"
+      />
+      <span
+        v-if="i === 0"
+        class="text-2xl"
       >
-        <IconBtn
-          :icon="contact.icon"
-          :variant="Variants.Elevated"
-          :color="Colors.Primary"
-          :size="contact.size || Sizes.Small"
-          :href="contact.to"
-        />
-        <span :class="{ 'ml-1': i !== 0 }">
-          {{ contact.text }}
-        </span>
-      </div>
+        {{ contact.text }}
+      </span>
+
+      <VBtn
+        v-else
+        :to="contact.to"
+        target="_blank"
+        :variant="Variants.Plain"
+        class="px-0 ml-2"
+      >
+        {{ contact.text }}
+      </VBtn>
     </div>
-  </div>
+  </PageSection>
 </template>

@@ -15,3 +15,11 @@ export interface Experience {
 }
 
 export interface Quote { q?: string; a?: string; h?: string }
+
+export interface ContactForm {
+  name: string;
+  company?: string;
+  phone?: string;
+  email: string;
+  message: string;
+}

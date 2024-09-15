@@ -29,3 +29,10 @@ export enum SkillDegree {
   Often,
   Daily,
 }
+
+export enum Sorts {
+  Alphabetically,
+  FewTime,
+  Often,
+  Daily,
+}
