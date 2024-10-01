@@ -12,13 +12,18 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@vueuse/nuxt',
   ],
+  nitro: {
+    experimental: {
+      tasks: true,
+    },
+  },
   vuetify: {
     moduleOptions: {
       styles: {
         configFile: './styles/settings.scss',
       },
     },
-    vuetifyOptions: './vuetify.config.ts', // <== you can omit it
+    vuetifyOptions: './vuetify.config.ts',
   },
   eslint: {
     config: {

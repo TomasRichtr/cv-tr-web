@@ -12,11 +12,14 @@ const form = reactive<ContactForm>({
   message: '',
 });
 
-const submitContactMessage = (e: SubmitEvent) => {
+const submitContactMessage = async (e: SubmitEvent) => {
   e.preventDefault();
   if (!isValid.value) return;
-
-  console.log(form);
+  const { data } = await useFetch('/messages', {
+    method: 'POST',
+    body: form,
+  });
+  console.log(data);
 };
 
 const isValid = ref<boolean>(false);
@@ -48,7 +51,7 @@ const isValid = ref<boolean>(false);
         :disabled="!isValid"
         :color="Colors.Primary"
       >
-        {{ STRINGS.btnLabels.submit }}
+        <span class="text-background">{{ STRINGS.btnLabels.submit }}</span>
       </VBtn>
     </VForm>
   </PageSection>

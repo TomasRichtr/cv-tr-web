@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
 import IconBtn from '~/components/shared/IconBtn.vue';
+import PageSection from '~/components/shared/PageSection.vue';
 import { Colors, Sizes, Variants } from '~/enums/vuetify.enums';
 import { STRINGS } from '~/constants/strings.constants';
-import PageSection from '~/components/shared/PageSection.vue';
 
 const CONTACTS_INFO = [
   {
@@ -14,22 +14,22 @@ const CONTACTS_INFO = [
   {
     icon: 'mdi-phone',
     text: '00 420 778 540 970',
-    to: 'tel:00420778540970',
+    href: 'tel:00420778540970',
   },
   {
     icon: 'mdi-email',
     text: 't.richtr@email.cz',
-    to: 'mailto:t.richtr@email.cz',
+    href: 'mailto:t.richtr@email.cz',
   },
   {
     icon: 'mdi-linkedin',
     text: 'linkedin.com/in/trichtr',
-    to: 'https://linkedin.com/in/trichtr',
+    href: 'https://linkedin.com/in/trichtr',
   },
   {
     icon: 'mdi-github',
     text: 'github.com/TomasRichtr',
-    to: 'https://github.com/TomasRichtr',
+    href: 'https://github.com/TomasRichtr',
   },
 ];
 </script>
@@ -50,7 +50,7 @@ const CONTACTS_INFO = [
         :variant="Variants.Elevated"
         :color="Colors.Primary"
         :size="contact.size || Sizes.XSmall"
-        :href="contact.to"
+        :href="contact.href"
       />
       <span
         v-if="i === 0"
@@ -61,7 +61,7 @@ const CONTACTS_INFO = [
 
       <VBtn
         v-else
-        :to="contact.to"
+        :href="contact.href"
         target="_blank"
         :variant="Variants.Plain"
         class="px-0 ml-2"

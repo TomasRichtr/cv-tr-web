@@ -16,7 +16,7 @@ const quote = ref<Quote | null>({});
 const isLoading = ref<boolean>(true);
 
 onMounted(async () => {
-  const { data } = await useFetch('/api/quotes');
+  const { data } = await useFetch('/quotes');
   quote.value = data.value;
   isLoading.value = false;
 });
