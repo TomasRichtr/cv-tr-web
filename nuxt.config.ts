@@ -12,11 +12,6 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@vueuse/nuxt',
   ],
-  nitro: {
-    experimental: {
-      tasks: true,
-    },
-  },
   vuetify: {
     moduleOptions: {
       styles: {
@@ -38,7 +33,7 @@ export default defineNuxtConfig({
     },
   },
   pinia: {
-    storesDirs: ['@/store/**'],
+    storesDirs: ['~/store/**'],
   },
   alias: {
     pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
@@ -49,5 +44,8 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['vuetify'],
+  },
+  nitro: {
+    plugins: ['~/server/plugins/migrations.plugins.ts'],
   },
 });

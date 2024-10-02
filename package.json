@@ -1,7 +1,6 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -18,7 +17,6 @@
     "@vueuse/core": "^11.0.3",
     "@vueuse/nuxt": "^11.0.3",
     "devicon": "^2.16.0",
-    "knex": "^3.1.0",
     "mysql": "^2.18.1",
     "nuxt": "^3.13.0",
     "vue": "latest",
@@ -27,9 +25,15 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.5.2",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^22.7.4",
     "dayjs-nuxt": "^2.1.9",
     "eslint": "^9.9.0",
+    "knex": "^3.1.0",
     "nuxt-lodash": "^2.5.3",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.6.2"
   }
 }

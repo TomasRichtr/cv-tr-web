@@ -1,6 +1,6 @@
 import type { Knex } from 'knex';
-import { Tables } from '~/types/db.types';
-import { MessagesCols } from '~/types/message.types';
+import { MessagesCols } from '../../types/message.types';
+import { Tables } from '../../types/db.types';
 
 exports.up = function (knexDB: Knex) {
   return knexDB.schema
