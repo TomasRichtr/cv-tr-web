@@ -48,4 +48,10 @@ export default defineNuxtConfig({
   nitro: {
     plugins: ['~/server/plugins/migrations.plugins.ts'],
   },
+  runtimeConfig: {
+    public: {
+      emailLogin: '',
+      emailPassword: '',
+    },
+  },
 });

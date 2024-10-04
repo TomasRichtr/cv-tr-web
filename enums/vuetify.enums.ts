@@ -38,3 +38,10 @@ export enum Locations {
   Left = 'left',
   Right = 'right',
 }
+
+export enum AlertTypes {
+  Success = 'success',
+  Info = 'info',
+  Warning = 'warning',
+  Error = 'error',
+}

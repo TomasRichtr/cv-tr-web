@@ -79,4 +79,14 @@ export const STRINGS = {
       count: 'Your phone is too long! Max length is 20 characters.',
     },
   },
+  notification: {
+    success: 'Success',
+    failure: 'Failure',
+    messages: {
+      successText: 'Your message has been successfully sent.',
+    },
+  },
+  errors: {
+    missingInstance: 'Missing app instance!',
+  },
 };

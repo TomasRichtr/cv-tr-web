@@ -1,37 +1,31 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import { STRINGS } from '~/constants/strings.constants';
-import type { ContactForm } from '~/types/data.types';
-import { Variants, Colors } from '~/enums/vuetify.enums';
-import { CONTACT_FORM_INPUTS } from '~/constants/contact_form.constants';
+import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
+import { CONTACT_FORM_INPUTS } from '~/constants/contact_form.constants';
+import { STRINGS } from '~/constants/strings.constants';
+import { Variants, Colors } from '~/enums/vuetify.enums';
+import { useMessageApi } from '~/composables/messages.composables';
+import { useUiStore } from '~/store/ui.store';
 
-const form = reactive<ContactForm>({
-  name: '',
-  email: '',
-  message: '',
-});
+const {
+  contactFormRef,
+  form,
+  isValid,
+  submitContactMessage,
+} = useMessageApi();
 
-const submitContactMessage = async (e: SubmitEvent) => {
-  e.preventDefault();
-  if (!isValid.value) return;
-  const { data } = await useFetch('/messages', {
-    method: 'POST',
-    body: form,
-  });
-  console.log(data);
-};
-
-const isValid = ref<boolean>(false);
+const { loading } = storeToRefs(useUiStore());
 </script>
 
 <template>
   <PageSection :title="capitalize(STRINGS.pageSections.contactForm)">
     <VForm
+      ref="contactFormRef"
       v-model="isValid"
       validate-on="input"
       class="flex flex-col gap-1.5"
-      @submit="submitContactMessage"
+      @submit.prevent
     >
       <component
         :is="input.component"
@@ -43,13 +37,15 @@ const isValid = ref<boolean>(false);
         :counter="input.counter"
         :rules="input.rules"
         :type="input.type"
+        :loading="loading"
+        :disabled="loading"
         :name="input.name"
       />
       <VBtn
-        type="submit"
         :variant="Variants.Elevated"
         :disabled="!isValid"
         :color="Colors.Primary"
+        @click="submitContactMessage"
       >
         <span class="text-background">{{ STRINGS.btnLabels.submit }}</span>
       </VBtn>

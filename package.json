@@ -18,6 +18,7 @@
     "@vueuse/nuxt": "^11.0.3",
     "devicon": "^2.16.0",
     "mysql": "^2.18.1",
+    "nodemailer": "^6.9.15",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vuetify-nuxt-module": "^0.17.1"
