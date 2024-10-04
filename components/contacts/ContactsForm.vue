@@ -3,7 +3,7 @@ import { capitalize } from 'vue';
 import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
 import { CONTACT_FORM_INPUTS } from '~/constants/contact_form.constants';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { Variants, Colors } from '~/enums/vuetify.enums';
 import { useMessageApi } from '~/composables/messages.composables';
 import { useUiStore } from '~/store/ui.store';

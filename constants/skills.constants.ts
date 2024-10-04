@@ -1,5 +1,5 @@
 import { SkillDegree, Skills } from '~/enums/skills.enum';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 
 export const SKILLS_DEGREE = {
   [Skills.CSS]: SkillDegree.Daily,

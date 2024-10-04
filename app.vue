@@ -4,7 +4,7 @@ import FooterBtns from '~/components/shared/FooterBtns.vue';
 import HeaderBar from '~/components/shared/HeaderBar.vue';
 import NavigationDrawer from '~/components/shared/NavigationDrawer.vue';
 import { RoutesEnums } from '~/enums/routes.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 
 const route = useRoute();
 

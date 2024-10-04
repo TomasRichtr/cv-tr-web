@@ -1,5 +1,5 @@
 import { VTextField, VTextarea } from 'vuetify/components';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import type { ContactFormInputProps } from '~/types/ui.types';
 import inputValidations from '~/composables/input_validations.composables';
 import { ContactFormInputs } from '~/enums/contact_form.enums';

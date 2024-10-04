@@ -4,7 +4,7 @@ import IconBtn from '~/components/shared/IconBtn.vue';
 import { Colors } from '~/enums/vuetify.enums';
 import { useUiStore } from '~/store/ui.store';
 import { RoutesEnums } from '~/enums/routes.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 

@@ -2,7 +2,7 @@ import { useUiStore } from '~/store/ui.store';
 import type { ApiEndpoints } from '~/enums/api.enums';
 import { ApiMethods } from '~/enums/api.enums';
 import type { NuxtError } from '#app';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { useShowNotification } from '~/composables/notification_alert.composables';
 
 export const useEndpoints = () => {

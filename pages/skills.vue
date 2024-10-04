@@ -8,14 +8,14 @@ import SkillsPredefinedSelects from '~/components/skills/SkillsPredefinedSelects
 import { SKILLS_DEGREE } from '~/constants/skills.constants';
 import { type SkillDegree, Skills, Sorts } from '~/enums/skills.enum';
 import PageWrapper from '~/components/shared/PageWrapper.vue';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import PageSection from '~/components/shared/PageSection.vue';
 
 const route = useRoute();
 
-const storageSelectedSkills = useStorage<Skills[]>('selected-skills', []);
+const storageSelectedSkills = useStorage<Skills[]>('selected-skills', [], sessionStorage);
 
-const storageSelectedSort = useStorage<Sorts>('selected-sort', 0);
+const storageSelectedSort = useStorage<Sorts>('selected-sort', 0, sessionStorage);
 
 const selectedSkills = ref<Skills[]>([]);
 

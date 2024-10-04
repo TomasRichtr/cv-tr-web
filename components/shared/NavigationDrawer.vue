@@ -22,7 +22,7 @@ const route = useRoute();
         <VBtn
           :to="{ name: item.to }"
           :variant="Variants.Plain"
-          class="flex items-center"
+          class="flex items-center w-full"
           :disabled="route.name === item.to
           "
         >

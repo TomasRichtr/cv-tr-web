@@ -2,7 +2,7 @@
 import type { VChip } from 'vuetify/components';
 import { capitalize } from 'vue';
 import { uniq, values, isEmpty } from 'lodash-es';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { Colors, Density, Variants } from '~/enums/vuetify.enums';
 import { HEADER_LABELS, SKILLS_DEGREE, SORTING } from '~/constants/skills.constants';
 import type { Skills } from '~/enums/skills.enum';
@@ -25,6 +25,8 @@ interface Emits {
 }
 
 const emit = defineEmits<Emits>();
+
+const { t } = useTranslations();
 
 const tagColor = (degree: SkillDegree) => {
   return {
@@ -79,7 +81,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
   <div class="flex flex-col gap-y-3">
     <PageSection
       class="flex flex-row flex-wrap gap-2"
-      :title="STRINGS.pageSections.filters"
+      :title="t('pageSections.filters')"
     >
       <VChip
         v-for="(label, i) in [STRINGS.labels.all, ...HEADER_LABELS]"

@@ -5,3 +5,8 @@ export enum Breakpoints {
   XL = '1280px',
   TwoXL = '1546px',
 }
+
+export enum Languages {
+  English = 'en',
+  Czech = 'cs',
+}

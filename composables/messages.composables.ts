@@ -1,7 +1,7 @@
 import type { VForm } from 'vuetify/components';
 import { cloneDeep } from 'lodash-es';
 import { DEFAULT_FORM } from '~/constants/contact_form.constants';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { useShowNotification } from '~/composables/notification_alert.composables';
 import { useEndpoints } from '~/composables/endpoints.composables';
 import { ApiEndpoints } from '~/enums/api.enums';

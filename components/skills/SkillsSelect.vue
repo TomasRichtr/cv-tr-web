@@ -4,7 +4,7 @@ import { capitalize } from 'vue';
 import { Skills } from '~/enums/skills.enum';
 import SkillTag from '~/components/shared/SkillTag.vue';
 import { Variants, Colors, Density } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import SkillIcon from '~/components/shared/SkillIcon.vue';
 import PageSection from '~/components/shared/PageSection.vue';
 

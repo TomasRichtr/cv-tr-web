@@ -1,5 +1,5 @@
 import { RoutesEnums } from '~/enums/routes.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { Variants, Colors } from '~/enums/vuetify.enums';
 import type { FooterBtn } from '~/types/ui.types';
 

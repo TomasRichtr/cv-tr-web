@@ -1,5 +1,5 @@
 import type { Dayjs } from 'dayjs';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { Formats } from '~/enums/date.enums';
 
 class DateUtils {

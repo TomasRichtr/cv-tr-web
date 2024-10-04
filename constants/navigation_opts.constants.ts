@@ -1,4 +1,4 @@
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { RoutesEnums } from '~/enums/routes.enums';
 
 export const NAVIGATION_OPTS = [

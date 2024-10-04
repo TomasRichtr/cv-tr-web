@@ -1,6 +1,6 @@
 import { getCurrentInstance } from 'vue';
 import type { createVuetify } from 'vuetify';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 
 const vuetifyInstance = ref<ReturnType<typeof createVuetify>>();
 

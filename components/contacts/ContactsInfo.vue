@@ -3,7 +3,7 @@ import { capitalize } from 'vue';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import PageSection from '~/components/shared/PageSection.vue';
 import { Colors, Sizes, Variants } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 
 const CONTACTS_INFO = [
   {

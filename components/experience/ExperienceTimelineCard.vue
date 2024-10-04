@@ -5,7 +5,7 @@ import dateUtils from '~/utils/date.utils';
 import stringUtils from '~/utils/string.utils';
 import type { Experience } from '~/types/data.types';
 import { Colors, Sizes } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/strings.constants';
+import { STRINGS } from '~/constants/translations.constants';
 import { RoutesEnums } from '~/enums/routes.enums';
 
 const props = defineProps<Experience>();
