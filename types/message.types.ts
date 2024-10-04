@@ -1,10 +1,10 @@
 export interface Message {
   id: string;
-  name: string;
-  company?: string | null;
-  email: string;
-  phone?: string | null;
-  message: string;
+  name: string | null;
+  company: string | null;
+  email: string | null;
+  phone: string | null;
+  message: string | null;
 }
 
 export enum MessagesCols {

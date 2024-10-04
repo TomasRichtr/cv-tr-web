@@ -25,7 +25,7 @@ const { loading } = storeToRefs(useUiStore());
       v-model="isValid"
       validate-on="input"
       class="flex flex-col gap-1.5"
-      @submit.prevent
+      @submit.prevent.stop
     >
       <component
         :is="input.component"

@@ -5,12 +5,12 @@ import type { NuxtError } from '#app';
 import { STRINGS } from '~/constants/strings.constants';
 import { useShowNotification } from '~/composables/notification_alert.composables';
 
-export const useApi = () => {
+export const useEndpoints = () => {
   const { loading } = storeToRefs(useUiStore());
 
   const { showFailure } = useShowNotification();
 
-  const mutate = async <TBody, TResponse>(
+  const apiMutate = async <TBody, TResponse>(
     body: TBody,
     endPoint: ApiEndpoints,
     method: ApiMethods = ApiMethods.Post,
@@ -39,6 +39,6 @@ export const useApi = () => {
   };
 
   return {
-    mutate,
+    apiMutate,
   };
 };

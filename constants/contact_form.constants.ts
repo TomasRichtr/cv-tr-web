@@ -63,7 +63,9 @@ export const CONTACT_FORM_INPUTS: ContactFormInputProps[] = [
 ];
 
 export const DEFAULT_FORM = Object.freeze({
-  name: '',
-  email: '',
-  message: '',
+  name: null,
+  email: null,
+  message: null,
+  company: null,
+  phone: null,
 });
