@@ -2,11 +2,10 @@
 import { capitalize } from 'vue';
 import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
-import { CONTACT_FORM_INPUTS } from '~/constants/contact_form.constants';
-import { STRINGS } from '~/constants/translations.constants';
-import { Variants, Colors } from '~/enums/vuetify.enums';
+import { CONTACT_FORM_FIELDS } from '~/constants/contact_form.constants';
 import { useMessageApi } from '~/composables/messages.composables';
 import { useUiStore } from '~/store/ui.store';
+import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
 
 const {
   contactFormRef,
@@ -16,10 +15,12 @@ const {
 } = useMessageApi();
 
 const { loading } = storeToRefs(useUiStore());
+
+const { t } = useTranslations();
 </script>
 
 <template>
-  <PageSection :title="capitalize(STRINGS.pageSections.contactForm)">
+  <PageSection :title="capitalize(t('pageSections.contactForm'))">
     <VForm
       ref="contactFormRef"
       v-model="isValid"
@@ -29,11 +30,11 @@ const { loading } = storeToRefs(useUiStore());
     >
       <component
         :is="input.component"
-        v-for="input in CONTACT_FORM_INPUTS"
+        v-for="input in CONTACT_FORM_FIELDS"
         :key="input.name"
         v-model="form[input.name]"
         :label="input.label"
-        :variant="Variants.Outlined"
+        :variant="VARIANTS.OUTLINED"
         :counter="input.counter"
         :rules="input.rules"
         :type="input.type"
@@ -42,12 +43,12 @@ const { loading } = storeToRefs(useUiStore());
         :name="input.name"
       />
       <VBtn
-        :variant="Variants.Elevated"
+        :variant="VARIANTS.ELEVATED"
         :disabled="!isValid"
-        :color="Colors.Primary"
+        :color="COLORS.PRIMARY"
         @click="submitContactMessage"
       >
-        <span class="text-background">{{ STRINGS.btnLabels.submit }}</span>
+        <span class="text-background">{{ t('btnLabels.submit') }}</span>
       </VBtn>
     </VForm>
   </PageSection>

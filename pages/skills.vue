@@ -8,7 +8,6 @@ import SkillsPredefinedSelects from '~/components/skills/SkillsPredefinedSelects
 import { SKILLS_DEGREE } from '~/constants/skills.constants';
 import { type SkillDegree, Skills, Sorts } from '~/enums/skills.enum';
 import PageWrapper from '~/components/shared/PageWrapper.vue';
-import { STRINGS } from '~/constants/translations.constants';
 import PageSection from '~/components/shared/PageSection.vue';
 
 const route = useRoute();
@@ -67,6 +66,8 @@ const sortBySelectedSort = (skills: Skills[]) => {
 
   return sortBy(skills, sorter);
 };
+
+const { t } = useTranslations();
 </script>
 
 <template>
@@ -77,7 +78,7 @@ const sortBySelectedSort = (skills: Skills[]) => {
       @update:selected-degrees="selectSkills"
     />
     <SkillSelect v-model="selectedSkills" />
-    <PageSection :title="STRINGS.pageSections.skillsOverview">
+    <PageSection :title="t('pageSections.skillsOverview')">
       <SkillsHeader />
       <SkillsList :skills="filteredSkills" />
     </PageSection>

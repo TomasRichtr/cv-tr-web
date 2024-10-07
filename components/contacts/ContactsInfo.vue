@@ -2,14 +2,15 @@
 import { capitalize } from 'vue';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import PageSection from '~/components/shared/PageSection.vue';
-import { Colors, Sizes, Variants } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/translations.constants';
+import { COLORS, SIZES, VARIANTS } from '~/enums/vuetify.enums';
+
+const { t } = useTranslations();
 
 const CONTACTS_INFO = [
   {
-    text: `${STRINGS.name} ${STRINGS.surname}`,
+    text: `${t('name')} ${t('surname')}`,
     icon: 'mdi-contacts',
-    size: Sizes.Default,
+    size: SIZES.DEFAULT,
   },
   {
     icon: 'mdi-phone',
@@ -36,7 +37,7 @@ const CONTACTS_INFO = [
 
 <template>
   <PageSection
-    :title="capitalize(STRINGS.pageSections.contacts)"
+    :title="capitalize(t('pageSections.contacts'))"
     class="gap-y-1"
   >
     <div
@@ -47,9 +48,9 @@ const CONTACTS_INFO = [
     >
       <IconBtn
         :icon="contact.icon"
-        :variant="Variants.Elevated"
-        :color="Colors.Primary"
-        :size="contact.size || Sizes.XSmall"
+        :variant="VARIANTS.ELEVATED"
+        :color="COLORS.PRIMARY"
+        :size="contact.size || SIZES.X_SMALL"
         :href="contact.href"
       />
       <span
@@ -63,7 +64,7 @@ const CONTACTS_INFO = [
         v-else
         :href="contact.href"
         target="_blank"
-        :variant="Variants.Plain"
+        :variant="VARIANTS.PLAIN"
         class="px-0 ml-2"
       >
         {{ contact.text }}

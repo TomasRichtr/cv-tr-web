@@ -1,18 +1,18 @@
-import { Skills } from '~/enums/skills.enum';
+import { SKILLS } from '~/enums/skills.enum';
 
 export const DEV_ICON_MAP = {
-  [Skills.Tailwind]: 'tailwindcss',
-  [Skills.Vue]: 'vuejs',
-  [Skills.HTML]: 'html5',
-  [Skills.CSS]: 'css3',
-  [Skills.Knex]: 'knexjs',
-  [Skills.NodeJs]: 'nodejs',
-  [Skills.Cypress]: 'cypressio',
-  [Skills.NetlifyFunctions]: 'netlify',
-  [Skills.ElasticSearch]: 'elasticsearch',
-  [Skills.Nuxt]: 'nuxtjs',
+  [SKILLS.TAILWIND]: 'tailwindcss',
+  [SKILLS.VUE]: 'vuejs',
+  [SKILLS.HTML]: 'html5',
+  [SKILLS.CSS]: 'css3',
+  [SKILLS.KNEX]: 'knexjs',
+  [SKILLS.NODE_JS]: 'nodejs',
+  [SKILLS.CYPRESS]: 'cypressio',
+  [SKILLS.NETLIFY_FUNCTIONS]: 'netlify',
+  [SKILLS.ELASTIC_SEARCH]: 'elasticsearch',
+  [SKILLS.NUXT]: 'nuxtjs',
 };
 
 export const MATERIAL_ICON_MAP = {
-  [Skills.RestApi]: 'api',
+  [SKILLS.REST_API]: 'api',
 };

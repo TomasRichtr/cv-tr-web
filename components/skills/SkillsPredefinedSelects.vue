@@ -2,11 +2,10 @@
 import type { VChip } from 'vuetify/components';
 import { capitalize } from 'vue';
 import { uniq, values, isEmpty } from 'lodash-es';
-import { STRINGS } from '~/constants/translations.constants';
-import { Colors, Density, Variants } from '~/enums/vuetify.enums';
+import { COLORS, DENSITY, VARIANTS } from '~/enums/vuetify.enums';
 import { HEADER_LABELS, SKILLS_DEGREE, SORTING } from '~/constants/skills.constants';
 import type { Skills } from '~/enums/skills.enum';
-import { SkillDegree } from '~/enums/skills.enum';
+import { SKILL_DEGREE } from '~/enums/skills.enum';
 import PageSection from '~/components/shared/PageSection.vue';
 
 interface Props {
@@ -20,7 +19,7 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 interface Emits {
-  (e: 'update:selected-degrees', degree: SkillDegree[]): void;
+  (e: 'update:selected-degrees', degree: number[]): void;
   (e: 'update:selected-sort', sort: number): void;
 }
 
@@ -28,11 +27,11 @@ const emit = defineEmits<Emits>();
 
 const { t } = useTranslations();
 
-const tagColor = (degree: SkillDegree) => {
+const tagColor = (degree: number) => {
   return {
-    [SkillDegree.FewTime]: Colors.Primary,
-    [SkillDegree.Often]: Colors.Secondary,
-    [SkillDegree.Daily]: Colors.Warning,
+    [SKILL_DEGREE.FEW_TIME]: COLORS.PRIMARY,
+    [SKILL_DEGREE.OFTEN]: COLORS.SECONDARY,
+    [SKILL_DEGREE.DAILY]: COLORS.WARNING,
   }[degree];
 };
 
@@ -67,13 +66,13 @@ onBeforeMount(() => {
 });
 
 const isDegreeChipSelected = (degreeUpdate: number) => {
-  if (degreeUpdate === 0 && isEmpty(props.selectedSkills)) return Variants.Elevated;
+  if (degreeUpdate === 0 && isEmpty(props.selectedSkills)) return VARIANTS.ELEVATED;
   const isDegreeUpdateSelected = selectedDegrees.value.includes(degreeUpdate);
   const allSkillDegreesCount = values(SKILLS_DEGREE).filter(degree => degree === degreeUpdate).length;
   const selectedSkillDegreesCount = props.selectedSkills.filter(skill => SKILLS_DEGREE[skill] === degreeUpdate).length;
   return isDegreeUpdateSelected && allSkillDegreesCount === selectedSkillDegreesCount
-    ? Variants.Elevated
-    : Variants.Outlined;
+    ? VARIANTS.ELEVATED
+    : VARIANTS.OUTLINED;
 };
 </script>
 
@@ -84,10 +83,10 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
       :title="t('pageSections.filters')"
     >
       <VChip
-        v-for="(label, i) in [STRINGS.labels.all, ...HEADER_LABELS]"
+        v-for="(label, i) in [t('labels.all'), ...HEADER_LABELS]"
         :key="label"
         :variant="isDegreeChipSelected(i)"
-        :density="Density.Compact"
+        :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"
         :text="capitalize(label)"
@@ -97,13 +96,13 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
 
     <PageSection
       class="flex flex-row flex-wrap gap-2"
-      :title="STRINGS.pageSections.sorters"
+      :title="t('pageSections.sorters')"
     >
       <VChip
         v-for="(label, i) in SORTING"
         :key="label"
-        :variant="props.selectedSort === i ? Variants.Elevated : Variants.Outlined"
-        :density="Density.Compact"
+        :variant="props.selectedSort === i ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
+        :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"
         :text="capitalize(label)"

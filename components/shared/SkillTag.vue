@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
 import type { VChip } from 'vuetify/components';
-import { type Colors, Variants } from '~/enums/vuetify.enums';
+import { type Colors, VARIANTS } from '~/enums/vuetify.enums';
 import SkillIcon from '~/components/shared/SkillIcon.vue';
 
 interface Props {
@@ -39,7 +39,7 @@ const tag = ref<ComponentPublicInstance<typeof VChip>>();
     ref="tag"
     class="capitalize"
     :class="{ 'cursor-pointer': props.externalLink }"
-    :variant="Variants.Outlined"
+    :variant="VARIANTS.OUTLINED"
     :color="props.color"
     :closable="props.closable"
     :tag="props.externalLink ? 'a' : undefined"

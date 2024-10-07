@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { values, without } from 'lodash-es';
 import { capitalize } from 'vue';
-import { Skills } from '~/enums/skills.enum';
+import type { Skills } from '~/enums/skills.enum';
+import { SKILLS } from '~/enums/skills.enum';
 import SkillTag from '~/components/shared/SkillTag.vue';
-import { Variants, Colors, Density } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/translations.constants';
+import { VARIANTS, COLORS, DENSITY } from '~/enums/vuetify.enums';
 import SkillIcon from '~/components/shared/SkillIcon.vue';
 import PageSection from '~/components/shared/PageSection.vue';
 
@@ -15,7 +15,7 @@ interface Props {
 const props = defineProps<Props>();
 
 const skillOpts = computed(() => {
-  return values(Skills).map((skill: Skills) => skill);
+  return values(SKILLS).map((skill: Skills) => skill);
 });
 
 interface Emits {
@@ -38,26 +38,28 @@ const removeSkill = (removedSkill: Skills) => {
 };
 
 const { isSmallScreen } = useBreakpoints();
+
+const { t } = useTranslations();
 </script>
 
 <template>
-  <PageSection :title="STRINGS.pageSections.skills">
+  <PageSection :title="t('pageSections.skills')">
     <VAutocomplete
       v-model="selectedSkills"
-      :label="capitalize(STRINGS.btnLabels.skills)"
+      :label="capitalize(t('btnLabels.skills'))"
       :items="skillOpts"
       multiple
       chips
       closable-chips
-      :density="Density.Compact"
-      :variant="Variants.Outlined"
+      :density="DENSITY.COMPACT"
+      :variant="VARIANTS.OUTLINED"
       clearable
       :hide-details="true"
     >
       <template #chip="{ props: itemProps, item }">
         <SkillTag
           v-bind="itemProps"
-          :color="Colors.Primary"
+          :color="COLORS.PRIMARY"
           :skill="item.raw"
           class="cursor-pointer"
           :closable="true"
@@ -70,7 +72,7 @@ const { isSmallScreen } = useBreakpoints();
         <VListItem
           v-bind="itemProps"
           :title="capitalize(item.raw)"
-          :density="Density.Compact"
+          :density="DENSITY.COMPACT"
         >
           <template #prepend>
             <SkillIcon :skill="item.raw" />

@@ -1,10 +1,10 @@
 import { useMediaQuery } from '@vueuse/core';
-import { Breakpoints } from '~/enums/ui.enums';
+import { BREAKPOINTS } from '~/enums/ui.enums';
 
 export const useBreakpoints = () => {
-  const isSmallScreen = useMediaQuery(`(max-width: ${Breakpoints.Small})`);
-  const isMediumScreen = useMediaQuery(`(max-width: ${Breakpoints.Medium})`);
-  const isLargeScreen = useMediaQuery(`(max-width: ${Breakpoints.Large})`);
+  const isSmallScreen = useMediaQuery(`(max-width: ${BREAKPOINTS.SMALL})`);
+  const isMediumScreen = useMediaQuery(`(max-width: ${BREAKPOINTS.MEDIUM})`);
+  const isLargeScreen = useMediaQuery(`(max-width: ${BREAKPOINTS.LARGE})`);
 
   return {
     isSmallScreen, isMediumScreen, isLargeScreen,

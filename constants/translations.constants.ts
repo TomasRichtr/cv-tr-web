@@ -1,4 +1,4 @@
-import { ContactFormInputs } from '~/enums/contact_form.enums';
+import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
 
 export const EN = {
   name: 'Tomas',
@@ -58,23 +58,23 @@ export const EN = {
     phone: 'Fill, if you prefer to be called.',
   },
   validation: {
-    [ContactFormInputs.Name]: {
+    [CONTACT_FORM_INPUTS.NAME]: {
       required: 'You must enter name.',
       count: 'Your name is too long! Max length is 100 characters.',
     },
-    [ContactFormInputs.Company]: {
+    [CONTACT_FORM_INPUTS.COMPANY]: {
       count: 'Your phone is too long! Max length is 100 characters.',
     },
-    [ContactFormInputs.Email]: {
+    [CONTACT_FORM_INPUTS.EMAIL]: {
       required: 'You must enter valid email.',
       format: 'You must enter valid email.',
       count: 'Your email is too long! Max length is 100 characters.',
     },
-    [ContactFormInputs.Message]: {
+    [CONTACT_FORM_INPUTS.MESSAGE]: {
       required: 'You must enter a message.',
       count: 'Your message is too long! Max length is 1000 characters.',
     },
-    [ContactFormInputs.Phone]: {
+    [CONTACT_FORM_INPUTS.PHONE]: {
       format: 'You must enter a valid phone number.',
       count: 'Your phone is too long! Max length is 20 characters.',
     },
@@ -149,23 +149,23 @@ export const CS = {
     phone: 'Vyplňte, pokud preferujete zavolání.',
   },
   validation: {
-    [ContactFormInputs.Name]: {
+    [CONTACT_FORM_INPUTS.NAME]: {
       required: 'Musíte zadat jméno.',
       count: 'Vaše jméno je příliš dlouhé! Maximální délka je 100 znaků.',
     },
-    [ContactFormInputs.Company]: {
+    [CONTACT_FORM_INPUTS.COMPANY]: {
       count: 'Název firmy je příliš dlouhý! Maximální délka je 100 znaků.',
     },
-    [ContactFormInputs.Email]: {
+    [CONTACT_FORM_INPUTS.EMAIL]: {
       required: 'Musíte zadat platný e-mail.',
       format: 'Musíte zadat platný e-mail.',
       count: 'Váš e-mail je příliš dlouhý! Maximální délka je 100 znaků.',
     },
-    [ContactFormInputs.Message]: {
+    [CONTACT_FORM_INPUTS.MESSAGE]: {
       required: 'Musíte zadat zprávu.',
       count: 'Vaše zpráva je příliš dlouhá! Maximální délka je 1000 znaků.',
     },
-    [ContactFormInputs.Phone]: {
+    [CONTACT_FORM_INPUTS.PHONE]: {
       format: 'Musíte zadat platné telefonní číslo.',
       count: 'Vaše telefonní číslo je příliš dlouhé! Maximální délka je 20 znaků.',
     },

@@ -1,36 +1,37 @@
-import { SkillDegree, Skills } from '~/enums/skills.enum';
-import { STRINGS } from '~/constants/translations.constants';
+import { SKILL_DEGREE, SKILLS } from '~/enums/skills.enum';
+
+const { t } = useTranslations();
 
 export const SKILLS_DEGREE = {
-  [Skills.CSS]: SkillDegree.Daily,
-  [Skills.Cypress]: SkillDegree.FewTime,
-  [Skills.ElasticSearch]: SkillDegree.Often,
-  [Skills.Git]: SkillDegree.Daily,
-  [Skills.GraphQL]: SkillDegree.Daily,
-  [Skills.HTML]: SkillDegree.Daily,
-  [Skills.JQuery]: SkillDegree.FewTime,
-  [Skills.Javascript]: SkillDegree.Daily,
-  [Skills.Jest]: SkillDegree.Often,
-  [Skills.Knex]: SkillDegree.Often,
-  [Skills.Mocha]: SkillDegree.Often,
-  [Skills.MySQL]: SkillDegree.FewTime,
-  [Skills.NetlifyFunctions]: SkillDegree.Often,
-  [Skills.NodeJs]: SkillDegree.Often,
-  [Skills.Nuxt]: SkillDegree.FewTime,
-  [Skills.Playwright]: SkillDegree.Often,
-  [Skills.React]: SkillDegree.FewTime,
-  [Skills.RestApi]: SkillDegree.Daily,
-  [Skills.Sass]: SkillDegree.Daily,
-  [Skills.Tailwind]: SkillDegree.Daily,
-  [Skills.TypeScript]: SkillDegree.Daily,
-  [Skills.Vitest]: SkillDegree.Daily,
-  [Skills.Vue]: SkillDegree.Daily,
+  [SKILLS.CSS]: SKILL_DEGREE.DAILY,
+  [SKILLS.CYPRESS]: SKILL_DEGREE.FEW_TIME,
+  [SKILLS.ELASTIC_SEARCH]: SKILL_DEGREE.OFTEN,
+  [SKILLS.GIT]: SKILL_DEGREE.DAILY,
+  [SKILLS.GRAPHQL]: SKILL_DEGREE.DAILY,
+  [SKILLS.HTML]: SKILL_DEGREE.DAILY,
+  [SKILLS.JQUERY]: SKILL_DEGREE.FEW_TIME,
+  [SKILLS.JAVASCRIPT]: SKILL_DEGREE.DAILY,
+  [SKILLS.JEST]: SKILL_DEGREE.OFTEN,
+  [SKILLS.KNEX]: SKILL_DEGREE.OFTEN,
+  [SKILLS.MOCHA]: SKILL_DEGREE.OFTEN,
+  [SKILLS.MYSQL]: SKILL_DEGREE.FEW_TIME,
+  [SKILLS.NETLIFY_FUNCTIONS]: SKILL_DEGREE.OFTEN,
+  [SKILLS.NODE_JS]: SKILL_DEGREE.OFTEN,
+  [SKILLS.NUXT]: SKILL_DEGREE.FEW_TIME,
+  [SKILLS.PLAYWRIGHT]: SKILL_DEGREE.OFTEN,
+  [SKILLS.REACT]: SKILL_DEGREE.FEW_TIME,
+  [SKILLS.REST_API]: SKILL_DEGREE.DAILY,
+  [SKILLS.SASS]: SKILL_DEGREE.DAILY,
+  [SKILLS.TAILWIND]: SKILL_DEGREE.DAILY,
+  [SKILLS.TYPESCRIPT]: SKILL_DEGREE.DAILY,
+  [SKILLS.VITEST]: SKILL_DEGREE.DAILY,
+  [SKILLS.VUE]: SKILL_DEGREE.DAILY,
 };
 
 export const HEADER_LABELS = [
-  STRINGS.skillsDegree.fewTimes, STRINGS.skillsDegree.often, STRINGS.skillsDegree.daily,
+  t('skillsDegree.fewTimes'), t('skillsDegree.often'), t('skillsDegree.daily'),
 ];
 
 export const SORTING = [
-  STRINGS.sorting.alphabetically, STRINGS.skillsDegree.fewTimes, STRINGS.skillsDegree.often, STRINGS.skillsDegree.daily,
+  t('sorting.alphabetically'), t('skillsDegree.fewTimes'), t('skillsDegree.often'), t('skillsDegree.daily'),
 ];

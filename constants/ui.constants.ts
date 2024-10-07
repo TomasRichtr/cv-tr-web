@@ -1,67 +1,67 @@
-import { RoutesEnums } from '~/enums/routes.enums';
-import { STRINGS } from '~/constants/translations.constants';
-import { Variants, Colors } from '~/enums/vuetify.enums';
+import type { RoutesEnums } from '~/enums/routes.enums';
+import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import type { FooterBtn } from '~/types/ui.types';
+import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
 
 export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
-  [RoutesEnums.Index]: [
+  [ROUTES_ENUMS.INDEX]: [
     {},
     {
-      label: STRINGS.btnLabels.introduction,
-      color: Colors.Info,
-      to: RoutesEnums.Introduction,
-      variant: Variants.Elevated,
+      label: 'btnLabels.introduction',
+      color: COLORS.INFO,
+      to: ROUTES_ENUMS.INTRODUCTION,
+      variant: VARIANTS.ELEVATED,
     },
   ],
-  [RoutesEnums.Introduction]: [
+  [ROUTES_ENUMS.INTRODUCTION]: [
     {
-      label: STRINGS.btnLabels.introduction,
-      color: Colors.Info,
-      to: RoutesEnums.Experience,
-      variant: Variants.Elevated,
+      label: 'btnLabels.introduction',
+      color: COLORS.INFO,
+      to: ROUTES_ENUMS.EXPERIENCE,
+      variant: VARIANTS.ELEVATED,
     },
     {
-      label: STRINGS.btnLabels.home,
-      to: RoutesEnums.Index,
-      color: Colors.Background,
-      variant: Variants.Outlined,
-    },
-  ],
-  [RoutesEnums.Experience]: [
-    {
-      label: STRINGS.btnLabels.skills,
-      color: Colors.Info,
-      to: RoutesEnums.Skills,
-      variant: Variants.Elevated,
-    },
-    {
-      label: STRINGS.btnLabels.introduction,
-      to: RoutesEnums.Introduction,
-      variant: Variants.Outlined,
-      color: Colors.Background,
+      label: 'btnLabels.home',
+      to: ROUTES_ENUMS.INDEX,
+      color: COLORS.BACKGROUND,
+      variant: VARIANTS.OUTLINED,
     },
   ],
-  [RoutesEnums.Skills]: [
+  [ROUTES_ENUMS.EXPERIENCE]: [
     {
-      label: STRINGS.btnLabels.contacts,
-      color: Colors.Info,
-      to: RoutesEnums.Contacts,
-      variant: Variants.Elevated,
+      label: 'btnLabels.skills',
+      color: COLORS.INFO,
+      to: ROUTES_ENUMS.SKILLS,
+      variant: VARIANTS.ELEVATED,
     },
     {
-      label: STRINGS.btnLabels.experience,
-      to: RoutesEnums.Experience,
-      variant: Variants.Outlined,
-      color: Colors.Background,
+      label: 'btnLabels.introduction',
+      to: ROUTES_ENUMS.INTRODUCTION,
+      variant: VARIANTS.OUTLINED,
+      color: COLORS.BACKGROUND,
     },
   ],
-  [RoutesEnums.Contacts]: [
+  [ROUTES_ENUMS.SKILLS]: [
+    {
+      label: 'btnLabels.contacts',
+      color: COLORS.INFO,
+      to: ROUTES_ENUMS.CONTACTS,
+      variant: VARIANTS.ELEVATED,
+    },
+    {
+      label: 'btnLabels.experience',
+      to: ROUTES_ENUMS.EXPERIENCE,
+      variant: VARIANTS.OUTLINED,
+      color: COLORS.BACKGROUND,
+    },
+  ],
+  [ROUTES_ENUMS.CONTACTS]: [
     {},
     {
-      label: STRINGS.btnLabels.skills,
-      to: RoutesEnums.Skills,
-      variant: Variants.Outlined,
-      color: Colors.Background,
+      label: 'btnLabels.skills',
+      to: ROUTES_ENUMS.SKILLS,
+      variant: VARIANTS.OUTLINED,
+      color: COLORS.BACKGROUND,
     },
   ],
 };

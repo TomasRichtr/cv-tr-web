@@ -1,8 +1,7 @@
 import { useUiStore } from '~/store/ui.store';
-import type { ApiEndpoints } from '~/enums/api.enums';
-import { ApiMethods } from '~/enums/api.enums';
+import type { ApiEndpoints, ApiMethods } from '~/enums/api.enums';
+import { API_METHODS } from '~/enums/api.enums';
 import type { NuxtError } from '#app';
-import { STRINGS } from '~/constants/translations.constants';
 import { useShowNotification } from '~/composables/notification_alert.composables';
 
 export const useEndpoints = () => {
@@ -10,10 +9,12 @@ export const useEndpoints = () => {
 
   const { showFailure } = useShowNotification();
 
+  const { t } = useTranslations();
+
   const apiMutate = async <TBody, TResponse>(
     body: TBody,
     endPoint: ApiEndpoints,
-    method: ApiMethods = ApiMethods.Post,
+    method: ApiMethods = API_METHODS.POST,
   ): Promise<{ data?: TResponse; success: boolean }> => {
     const success = true;
     try {
@@ -28,7 +29,7 @@ export const useEndpoints = () => {
     catch (err) {
       const error = err as NuxtError;
       showFailure({
-        title: error.statusCode ? String(error.statusCode) : STRINGS.notification.failure,
+        title: error.statusCode ? String(error.statusCode) : t('notification.failure'),
         text: error.statusMessage,
       });
       return { success: false };

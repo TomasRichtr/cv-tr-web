@@ -1,9 +1,8 @@
-import { STRINGS } from '~/constants/translations.constants';
-import { RoutesEnums } from '~/enums/routes.enums';
+import { ROUTES_ENUMS } from '~/enums/routes.enums';
 
 export const NAVIGATION_OPTS = [
-  { text: STRINGS.btnLabels.home, icon: 'mdi-home', to: RoutesEnums.Index },
-  { text: STRINGS.btnLabels.introduction, icon: 'mdi-presentation', to: RoutesEnums.Introduction },
-  { text: STRINGS.btnLabels.experience, icon: 'mdi-briefcase', to: RoutesEnums.Experience },
-  { text: STRINGS.btnLabels.contacts, icon: 'mdi-account-box', to: RoutesEnums.Contacts },
+  { text: 'btnLabels.home', icon: 'mdi-home', to: ROUTES_ENUMS.INDEX },
+  { text: 'btnLabels.introduction', icon: 'mdi-presentation', to: ROUTES_ENUMS.INTRODUCTION },
+  { text: 'btnLabels.experience', icon: 'mdi-briefcase', to: ROUTES_ENUMS.EXPERIENCE },
+  { text: 'btnLabels.contacts', icon: 'mdi-account-box', to: ROUTES_ENUMS.CONTACTS },
 ];

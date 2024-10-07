@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Variants, Colors, Sizes } from '~/enums/vuetify.enums';
+import type { Variants, Colors } from '~/enums/vuetify.enums';
+import { SIZES, COLORS, VARIANTS } from '~/enums/vuetify.enums';
 import type { RoutesEnums } from '~/enums/routes.enums';
 
 interface Props {
@@ -11,8 +12,8 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  variant: Variants.Outlined,
-  color: Colors.Background,
+  variant: VARIANTS.OUTLINED,
+  color: COLORS.BACKGROUND,
   to: undefined,
   href: undefined,
 });
@@ -20,9 +21,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 <template>
   <VBtn
-    :size="Sizes.Small"
+    :size="SIZES.SMALL"
     :icon="props.icon"
-    :variant="Variants.Outlined"
+    :variant="VARIANTS.OUTLINED"
     :color="props.color"
     class="icon-btn"
     :to="props.to && { name: props.to }"
@@ -31,7 +32,7 @@ const props = withDefaults(defineProps<Props>(), {
   >
     <VIcon
       :icon="props.icon"
-      :size="Sizes.XLarge"
+      :size="SIZES.X_LARGE"
     />
   </VBtn>
 </template>

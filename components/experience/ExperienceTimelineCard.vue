@@ -5,12 +5,13 @@ import dateUtils from '~/utils/date.utils';
 import stringUtils from '~/utils/string.utils';
 import type { Experience } from '~/types/data.types';
 import { Colors, Sizes } from '~/enums/vuetify.enums';
-import { STRINGS } from '~/constants/translations.constants';
-import { RoutesEnums } from '~/enums/routes.enums';
+import { ROUTES_ENUMS } from '~/enums/routes.enums';
 
 const props = defineProps<Experience>();
 
 const { isSmallScreen } = useBreakpoints();
+
+const { t } = useTranslations();
 </script>
 
 <template>
@@ -34,8 +35,8 @@ const { isSmallScreen } = useBreakpoints();
     </VCardText>
 
     <VCardText class="pt-0 pb-1 relative">
-      {{ capitalize(STRINGS.size) }}: <span class="absolute bottom-px">~</span>
-      <span class="ml-2">{{ `${props.size} ${STRINGS.employees}` }}</span>
+      {{ capitalize(t('size')) }}: <span class="absolute bottom-px">~</span>
+      <span class="ml-2">{{ `${props.size} ${t('employees')}` }}</span>
     </VCardText>
 
     <VCardText class="pt-0">
@@ -56,7 +57,7 @@ const { isSmallScreen } = useBreakpoints();
     <VCardText class="pt-0">
       <NuxtLink
         class="flex flex-wrap gap-x-2 gap-y-1 cursor-pointer"
-        :to="{ name: RoutesEnums.Skills, query: { skills: props.skills } }"
+        :to="{ name: ROUTES_ENUMS.SKILLS, query: { skills: props.skills } }"
       >
         <SkillTag
           v-for="skill in props.skills"

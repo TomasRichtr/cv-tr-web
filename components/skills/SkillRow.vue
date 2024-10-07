@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Colors, Density } from '~/enums/vuetify.enums';
+import { Colors } from '~/enums/vuetify.enums';
 import type { Skills } from '~/enums/skills.enum';
-import { SkillDegree } from '~/enums/skills.enum';
+import { SKILL_DEGREE } from '~/enums/skills.enum';
 import SkillTag from '~/components/shared/SkillTag.vue';
 import { SKILLS_DEGREE } from '~/constants/skills.constants';
 
@@ -17,9 +17,9 @@ const props = withDefaults(defineProps<Props>(), {
 
 const iconColor = computed(() => {
   return {
-    [SkillDegree.FewTime]: Colors.Info,
-    [SkillDegree.Often]: Colors.Secondary,
-    [SkillDegree.Daily]: Colors.Success,
+    [SKILL_DEGREE.FEW_TIME]: COLORS.INFO,
+    [SKILL_DEGREE.OFTEN]: Colors.Secondary,
+    [SKILL_DEGREE.DAILY]: Colors.Success,
   }[SKILLS_DEGREE[props.skill]];
 });
 </script>
@@ -27,7 +27,7 @@ const iconColor = computed(() => {
 <template>
   <li class="flex items-center justify-between">
     <SkillTag
-      :color="Colors.Primary"
+      :color="COLORS.PRIMARY"
       :skill="props.skill"
       :external-link="`https://www.google.com/search?q=${props.skill}`"
     />

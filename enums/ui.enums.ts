@@ -1,12 +1,15 @@
-export enum Breakpoints {
-  Small = '640px',
-  Medium = '768px',
-  Large = '1024px',
-  XL = '1280px',
-  TwoXL = '1546px',
-}
+// Convert to constants
+export const BREAKPOINTS = {
+  SMALL: '640px',
+  MEDIUM: '768px',
+  LARGE: '1024px',
+  XL: '1280px',
+  TWO_XL: '1546px',
+} as const;
 
-export enum Languages {
-  English = 'en',
-  Czech = 'cs',
-}
+export const LANGUAGES = {
+  ENGLISH: 'en',
+  CZECH: 'cs',
+} as const;
+
+export type Languages = typeof LANGUAGES[keyof typeof LANGUAGES];

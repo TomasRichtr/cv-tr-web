@@ -2,7 +2,7 @@
 import type { NuxtError } from '#app';
 import { Colors } from '~/enums/vuetify.enums';
 import type { Quote } from '~/types/data.types';
-import { RoutesEnums } from '~/enums/routes.enums';
+import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import IconBtn from '~/components/shared/IconBtn.vue';
 
 interface Props {
@@ -31,7 +31,7 @@ onBeforeRouteLeave(() => {
     v-if="!isLoading"
     :headline="String(props.error?.statusCode)"
     :title="decodeURIComponent(props.error?.message) "
-    :bg-color="Colors.Background"
+    :bg-color="COLORS.BACKGROUND"
     height="100%"
   >
     <template #text>
@@ -39,9 +39,9 @@ onBeforeRouteLeave(() => {
     </template>
     <template #actions>
       <IconBtn
-        :color="Colors.Primary"
+        :color="COLORS.PRIMARY"
         icon="mdi-home"
-        :to="RoutesEnums.Index"
+        :to="ROUTES_ENUMS.INDEX"
       />
     </template>
   </VEmptyState>

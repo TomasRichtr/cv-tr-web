@@ -1,13 +1,14 @@
 import { getCurrentInstance } from 'vue';
 import type { createVuetify } from 'vuetify';
-import { STRINGS } from '~/constants/translations.constants';
 
 const vuetifyInstance = ref<ReturnType<typeof createVuetify>>();
 
 export const useVuetify = () => {
+  const { t } = useTranslations();
+
   const getVuetifyInstance = () => {
     const appInstance = getCurrentInstance();
-    if (!appInstance) throw Error (STRINGS.errors.missingInstance);
+    if (!appInstance) throw Error (t('errors.missingInstance'));
     return appInstance.appContext.config.globalProperties.$vuetify;
   };
 
