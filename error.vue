@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app';
-import { Colors } from '~/enums/vuetify.enums';
 import type { Quote } from '~/types/data.types';
 import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import IconBtn from '~/components/shared/IconBtn.vue';
+import { COLORS } from '~/enums/vuetify.enums';
 
 interface Props {
   error: NuxtError;

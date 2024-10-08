@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import ExperienceTimelineCard from '~/components/experience/ExperienceTimelineCard.vue';
 import { EXPERIENCES } from '~/constants/experiences.constants';
-import { Sizes } from '~/enums/vuetify.enums';
+import { DENSITY, SIZES } from '~/enums/vuetify.enums';
 </script>
 
 <template>
   <VTimeline
     side="end"
-    :size="Sizes.Small"
+    :size="SIZES.SMALL"
     :align="'start'"
     justify="left"
   >
@@ -15,7 +15,7 @@ import { Sizes } from '~/enums/vuetify.enums';
       v-for="item in EXPERIENCES"
       :key="item.position"
       :dot-color="item.color"
-      density="compact"
+      :density="DENSITY.COMPACT"
     >
       <ExperienceTimelineCard v-bind="item" />
     </VTimelineItem>

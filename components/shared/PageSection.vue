@@ -10,7 +10,9 @@ const props = defineProps<Props>();
 
 <template>
   <div class="flex flex-col px-4 py-5 border-2 border-secondary relative">
-    <span class="absolute -top-3 left-2 bg-background px-1 text-secondary font-semibold">{{ capitalize(props.title) }}</span>
+    <span class="absolute -top-3 left-2 bg-background px-1 text-secondary font-semibold">
+      {{ capitalize(props.title) }}
+    </span>
     <slot />
   </div>
 </template>

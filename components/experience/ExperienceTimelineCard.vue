@@ -4,8 +4,8 @@ import SkillTag from '~/components/shared/SkillTag.vue';
 import dateUtils from '~/utils/date.utils';
 import stringUtils from '~/utils/string.utils';
 import type { Experience } from '~/types/data.types';
-import { Colors, Sizes } from '~/enums/vuetify.enums';
 import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import { COLORS, SIZES } from '~/enums/vuetify.enums';
 
 const props = defineProps<Experience>();
 
@@ -48,8 +48,8 @@ const { t } = useTranslations();
         {{ props.link }}
         <VIcon
           icon="mdi-open-in-new"
-          :color="Colors.Easy"
-          :size="Sizes.Small"
+          :color="COLORS.EASY"
+          :size="SIZES.SMALL"
         />
       </a>
     </VCardText>

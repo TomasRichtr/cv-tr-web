@@ -22,7 +22,3 @@ const { t } = useTranslations();
     </span>
   </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>

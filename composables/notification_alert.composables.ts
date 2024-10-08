@@ -1,7 +1,7 @@
 import { createApp } from 'vue';
 import AlertComponent from '~/components/shared/NotificationAlert.vue';
 import type { NotificationAlertProps } from '~/types/notification_alert.types';
-import { AlertTypes } from '~/enums/vuetify.enums';
+import { ALERT_TYPES } from '~/enums/vuetify.enums';
 import { useVuetify } from '~/composables/vuetify.composables';
 
 export const useShowNotification = () => {
@@ -19,11 +19,11 @@ export const useShowNotification = () => {
   };
 
   const showSuccess = ({ title, text }: Omit<NotificationAlertProps, 'type'>) => {
-    createNotificationAlert({ type: AlertTypes.Success, title, text });
+    createNotificationAlert({ type: ALERT_TYPES.SUCCESS, title, text });
   };
 
   const showFailure = ({ title, text }: Omit<NotificationAlertProps, 'type'>) => {
-    createNotificationAlert({ type: AlertTypes.Error, title, text });
+    createNotificationAlert({ type: ALERT_TYPES.ERROR, title, text });
   };
 
   return {

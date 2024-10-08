@@ -1,12 +1,12 @@
 import dayjs from 'dayjs';
 import type { Experience } from '~/types/data.types';
-import { Colors } from '~/enums/vuetify.enums';
+import { COLORS } from '~/enums/vuetify.enums';
 import { SKILLS } from '~/enums/skills.enum';
 
 export const EXPERIENCES: Experience[] = [
   {
     position: 'Front-end developer',
-    color: Colors.Easy,
+    color: COLORS.EASY,
     place: 'Easy Software / Prague',
     description: `Development of Easy Project, a comprehensive project management tool. Their solutions help 
     organizations manage tasks, resources, and time tracking, enhancing productivity and efficiency.`,
@@ -31,7 +31,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     position: 'Full-stack developer',
-    color: Colors.Amio,
+    color: COLORS.AMIO,
     place: 'Amio / Prague',
     description: `Development of messaging platform that integrates multiple communication channels into a single 
     interface. Their solution enables businesses to manage customer interactions across platforms like WhatsApp, 
@@ -58,7 +58,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     position: 'Full-stack developer',
-    color: Colors.Equiradar,
+    color: COLORS.EQUIRADAR,
     place: 'Equiradar / Prague',
     description: `Developing software solutions for the equine industry. Their platform provides tools for managing 
     horse health, training, and performance data, helping equine professionals optimize care and training processes.`,
@@ -81,7 +81,7 @@ export const EXPERIENCES: Experience[] = [
   },
   {
     position: 'Front-end developer',
-    color: Colors.Easy,
+    color: COLORS.EASY,
     place: 'Easy Software / Prague',
     description: `Development of Easy Project, a comprehensive project management tool. Their solutions help 
     organizations manage tasks, resources, and time tracking, enhancing productivity and efficiency.`,

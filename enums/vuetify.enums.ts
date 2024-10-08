@@ -50,6 +50,4 @@ export type Variants = typeof VARIANTS[keyof typeof VARIANTS];
 
 export type Colors = typeof COLORS[keyof typeof COLORS];
 
-export type Sizes = typeof SIZES[keyof typeof SIZES];
-
 export type AlertTypes = typeof ALERT_TYPES[keyof typeof ALERT_TYPES];

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Colors } from '~/enums/vuetify.enums';
+import { COLORS } from '~/enums/vuetify.enums';
 import type { Skills } from '~/enums/skills.enum';
 import { SKILL_DEGREE } from '~/enums/skills.enum';
 import SkillTag from '~/components/shared/SkillTag.vue';
@@ -18,8 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
 const iconColor = computed(() => {
   return {
     [SKILL_DEGREE.FEW_TIME]: COLORS.INFO,
-    [SKILL_DEGREE.OFTEN]: Colors.Secondary,
-    [SKILL_DEGREE.DAILY]: Colors.Success,
+    [SKILL_DEGREE.OFTEN]: COLORS.SECONDARY,
+    [SKILL_DEGREE.DAILY]: COLORS.SUCCESS,
   }[SKILLS_DEGREE[props.skill]];
 });
 </script>
@@ -55,7 +55,3 @@ const iconColor = computed(() => {
     </VRating>
   </li>
 </template>
-
-<style scoped lang="scss">
-
-</style>
