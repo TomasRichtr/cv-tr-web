@@ -30,7 +30,7 @@ onBeforeRouteLeave(() => {
   <VEmptyState
     v-if="!isLoading"
     :headline="String(props.error?.statusCode)"
-    :title="decodeURIComponent(props.error?.message) "
+    :title="decodeURIComponent(props.error?.message)"
     :bg-color="COLORS.BACKGROUND"
     height="100%"
   >
