@@ -1,14 +1,14 @@
-export const API_ENDPOINTS = {
+export const API_ENDPOINTS = Object.freeze({
   MESSAGES: '/messages',
-} as const;
+}) as const;
 
-export const API_METHODS = {
+export const API_METHODS = Object.freeze({
   POST: 'post',
   GET: 'get',
   DELETE: 'delete',
   PATCH: 'patch',
   PUT: 'put',
-} as const;
+}) as const;
 
 export type ApiEndpoints = typeof API_ENDPOINTS[keyof typeof API_ENDPOINTS];
 

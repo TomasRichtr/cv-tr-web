@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
 import SkillTag from '~/components/shared/SkillTag.vue';
-import dateUtils from '~/utils/date.utils';
-import stringUtils from '~/utils/string.utils';
 import type { Experience } from '~/types/data.types';
 import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import { COLORS, SIZES } from '~/enums/vuetify.enums';
+import { useDatetime } from '~/composables/date.composables';
+import { useString } from '~/composables/string.composables';
 
 const props = defineProps<Experience>();
 
 const { isSmallScreen } = useBreakpoints();
 
 const { t } = useTranslations();
+
+const { resolveDateString } = useDatetime();
+
+const { resolvePeriodLength } = useString();
 </script>
 
 <template>
@@ -19,10 +23,10 @@ const { t } = useTranslations();
     <VCardTitle :class="[`bg-${props.color}`]">
       {{ props.position }}
       <div class="text-sm">
-        {{ dateUtils.resolveDateString(props.startDate) }}
+        {{ resolveDateString(props.startDate) }}
         <span>-</span>
-        {{ dateUtils.resolveDateString(props.endDate) }}
-        ({{ stringUtils.resolvePeriodLength({ startDate: props.startDate, endDate: props.endDate }) }})
+        {{ resolveDateString(props.endDate) }}
+        ({{ resolvePeriodLength({ startDate: props.startDate, endDate: props.endDate }) }})
       </div>
     </VCardTitle>
 
