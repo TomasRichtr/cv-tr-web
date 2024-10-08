@@ -16,7 +16,7 @@ const { t } = useTranslations();
         :key="label"
         class="w-[56px] md:w-[72px] cursor-pointer"
       >
-        {{ capitalize(label) }}
+        {{ capitalize(t(label)) }}
       </span>
 
     </span>

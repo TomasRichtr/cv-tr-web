@@ -3,7 +3,7 @@ import type { Experience } from '~/types/data.types';
 import { COLORS } from '~/enums/vuetify.enums';
 import { SKILLS } from '~/enums/skills.enum';
 
-export const EXPERIENCES: Experience[] = [
+export const EXPERIENCES: Experience[] = Object.freeze([
   {
     position: 'Front-end developer',
     color: COLORS.EASY,
@@ -105,4 +105,4 @@ export const EXPERIENCES: Experience[] = [
       SKILLS.VITEST,
     ],
   },
-];
+]);

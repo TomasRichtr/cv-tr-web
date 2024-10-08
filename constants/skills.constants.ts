@@ -1,8 +1,6 @@
 import { SKILL_DEGREE, SKILLS } from '~/enums/skills.enum';
 
-const { t } = useTranslations();
-
-export const SKILLS_DEGREE = {
+export const SKILLS_DEGREE = Object.freeze({
   [SKILLS.CSS]: SKILL_DEGREE.DAILY,
   [SKILLS.CYPRESS]: SKILL_DEGREE.FEW_TIME,
   [SKILLS.ELASTIC_SEARCH]: SKILL_DEGREE.OFTEN,
@@ -26,12 +24,12 @@ export const SKILLS_DEGREE = {
   [SKILLS.TYPESCRIPT]: SKILL_DEGREE.DAILY,
   [SKILLS.VITEST]: SKILL_DEGREE.DAILY,
   [SKILLS.VUE]: SKILL_DEGREE.DAILY,
-};
+});
 
-export const HEADER_LABELS = [
-  t('skillsDegree.fewTimes'), t('skillsDegree.often'), t('skillsDegree.daily'),
-];
+export const HEADER_LABELS = Object.freeze([
+  'skillsDegree.fewTimes', 'skillsDegree.often', 'skillsDegree.daily',
+]);
 
-export const SORTING = [
-  t('sorting.alphabetically'), t('skillsDegree.fewTimes'), t('skillsDegree.often'), t('skillsDegree.daily'),
-];
+export const SORTING_LABELS = Object.freeze([
+  'sorting.alphabetically', 'skillsDegree.fewTimes', 'skillsDegree.often', 'skillsDegree.daily',
+]);

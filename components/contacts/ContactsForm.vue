@@ -2,10 +2,10 @@
 import { capitalize } from 'vue';
 import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
-import { CONTACT_FORM_FIELDS } from '~/constants/contact_form.constants';
 import { useMessageApi } from '~/composables/messages.composables';
 import { useUiStore } from '~/store/ui.store';
 import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { useContactForm } from '~/composables/contact_form.composables';
 
 const {
   contactFormRef,
@@ -17,6 +17,8 @@ const {
 const { loading } = storeToRefs(useUiStore());
 
 const { t } = useTranslations();
+
+const { contactForm } = useContactForm();
 </script>
 
 <template>
@@ -30,7 +32,7 @@ const { t } = useTranslations();
     >
       <component
         :is="input.component"
-        v-for="input in CONTACT_FORM_FIELDS"
+        v-for="input in contactForm"
         :key="input.name"
         v-model="form[input.name]"
         :label="input.label"

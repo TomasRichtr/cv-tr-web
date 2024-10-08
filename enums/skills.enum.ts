@@ -1,5 +1,5 @@
 // Convert to constants
-export const SKILLS = {
+export const SKILLS = Object.freeze({
   CSS: 'CSS',
   CYPRESS: 'cypress',
   ELASTIC_SEARCH: 'Elastic search',
@@ -23,20 +23,20 @@ export const SKILLS = {
   TYPESCRIPT: 'typescript',
   VITEST: 'vitest',
   VUE: 'vue',
-} as const;
+}) as const;
 
-export const SKILL_DEGREE = {
+export const SKILL_DEGREE = Object.freeze({
   FEW_TIME: 1,
   OFTEN: 2,
   DAILY: 3,
-} as const;
+}) as const;
 
-export const SORTS = {
+export const SORTS = Object.freeze({
   ALPHABETICALLY: 0,
   FEW_TIME: 1,
   OFTEN: 2,
   DAILY: 3,
-} as const;
+}) as const;
 
 export type Skills = typeof SKILLS[keyof typeof SKILLS];
 

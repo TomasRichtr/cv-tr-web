@@ -1,7 +1,7 @@
 <script setup lang="ts">
-
+const { t } = useTranslations();
 </script>
 
 <template>
-  <div>bla bla</div>
+  <div>{{ t("introduction") }}</div>
 </template>

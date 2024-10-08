@@ -3,7 +3,7 @@ import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import type { FooterBtn } from '~/types/ui.types';
 import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
 
-export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
+export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = Object.freeze({
   [ROUTES_ENUMS.INDEX]: [
     {},
     {
@@ -15,7 +15,7 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
   ],
   [ROUTES_ENUMS.INTRODUCTION]: [
     {
-      label: 'btnLabels.introduction',
+      label: 'btnLabels.experience',
       color: COLORS.INFO,
       to: ROUTES_ENUMS.EXPERIENCE,
       variant: VARIANTS.ELEVATED,
@@ -64,4 +64,4 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = {
       color: COLORS.BACKGROUND,
     },
   ],
-};
+});

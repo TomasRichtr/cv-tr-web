@@ -1,17 +1,17 @@
-export const VARIANTS = {
+export const VARIANTS = Object.freeze({
   ELEVATED: 'elevated',
   OUTLINED: 'outlined',
   FLAT: 'flat',
   TEXT: 'text',
   TONAL: 'tonal',
   PLAIN: 'plain',
-} as const;
+}) as const;
 
-export const DENSITY = {
+export const DENSITY = Object.freeze({
   COMPACT: 'compact',
-} as const;
+}) as const;
 
-export const COLORS = {
+export const COLORS = Object.freeze({
   INFO: 'info',
   WARNING: 'warning',
   SECONDARY: 'secondary',
@@ -22,29 +22,29 @@ export const COLORS = {
   EASY: 'easy',
   AMIO: 'amio',
   EQUIRADAR: 'equiradar',
-} as const;
+}) as const;
 
-export const SIZES = {
+export const SIZES = Object.freeze({
   X_SMALL: 'x-small',
   SMALL: 'small',
   DEFAULT: 'default',
   LARGE: 'large',
   X_LARGE: 'x-large',
-} as const;
+}) as const;
 
-export const LOCATIONS = {
+export const LOCATIONS = Object.freeze({
   START: 'start',
   END: 'end',
   LEFT: 'left',
   RIGHT: 'right',
-} as const;
+}) as const;
 
-export const ALERT_TYPES = {
+export const ALERT_TYPES = Object.freeze({
   SUCCESS: 'success',
   INFO: 'info',
   WARNING: 'warning',
   ERROR: 'error',
-} as const;
+}) as const;
 
 export type Variants = typeof VARIANTS[keyof typeof VARIANTS];
 

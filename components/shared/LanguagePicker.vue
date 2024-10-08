@@ -11,14 +11,14 @@ const { language } = storeToRefs(useUiStore());
 <template>
   <VBtnGroup
     v-model="language"
-    :variant="VARIANTS.ELEVATED"
-    :color="COLORS.PRIMARY"
     mandatory
     class="w-full"
     rounded="xl"
   >
     <VBtn
       width="50%"
+      :color="language === LANGUAGES.ENGLISH ? COLORS.PRIMARY : null"
+      :variant="language === LANGUAGES.ENGLISH ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
       @click="language = LANGUAGES.ENGLISH"
     >
       <div class="flex items-end gap-1">
@@ -33,7 +33,8 @@ const { language } = storeToRefs(useUiStore());
 
     <VBtn
       width="50%"
-
+      :color="language === LANGUAGES.CZECH ? COLORS.PRIMARY : null"
+      :variant="language === LANGUAGES.CZECH ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
       @click="language = LANGUAGES.CZECH"
     >
       <div class="flex items-end gap-1">

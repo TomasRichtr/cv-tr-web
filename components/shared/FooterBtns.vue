@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { FOOTER_BTNS_MAP } from '~/constants/ui.constants';
+import { FOOTER_BTNS_MAP } from '~/constants/footer.constants';
 import { useUiStore } from '~/store/ui.store';
 import { COLORS } from '~/enums/vuetify.enums';
 import type { RoutesEnums } from '~/enums/routes.enums';

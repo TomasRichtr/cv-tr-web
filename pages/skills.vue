@@ -6,7 +6,8 @@ import SkillsHeader from '~/components/skills/SkillsHeader.vue';
 import SkillsList from '~/components/skills/SkillsList.vue';
 import SkillsPredefinedSelects from '~/components/skills/SkillsPredefinedSelects.vue';
 import { SKILLS_DEGREE } from '~/constants/skills.constants';
-import { type SkillDegree, Skills, Sorts } from '~/enums/skills.enum';
+import type { SkillDegree, Sorts, Skills } from '~/enums/skills.enum';
+import { SKILLS, SORTS } from '~/enums/skills.enum';
 import PageWrapper from '~/components/shared/PageWrapper.vue';
 import PageSection from '~/components/shared/PageSection.vue';
 
@@ -31,7 +32,7 @@ watch(() => selectedSkills.value.length, () => {
   router.replace({ query: { skills: selectedSkills.value, sort: selectedSort.value } });
 });
 
-const selectedSort = ref<Sorts>(Sorts.Alphabetically);
+const selectedSort = ref<Sorts>(SORTS.ALPHABETICALLY);
 
 watch(() => selectedSort.value, () => {
   storageSelectedSort.value = selectedSort.value;
@@ -39,9 +40,9 @@ watch(() => selectedSort.value, () => {
 });
 
 const filteredSkills = computed(() => {
-  if (isEmpty(selectedSkills.value)) return sortBySelectedSort(values(Skills));
+  if (isEmpty(selectedSkills.value)) return sortBySelectedSort(values(SKILLS));
 
-  const filtered = values(Skills).filter(skill => selectedSkills.value.includes(skill));
+  const filtered = values(SKILLS).filter(skill => selectedSkills.value.includes(skill));
   return sortBySelectedSort(filtered);
 });
 

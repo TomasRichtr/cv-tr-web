@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { getCurrentInstance } from 'vue';
 import type { NotificationAlertProps } from '~/types/notification_alert.types';
-import { AlertTypes } from '~/enums/vuetify.enums';
+import { ALERT_TYPES } from '~/enums/vuetify.enums';
 
 const props = withDefaults(defineProps<NotificationAlertProps>(), {
-  type: AlertTypes.Success,
+  type: ALERT_TYPES.SUCCESS,
 });
 
 const timeout = ref<number>(0);

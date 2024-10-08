@@ -1,9 +1,18 @@
 import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
 
-export const EN = {
+export const EN = Object.freeze({
   name: 'Tomas',
   surname: 'Richtr',
   description: 'self-taught web developer',
+  introduction: `
+  Hello, I'm Tomas Richtr, a passionate and versatile web developer with a solid track record in both 
+  front-end and back-end development. 
+  I specialize in Vue.js, React, and a variety of tools that power modern web applications, including GraphQL, MySQL, 
+  and testing frameworks like Jest and Cypress. 
+  My professional journey has given me the opportunity to work on diverse projects, from project management software 
+  to chatbot development, each time honing my expertise and pushing the boundaries of web development.
+  I am fluent in both Czech and English, enabling me to collaborate effectively in diverse teams. 
+  I thrive on solving complex challenges, learning new technologies, and creating solutions that make an impact.`,
   pageSections: {
     contactForm: 'leave the message',
     contacts: 'contacts',
@@ -89,12 +98,20 @@ export const EN = {
   errors: {
     missingInstance: 'Missing app instance!',
   },
-};
+});
 
-export const CS = {
+export const CS = Object.freeze({
   name: 'Tomas',
   surname: 'Richtr',
   description: 'samouk webový vývojář',
+  introduction: `Ahoj, jmenuji se Tomas Richtr, jsem nadšený a všestranný webový vývojář s bohatými zkušenostmi jak ve
+   front-end, tak back-end vývoji. Specializuji se na Vue.js, React a různé nástroje, které pohání moderní webové 
+   aplikace, včetně GraphQL, MySQL a testovacích frameworků, jako jsou Jest a Cypress. Moje profesní cesta mi umožnila
+    pracovat na rozmanitých projektech, od softwaru pro správu projektů až po vývoj chatbotů, přičemž jsem vždy 
+    zdokonaloval své dovednosti a posouval hranice webového vývoje.
+
+Mluvím plynně česky i anglicky, což mi umožňuje efektivně spolupracovat v různorodých týmech. Rád řeším složité výzvy, 
+učím se nové technologie a vytvářím řešení, která mají skutečný dopad.`,
   pageSections: {
     contactForm: 'zanechte zprávu',
     contacts: 'kontakty',
@@ -180,9 +197,9 @@ export const CS = {
   errors: {
     missingInstance: 'Chybí instance aplikace!',
   },
-};
+});
 
-export const STRINGS = {
+export const TRANSLATIONS = Object.freeze({
   en: EN,
   cs: CS,
-};
+});

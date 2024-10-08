@@ -19,6 +19,7 @@ onMounted(async () => {
   const { data } = await useFetch('/quotes');
   quote.value = data.value;
   isLoading.value = false;
+  console.error(props.error);
 });
 
 onBeforeRouteLeave(() => {
