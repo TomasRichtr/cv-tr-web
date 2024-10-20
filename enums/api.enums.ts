@@ -1,14 +1,16 @@
-export const API_ENDPOINTS = Object.freeze({
-  MESSAGES: '/messages',
-}) as const;
+import type { DeepReadonly } from 'vue';
 
-export const API_METHODS = Object.freeze({
+export const API_ENDPOINTS: DeepReadonly<Record<string, string>> = {
+  MESSAGES: '/messages',
+};
+
+export const API_METHODS: DeepReadonly<Record<string, string>> = {
   POST: 'post',
   GET: 'get',
   DELETE: 'delete',
   PATCH: 'patch',
   PUT: 'put',
-}) as const;
+};
 
 export type ApiEndpoints = typeof API_ENDPOINTS[keyof typeof API_ENDPOINTS];
 

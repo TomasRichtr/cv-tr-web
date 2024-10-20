@@ -1,9 +1,10 @@
+import type { DeepReadonly } from 'vue';
 import type { RoutesEnums } from '~/enums/routes.enums';
 import { ROUTES_ENUMS } from '~/enums/routes.enums';
 import type { FooterBtn } from '~/types/ui.types';
 import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
 
-export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = Object.freeze({
+export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   [ROUTES_ENUMS.INDEX]: [
     {},
     {
@@ -64,4 +65,4 @@ export const FOOTER_BTNS_MAP: Record<RoutesEnums, FooterBtn[]> = Object.freeze({
       color: COLORS.BACKGROUND,
     },
   ],
-});
+};

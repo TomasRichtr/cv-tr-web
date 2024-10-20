@@ -27,8 +27,7 @@ const { t } = useTranslations();
             :to="{ name: item.to }"
             :variant="VARIANTS.PLAIN"
             class="flex items-center w-full"
-            :disabled="route.name === item.to
-            "
+            :disabled="route.name === item.to"
           >
             {{ t(item.text) }}
             <template #prepend>

@@ -1,4 +1,4 @@
-import { QUOTES_URL } from '~/server/constants/quotes.contants';
+import { QUOTES_URL } from '~/constants/quotes.contants';
 import type { Quote } from '~/types/data.types';
 
 export const getQuote = async () => {

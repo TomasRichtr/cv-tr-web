@@ -1,17 +1,19 @@
-export const VARIANTS = Object.freeze({
+import type { DeepReadonly } from 'vue';
+
+export const VARIANTS: DeepReadonly<Record<string, string>> = {
   ELEVATED: 'elevated',
   OUTLINED: 'outlined',
   FLAT: 'flat',
   TEXT: 'text',
   TONAL: 'tonal',
   PLAIN: 'plain',
-}) as const;
+};
 
-export const DENSITY = Object.freeze({
+export const DENSITY: DeepReadonly<Record<string, string>> = {
   COMPACT: 'compact',
-}) as const;
+};
 
-export const COLORS = Object.freeze({
+export const COLORS: DeepReadonly<Record<string, string>> = {
   INFO: 'info',
   WARNING: 'warning',
   SECONDARY: 'secondary',
@@ -22,29 +24,29 @@ export const COLORS = Object.freeze({
   EASY: 'easy',
   AMIO: 'amio',
   EQUIRADAR: 'equiradar',
-}) as const;
+};
 
-export const SIZES = Object.freeze({
+export const SIZES: DeepReadonly<Record<string, string>> = {
   X_SMALL: 'x-small',
   SMALL: 'small',
   DEFAULT: 'default',
   LARGE: 'large',
   X_LARGE: 'x-large',
-}) as const;
+};
 
-export const LOCATIONS = Object.freeze({
+export const LOCATIONS: DeepReadonly<Record<string, string>> = {
   START: 'start',
   END: 'end',
   LEFT: 'left',
   RIGHT: 'right',
-}) as const;
+};
 
-export const ALERT_TYPES = Object.freeze({
+export const ALERT_TYPES: DeepReadonly<Record<string, string>> = {
   SUCCESS: 'success',
   INFO: 'info',
   WARNING: 'warning',
   ERROR: 'error',
-}) as const;
+};
 
 export type Variants = typeof VARIANTS[keyof typeof VARIANTS];
 

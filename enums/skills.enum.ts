@@ -1,5 +1,7 @@
 // Convert to constants
-export const SKILLS = Object.freeze({
+import type { DeepReadonly } from 'vue';
+
+export const SKILLS: DeepReadonly<Record<string, string>> = {
   CSS: 'CSS',
   CYPRESS: 'cypress',
   ELASTIC_SEARCH: 'Elastic search',
@@ -23,20 +25,20 @@ export const SKILLS = Object.freeze({
   TYPESCRIPT: 'typescript',
   VITEST: 'vitest',
   VUE: 'vue',
-}) as const;
+};
 
-export const SKILL_DEGREE = Object.freeze({
+export const SKILL_DEGREE: DeepReadonly<Record<string, number>> = {
   FEW_TIME: 1,
   OFTEN: 2,
   DAILY: 3,
-}) as const;
+};
 
-export const SORTS = Object.freeze({
+export const SORTS: DeepReadonly<Record<string, number>> = {
   ALPHABETICALLY: 0,
   FEW_TIME: 1,
   OFTEN: 2,
   DAILY: 3,
-}) as const;
+};
 
 export type Skills = typeof SKILLS[keyof typeof SKILLS];
 

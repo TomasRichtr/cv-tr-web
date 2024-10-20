@@ -1,16 +1,22 @@
+import type { DeepReadonly } from 'vue';
 import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
 
-export const EN = Object.freeze({
+export const EN: DeepReadonly<Record<string, unknown>> = {
   name: 'Tomas',
   surname: 'Richtr',
   description: 'self-taught web developer',
   introduction: `
-  Hello, I'm Tomas Richtr, a passionate and versatile web developer with a solid track record in both 
+  Hello,
+  <br/><br/> 
+  I'm Tomas Richtr, a passionate and versatile web developer with a solid track record in both 
   front-end and back-end development. 
-  I specialize in Vue.js, React, and a variety of tools that power modern web applications, including GraphQL, MySQL, 
+  <br/><br/> 
+  I specialize in Vue.js, and a variety of tools that power modern web applications, including GraphQL, MySQL, 
   and testing frameworks like Jest and Cypress. 
+  <br/><br/>
   My professional journey has given me the opportunity to work on diverse projects, from project management software 
-  to chatbot development, each time honing my expertise and pushing the boundaries of web development.
+  to chatbot development, each time honing my expertise and pushing my and product boundaries.
+  <br/><br/>
   I am fluent in both Czech and English, enabling me to collaborate effectively in diverse teams. 
   I thrive on solving complex challenges, learning new technologies, and creating solutions that make an impact.`,
   pageSections: {
@@ -28,6 +34,7 @@ export const EN = Object.freeze({
     skills: 'skills',
     contacts: 'contacts',
     submit: 'submit',
+    admin: 'admin',
   },
   period: {
     month: 'month',
@@ -98,20 +105,26 @@ export const EN = Object.freeze({
   errors: {
     missingInstance: 'Missing app instance!',
   },
-});
+};
 
-export const CS = Object.freeze({
+export const CS: DeepReadonly<Record<string, unknown>> = {
   name: 'Tomas',
   surname: 'Richtr',
   description: 'samouk webový vývojář',
-  introduction: `Ahoj, jmenuji se Tomas Richtr, jsem nadšený a všestranný webový vývojář s bohatými zkušenostmi jak ve
-   front-end, tak back-end vývoji. Specializuji se na Vue.js, React a různé nástroje, které pohání moderní webové 
-   aplikace, včetně GraphQL, MySQL a testovacích frameworků, jako jsou Jest a Cypress. Moje profesní cesta mi umožnila
-    pracovat na rozmanitých projektech, od softwaru pro správu projektů až po vývoj chatbotů, přičemž jsem vždy 
-    zdokonaloval své dovednosti a posouval hranice webového vývoje.
-
-Mluvím plynně česky i anglicky, což mi umožňuje efektivně spolupracovat v různorodých týmech. Rád řeším složité výzvy, 
-učím se nové technologie a vytvářím řešení, která mají skutečný dopad.`,
+  introduction:
+  `Ahoj,
+  <br/><br/>
+  Jmenuji se Tomáš Richtr a jsem vášnivý a všestranný webový vývojář s pevnou zkušeností jak ve front-endu, tak i v 
+  back-end vývoji.
+  <br/><br/>
+  Specializuji se na Vue.js a řadu nástrojů, které pohánějí moderní webové aplikace, včetně GraphQL, MySQL a 
+  testovacích frameworků jako jsou Jest a Cypress.
+  <br/><br/>
+  Má profesní cesta mi poskytla příležitost pracovat na různorodých projektech, od softwaru pro řízení projektů až po 
+  vývoj chatbotů, a tím jsem si neustále zdokonaloval své dovednosti a posouval hranice produktů.
+  <br/><br/>
+  Ovládám češtinu i angličtinu, což mi umožňuje efektivně spolupracovat v různorodých týmech. Daří se mi v řešení 
+  složitých výzev, učení se novým technologiím a vytváření řešení, která mají dopad.`,
   pageSections: {
     contactForm: 'zanechte zprávu',
     contacts: 'kontakty',
@@ -127,6 +140,7 @@ učím se nové technologie a vytvářím řešení, která mají skutečný dop
     skills: 'dovednosti',
     contacts: 'kontakty',
     submit: 'odeslat',
+    admin: 'admin',
   },
   period: {
     month: 'měsíc',
@@ -197,9 +211,9 @@ učím se nové technologie a vytvářím řešení, která mají skutečný dop
   errors: {
     missingInstance: 'Chybí instance aplikace!',
   },
-});
+};
 
-export const TRANSLATIONS = Object.freeze({
+export const TRANSLATIONS: DeepReadonly<Record<string, unknown>> = {
   en: EN,
   cs: CS,
-});
+};

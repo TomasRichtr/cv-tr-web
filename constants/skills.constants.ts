@@ -1,6 +1,7 @@
+import type { DeepReadonly } from 'vue';
 import { SKILL_DEGREE, SKILLS } from '~/enums/skills.enum';
 
-export const SKILLS_DEGREE = Object.freeze({
+export const SKILLS_DEGREE: DeepReadonly<Record<string, number>> = {
   [SKILLS.CSS]: SKILL_DEGREE.DAILY,
   [SKILLS.CYPRESS]: SKILL_DEGREE.FEW_TIME,
   [SKILLS.ELASTIC_SEARCH]: SKILL_DEGREE.OFTEN,
@@ -24,12 +25,12 @@ export const SKILLS_DEGREE = Object.freeze({
   [SKILLS.TYPESCRIPT]: SKILL_DEGREE.DAILY,
   [SKILLS.VITEST]: SKILL_DEGREE.DAILY,
   [SKILLS.VUE]: SKILL_DEGREE.DAILY,
-});
+};
 
-export const HEADER_LABELS = Object.freeze([
+export const HEADER_LABELS: DeepReadonly<string[]> = [
   'skillsDegree.fewTimes', 'skillsDegree.often', 'skillsDegree.daily',
-]);
+];
 
-export const SORTING_LABELS = Object.freeze([
+export const SORTING_LABELS: DeepReadonly<string[]> = [
   'sorting.alphabetically', 'skillsDegree.fewTimes', 'skillsDegree.often', 'skillsDegree.daily',
-]);
+];

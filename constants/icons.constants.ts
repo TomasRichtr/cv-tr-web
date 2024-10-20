@@ -1,6 +1,7 @@
+import type { DeepReadonly } from 'vue';
 import { SKILLS } from '~/enums/skills.enum';
 
-export const DEV_ICON_MAP = Object.freeze({
+export const DEV_ICON_MAP: DeepReadonly<Record<string, string>> = {
   [SKILLS.TAILWIND]: 'tailwindcss',
   [SKILLS.VUE]: 'vuejs',
   [SKILLS.HTML]: 'html5',
@@ -11,8 +12,8 @@ export const DEV_ICON_MAP = Object.freeze({
   [SKILLS.NETLIFY_FUNCTIONS]: 'netlify',
   [SKILLS.ELASTIC_SEARCH]: 'elasticsearch',
   [SKILLS.NUXT]: 'nuxtjs',
-});
+};
 
-export const MATERIAL_ICON_MAP = Object.freeze({
+export const MATERIAL_ICON_MAP: DeepReadonly<Record<string, string>> = {
   [SKILLS.REST_API]: 'api',
-});
+};
