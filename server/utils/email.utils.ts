@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer';
+import type { Message } from '~/types/message.types';
 
 const config = useRuntimeConfig();
 
@@ -27,4 +28,11 @@ export const sendEmail = async (from: string, subject: string, text: string) => 
     console.error('Error sending email: ', error);
     throw error;
   }
+};
+
+export const buildSubject = (id: number, message: Omit<Message, 'id'>) => {
+  let messageSubject = `from: ${message.email}, ${message.name}, id: ${id}`;
+  if (message.company) messageSubject = messageSubject + ` / ${message.company}`;
+  if (message.phone) messageSubject = messageSubject + ` / ${message.phone}`;
+  return messageSubject;
 };

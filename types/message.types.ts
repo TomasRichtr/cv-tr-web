@@ -1,10 +1,11 @@
 export interface Message {
   id: string;
-  name: string | null;
+  name: string;
   company: string | null;
-  email: string | null;
+  email: string;
   phone: string | null;
-  message: string | null;
+  message: string;
+  read: 0 | 1 | boolean | null;
 }
 
 export enum MessagesCols {
@@ -14,6 +15,7 @@ export enum MessagesCols {
   Email = 'email',
   Phone = 'phone',
   Message = 'message',
+  Read = 'read',
 }
 
 export type NewMessage = Omit<Message, 'id'>;

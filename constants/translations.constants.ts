@@ -105,6 +105,14 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
   errors: {
     missingInstance: 'Missing app instance!',
   },
+  tooltip: {
+    read: 'Change to read',
+    unread: 'Change to unread',
+  },
+  action: 'actions',
+  modal: {
+    title: 'from',
+  },
 };
 
 export const CS: DeepReadonly<Record<string, unknown>> = {

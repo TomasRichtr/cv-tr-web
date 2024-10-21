@@ -15,14 +15,14 @@ export const useMessageApi = () => {
 
   const { showSuccess } = useShowNotification();
 
-  const { apiMutate } = useEndpoints();
+  const { apiCreate, apiQuery, apiDelete, apiUpdate } = useEndpoints();
 
   const { t } = useTranslations();
 
-  const submitContactMessage = async () => {
+  const submitNewMessage = async () => {
     if (!isValid.value) return;
 
-    const { success } = await apiMutate<NewMessage, Message>(form.value, API_ENDPOINTS.MESSAGES);
+    const { success } = await apiCreate<NewMessage, Message>(form.value, API_ENDPOINTS.MESSAGES);
     if (success) {
       form.value = cloneDeep(DEFAULT_FORM);
       contactFormRef.value!.resetValidation();
@@ -30,10 +30,31 @@ export const useMessageApi = () => {
     }
   };
 
+  const getMessages = async () => {
+    const { success, data } = await apiQuery<Message[]>(API_ENDPOINTS.MESSAGES);
+    if (success && data) return data;
+    return [];
+  };
+
+  const updateMessage = async (id: string, message: Message) => {
+    const { success, data } = await apiUpdate<Message, Message>(id, message, API_ENDPOINTS.MESSAGES);
+    if (success && data) return data;
+    return {};
+  };
+
+  const deleteMessage = async (id: string) => {
+    const { success, data } = await apiDelete(id, API_ENDPOINTS.MESSAGES);
+    if (success && data) return data;
+    return null;
+  };
+
   return {
     form,
     isValid,
     contactFormRef,
-    submitContactMessage,
+    submitNewMessage,
+    getMessages,
+    updateMessage,
+    deleteMessage,
   };
 };

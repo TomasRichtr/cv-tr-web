@@ -11,7 +11,7 @@ const {
   contactFormRef,
   form,
   isValid,
-  submitContactMessage,
+  submitNewMessage,
 } = useMessageApi();
 
 const { loading } = storeToRefs(useUiStore());
@@ -48,7 +48,7 @@ const { contactForm } = useContactForm();
         :variant="VARIANTS.ELEVATED"
         :disabled="!isValid"
         :color="COLORS.PRIMARY"
-        @click="submitContactMessage"
+        @click="submitNewMessage"
       >
         <span class="text-background">{{ t('btnLabels.submit') }}</span>
       </VBtn>

@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<Props>(), {
   <VBtn
     :size="SIZES.SMALL"
     :icon="props.icon"
-    :variant="VARIANTS.OUTLINED"
+    :variant="props.variant"
     :color="props.color"
     class="icon-btn"
     :to="props.to && { name: props.to }"
