@@ -24,7 +24,3 @@ const iconProps = computed(() => {
     v-bind="iconProps"
   />
 </template>
-
-<style scoped lang="scss">
-
-</style>

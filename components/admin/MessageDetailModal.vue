@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Message } from '~/types/message.types';
+import LabeledInfo from '~/components/shared/LabeledInfo.vue';
 
 interface Props {
   message: Message;
@@ -16,29 +17,41 @@ const { t } = useTranslations();
   <VDialog
     v-model="isVisibleVal"
     max-width="750px"
+    :offset="500"
   >
     <VCard>
-      <div class="grid grid-cols-2" />
-      <!--      <template #title="titleProps"> -->
-      <!--        <div -->
-      <!--          v-bind="titleProps" -->
-      <!--          class="flex" -->
-      <!--        > -->
-      <!--          <h6 class="capitalize mr-1.5"> -->
-      <!--            {{ `${t('modal.title')}:` }} -->
-      <!--          </h6> -->
-      <!--          {{ `${props.message.name}` }} -->
-      <!--        </div> -->
-      <!--      </template> -->
-      <!--      <VCard -->
-      <!--        :title="`${t('modal.title')}: ${props.message.name} / ${t('inputLabels.company')}: ${props.message.company}`" -->
-      <!--        :subtitle="`${t('inputLabels.phone')}: ${props.message.phone} / ${t('inputLabels.email')}: ${props.message.email}`" -->
-      <!--        :text="`${t('inputLabels.message')}: ${props.message.message}`" -->
-      <!--      /> -->
+      <div class="grid grid-cols-2 p-8 gap-8">
+        <LabeledInfo
+          class="col-span-1"
+          :label="t('labels.id', true)"
+          :info="props.message.id"
+        />
+        <LabeledInfo
+          class="col-span-1"
+          :label="t('inputLabels.name', true)"
+          :info="props.message.name"
+        />
+        <LabeledInfo
+          class="col-span-1"
+          :label="t('inputLabels.email', true)"
+          :info="props.message.email"
+        />
+        <LabeledInfo
+          class="col-span-1"
+          :label="t('inputLabels.phone', true)"
+          :info="props.message.phone"
+        />
+        <LabeledInfo
+          class="col-span-1"
+          :label="t('labels.read', true)"
+          :info="props.message.read ? t('labels.yes') : t('labels.no')"
+        />
+        <LabeledInfo
+          class="col-span-2"
+          :label="t('inputLabels.message', true)"
+          :info="props.message.message"
+        />
+      </div>
     </VCard>
   </VDialog>
 </template>
-
-<style scoped lang="scss">
-
-</style>

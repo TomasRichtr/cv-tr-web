@@ -45,6 +45,11 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
   },
   labels: {
     all: 'all',
+    id: 'id',
+    read: 'read',
+    yes: 'yes',
+    no: 'no',
+    search: 'search',
   },
   size: 'size',
   employees: 'employees',
@@ -72,6 +77,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
   },
   placeholders: {
     phone: 'Fill, if you prefer to be called.',
+    search: 'Search in messages',
   },
   validation: {
     [CONTACT_FORM_INPUTS.NAME]: {
@@ -106,13 +112,12 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     missingInstance: 'Missing app instance!',
   },
   tooltip: {
-    read: 'Change to read',
-    unread: 'Change to unread',
+    read: 'change to read',
+    unread: 'change to unread',
+    delete: 'delete message',
+    detail: 'see details',
   },
   action: 'actions',
-  modal: {
-    title: 'from',
-  },
 };
 
 export const CS: DeepReadonly<Record<string, unknown>> = {

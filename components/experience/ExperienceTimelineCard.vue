@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { capitalize } from 'vue';
 import SkillTag from '~/components/shared/SkillTag.vue';
 import type { Experience } from '~/types/data.types';
 import { ROUTES_ENUMS } from '~/enums/routes.enums';
@@ -39,7 +38,7 @@ const { resolvePeriodLength } = useString();
     </VCardText>
 
     <VCardText class="pt-0 pb-1 relative">
-      {{ capitalize(t('size')) }}: <span class="absolute bottom-px">~</span>
+      {{ t('size', true) }}: <span class="absolute bottom-px">~</span>
       <span class="ml-2">{{ `${props.size} ${t('employees')}` }}</span>
     </VCardText>
 

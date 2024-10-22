@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { capitalize } from 'vue';
 import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
 import { useMessageApi } from '~/composables/messages.composables';
@@ -22,7 +21,7 @@ const { contactForm } = useContactForm();
 </script>
 
 <template>
-  <PageSection :title="capitalize(t('pageSections.contactForm'))">
+  <PageSection :title="t('pageSections.contactForm', true)">
     <VForm
       ref="contactFormRef"
       v-model="isValid"
@@ -34,9 +33,9 @@ const { contactForm } = useContactForm();
         :is="input.component"
         v-for="input in contactForm"
         :key="input.name"
-        v-model="form[input.name]"
+        v-model="form[input.name as never]"
         :label="input.label"
-        :variant="VARIANTS.OUTLINED"
+        :variant="VARIANTS.OUTLINED as never"
         :counter="input.counter"
         :rules="input.rules"
         :type="input.type"

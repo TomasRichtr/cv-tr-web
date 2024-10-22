@@ -37,7 +37,7 @@ const CONTACTS_INFO = [
 
 <template>
   <PageSection
-    :title="capitalize(t('pageSections.contacts'))"
+    :title="t('pageSections.contacts', true)"
     class="gap-y-1"
   >
     <div

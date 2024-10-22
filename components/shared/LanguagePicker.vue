@@ -48,7 +48,3 @@ const { language } = storeToRefs(useUiStore());
     </VBtn>
   </VBtnGroup>
 </template>
-
-<style scoped lang="scss">
-
-</style>

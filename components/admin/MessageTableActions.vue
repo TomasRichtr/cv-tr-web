@@ -40,22 +40,21 @@ const isDetailVisible = ref<boolean>(false);
 
 <template>
   <div class="flex items-center">
-    <VTooltip :text="isRead ? t('tooltip.unread') : t('tooltip.read')">
-      <template #activator="{ props: tooltipProps }">
-        <VCheckbox
-          v-bind="tooltipProps"
-          v-model="isRead"
-          :hide-details="true"
-        />
-      </template>
-    </VTooltip>
+    <VCheckbox
+      v-model="isRead"
+      v-tooltip:start="isRead ? t('tooltip.unread') : t('tooltip.read')"
+      :hide-details="true"
+    />
+
     <IconBtn
+      v-tooltip:start="t('tooltip.delete')"
       icon="mdi-delete"
       :variant="VARIANTS.PLAIN"
       :color="COLORS.ERROR"
       @click.once="handleMessageDelete"
     />
     <IconBtn
+      v-tooltip:start="t('tooltip.detail')"
       icon="mdi-eye"
       :variant="VARIANTS.PLAIN"
       :color="COLORS.PRIMARY"

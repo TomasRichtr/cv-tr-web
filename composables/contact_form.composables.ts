@@ -1,11 +1,21 @@
 import { VTextarea, VTextField } from 'vuetify/components';
+import type { ContactFormInputs } from '~/enums/contact_form.enums';
 import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
 import inputValidations from '~/utils/input_validations.utils';
+
+interface Input {
+  name: ContactFormInputs;
+  label: string;
+  counter: number;
+  component: typeof VTextField | typeof VTextarea;
+  rules?: ((val: string) => string | boolean)[];
+  type: 'text' | 'email' | 'phone';
+}
 
 export const useContactForm = () => {
   const { t } = useTranslations();
 
-  const contactForm = computed(() => {
+  const contactForm: ComputedRef<Input[]> = computed(() => {
     return [
       {
         name: CONTACT_FORM_INPUTS.NAME,

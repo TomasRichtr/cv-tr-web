@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { VChip } from 'vuetify/components';
-import { capitalize } from 'vue';
 import { uniq, values, isEmpty } from 'lodash-es';
 import { COLORS, DENSITY, VARIANTS } from '~/enums/vuetify.enums';
 import { HEADER_LABELS, SKILLS_DEGREE, SORTING_LABELS } from '~/constants/skills.constants';
@@ -83,13 +82,13 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
       :title="t('pageSections.filters')"
     >
       <VChip
-        v-for="(label, i) in [t('labels.all'), ...HEADER_LABELS.map(key => t(key))]"
+        v-for="(label, i) in [t('labels.all'), ...HEADER_LABELS.map(key => t(key, true))]"
         :key="label"
         :variant="isDegreeChipSelected(i)"
         :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"
-        :text="capitalize(label)"
+        :text="label"
         @click="selectDegree(i)"
       />
     </PageSection>
@@ -105,7 +104,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
         :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"
-        :text="capitalize(t(label))"
+        :text="t(label, true)"
         @click="emit('update:selected-sort', i)"
       />
     </PageSection>

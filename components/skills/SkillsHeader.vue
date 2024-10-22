@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { capitalize } from 'vue';
 import { HEADER_LABELS } from '~/constants/skills.constants';
 
 const { t } = useTranslations();
@@ -8,7 +7,7 @@ const { t } = useTranslations();
 <template>
   <div class="flex items-center justify-between">
     <span>
-      {{ capitalize(t('skillsDegree.definition')) }}
+      {{ t('skillsDegree.definition', true) }}
     </span>
     <span class="flex justify-end text-center">
       <span
@@ -16,7 +15,7 @@ const { t } = useTranslations();
         :key="label"
         class="w-[56px] md:w-[72px] cursor-pointer"
       >
-        {{ capitalize(t(label)) }}
+        {{ t(label, true) }}
       </span>
 
     </span>

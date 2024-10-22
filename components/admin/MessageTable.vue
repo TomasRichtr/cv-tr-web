@@ -41,7 +41,3 @@ const { isSmallScreen } = useBreakpoints();
     </template>
   </VDataTable>
 </template>
-
-<style scoped lang="scss">
-
-</style>
