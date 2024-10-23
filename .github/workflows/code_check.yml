@@ -1,6 +1,6 @@
 # .github/workflows/lint.yml
 
-name: Lint # name of the action (displayed in the github interface)
+name: Code check # name of the action (displayed in the github interface)
 
 on: # event list
   push:
@@ -13,7 +13,7 @@ env: # environment variables (available in any part of the action)
 
 jobs: # list of things to do
   linting:
-    name: Linting # job name (unique id)
+    name: Code check # job name (unique id)
     runs-on: ubuntu-latest # on which machine to run
     steps: # list of steps
       - name: Install NodeJS
@@ -27,8 +27,8 @@ jobs: # list of things to do
       - name: Install Dependencies
         run: npm ci
 
-      - name: Code Linting
+      - name: Eslint
         run: npm run lint
 
-      - name: Typescript Linting
+      - name: Typescript
         run: npm run typescript
