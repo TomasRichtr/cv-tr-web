@@ -2,7 +2,7 @@ import type { Knex } from 'knex';
 import { MessagesCols } from '../../types/message.types';
 import { Tables } from '../../types/db.types';
 
-exports.up = function (knexDB: Knex) {
+exports.up = (knexDB: Knex) => {
   return knexDB.schema
     .createTable(Tables.Messages, (table: Knex.TableBuilder) => {
       table.increments(MessagesCols.Id).primary();
@@ -19,6 +19,6 @@ exports.up = function (knexDB: Knex) {
     });
 };
 
-exports.down = function (knexDB: Knex) {
+exports.down = (knexDB: Knex) => {
   return knexDB.schema.dropTable(Tables.Messages);
 };

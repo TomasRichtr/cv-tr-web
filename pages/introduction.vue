@@ -7,7 +7,7 @@ const { t } = useTranslations();
 <template>
   <VCard>
     <template #title>
-      {{ capitalize(t('btnLabels.introduction')) }}
+      {{ capitalize(t('buttons.introduction')) }}
     </template>
     <template #text>
       <span

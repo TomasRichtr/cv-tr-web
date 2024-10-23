@@ -27,7 +27,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     skills: 'Pick skills',
     skillsOverview: 'Skills',
   },
-  btnLabels: {
+  buttons: {
     introduction: 'introduction',
     home: 'home',
     experience: 'experience',
@@ -35,6 +35,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     contacts: 'contacts',
     submit: 'submit',
     admin: 'admin',
+    login: 'login',
   },
   period: {
     month: 'month',
@@ -50,6 +51,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     yes: 'yes',
     no: 'no',
     search: 'search',
+    password: 'password',
   },
   size: 'size',
   employees: 'employees',
@@ -78,6 +80,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
   placeholders: {
     phone: 'Fill, if you prefer to be called.',
     search: 'Search in messages',
+    password: 'Fill a password',
   },
   validation: {
     [CONTACT_FORM_INPUTS.NAME]: {
@@ -146,7 +149,7 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
     skills: 'Vyberte dovednosti',
     skillsOverview: 'Dovednosti',
   },
-  btnLabels: {
+  buttons: {
     introduction: 'představení',
     home: 'domů',
     experience: 'zkušenosti',

@@ -49,7 +49,7 @@ const { contactForm } = useContactForm();
         :color="COLORS.PRIMARY"
         @click="submitNewMessage"
       >
-        <span class="text-background">{{ t('btnLabels.submit') }}</span>
+        <span class="text-background">{{ t('buttons.submit') }}</span>
       </VBtn>
     </VForm>
   </PageSection>

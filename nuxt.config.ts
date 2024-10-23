@@ -46,12 +46,21 @@ export default defineNuxtConfig({
     transpile: ['vuetify'],
   },
   nitro: {
-    plugins: ['~/server/plugins/migrations.plugins.ts'],
+    plugins: [
+      '~/server/plugins/migrations.plugins.ts',
+    ],
   },
   runtimeConfig: {
     public: {
       emailLogin: '',
       emailPassword: '',
+      database_host: '',
+      database_user: '',
+      database_password: '',
+      database: '',
+      database_port: '',
+      admin_name: '',
+      admin_password: '',
     },
   },
 });

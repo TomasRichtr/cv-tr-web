@@ -1,8 +1,8 @@
 import type { Knex } from 'knex';
 import { Tables } from '../../types/db.types';
-import { UserCols } from '../../types/User.types';
+import { UserCols } from '../../types/user.types';
 
-exports.up = function (knexDB: Knex) {
+exports.up = (knexDB: Knex) => {
   return knexDB.schema
     .createTable(Tables.Users, (table: Knex.TableBuilder) => {
       table.increments(UserCols.Id).primary();
@@ -13,6 +13,6 @@ exports.up = function (knexDB: Knex) {
     });
 };
 
-exports.down = function (knexDB: Knex) {
+exports.down = (knexDB: Knex) => {
   return knexDB.schema.dropTable(Tables.Messages);
 };

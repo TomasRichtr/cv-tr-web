@@ -1,13 +1,11 @@
-import { config } from 'dotenv';
-
-config();
+const config = useRuntimeConfig();
 
 const CONFIG = {
-  HOST: process.env.database_host || 'localhost',
-  USER: process.env.database_user || 'root',
-  PASSWORD: process.env.database_password || 'password',
-  DATABASE: process.env.database || 'tr_cv_app',
-  PORT: process.env.database_port || 3306,
+  HOST: config.public.database_host || 'localhost',
+  USER: config.public.database_user || 'root',
+  PASSWORD: config.public.database_password || 'password',
+  DATABASE: config.public.database || 'tr_cv_app',
+  PORT: config.public.database_port || 3306,
 };
 
 export default {

@@ -62,7 +62,7 @@ const isDetailVisible = ref<boolean>(false);
     />
   </div>
   <MessageDetailModal
-    :is-visible="isDetailVisible"
+    v-model:is-visible="isDetailVisible"
     :message="props.message"
   />
 </template>

@@ -6,7 +6,11 @@ register();
 export default defineNitroPlugin(async () => {
   try {
     console.log('Running migrations...');
-    await knexDb.migrate.latest();
+    knexDb.migrate.latest().then(() => {
+      return;
+    }).then(() => {
+      initData();
+    });
     console.log('Migrations finished');
   }
   catch (err) {

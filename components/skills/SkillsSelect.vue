@@ -46,7 +46,7 @@ const { t } = useTranslations();
   <PageSection :title="t('pageSections.skills')">
     <VAutocomplete
       v-model="selectedSkills"
-      :label="t('btnLabels.skills', true)"
+      :label="t('buttons.skills', true)"
       :items="skillOpts"
       multiple
       chips

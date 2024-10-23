@@ -2,6 +2,7 @@ import type { DeepReadonly } from 'vue';
 
 export const API_ENDPOINTS: DeepReadonly<Record<string, string>> = {
   MESSAGES: '/messages',
+  AUTH: '/auth',
 };
 
 export const API_METHODS: DeepReadonly<Record<string, string>> = {

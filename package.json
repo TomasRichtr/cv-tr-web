@@ -16,6 +16,7 @@
     "@pinia/nuxt": "^0.5.4",
     "@vueuse/core": "^11.0.3",
     "@vueuse/nuxt": "^11.0.3",
+    "bcrypt": "^5.1.1",
     "devicon": "^2.16.0",
     "mysql": "^2.18.1",
     "nodemailer": "^6.9.15",

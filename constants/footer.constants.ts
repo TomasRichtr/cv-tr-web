@@ -8,7 +8,7 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   [ROUTES_ENUMS.INDEX]: [
     {},
     {
-      label: 'btnLabels.introduction',
+      label: 'buttons.introduction',
       color: COLORS.INFO,
       to: ROUTES_ENUMS.INTRODUCTION,
       variant: VARIANTS.ELEVATED,
@@ -16,13 +16,13 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   ],
   [ROUTES_ENUMS.INTRODUCTION]: [
     {
-      label: 'btnLabels.experience',
+      label: 'buttons.experience',
       color: COLORS.INFO,
       to: ROUTES_ENUMS.EXPERIENCE,
       variant: VARIANTS.ELEVATED,
     },
     {
-      label: 'btnLabels.home',
+      label: 'buttons.home',
       to: ROUTES_ENUMS.INDEX,
       color: COLORS.BACKGROUND,
       variant: VARIANTS.OUTLINED,
@@ -30,13 +30,13 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   ],
   [ROUTES_ENUMS.EXPERIENCE]: [
     {
-      label: 'btnLabels.skills',
+      label: 'buttons.skills',
       color: COLORS.INFO,
       to: ROUTES_ENUMS.SKILLS,
       variant: VARIANTS.ELEVATED,
     },
     {
-      label: 'btnLabels.introduction',
+      label: 'buttons.introduction',
       to: ROUTES_ENUMS.INTRODUCTION,
       variant: VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
@@ -44,13 +44,13 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   ],
   [ROUTES_ENUMS.SKILLS]: [
     {
-      label: 'btnLabels.contacts',
+      label: 'buttons.contacts',
       color: COLORS.INFO,
       to: ROUTES_ENUMS.CONTACTS,
       variant: VARIANTS.ELEVATED,
     },
     {
-      label: 'btnLabels.experience',
+      label: 'buttons.experience',
       to: ROUTES_ENUMS.EXPERIENCE,
       variant: VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
@@ -59,7 +59,7 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
   [ROUTES_ENUMS.CONTACTS]: [
     {},
     {
-      label: 'btnLabels.skills',
+      label: 'buttons.skills',
       to: ROUTES_ENUMS.SKILLS,
       variant: VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,

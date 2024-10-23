@@ -17,7 +17,6 @@ const { t } = useTranslations();
   <VDialog
     v-model="isVisibleVal"
     max-width="750px"
-    :offset="500"
   >
     <VCard>
       <div class="grid grid-cols-2 p-8 gap-8">
