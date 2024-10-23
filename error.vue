@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app';
 import type { Quote } from '~/types/data.types';
-import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import { ROUTES } from '~/enums/routes';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import { COLORS } from '~/enums/vuetify.enums';
 
@@ -42,7 +42,7 @@ onBeforeRouteLeave(() => {
       <IconBtn
         :color="COLORS.PRIMARY"
         icon="mdi-home"
-        :to="ROUTES_ENUMS.INDEX"
+        :to="ROUTES.INDEX"
       />
     </template>
   </VEmptyState>

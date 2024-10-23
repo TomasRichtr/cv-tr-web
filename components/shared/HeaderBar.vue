@@ -3,7 +3,7 @@ import cv from 'assets/files/t_richtr_cv.pdf';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import { COLORS } from '~/enums/vuetify.enums';
 import { useUiStore } from '~/store/ui.store';
-import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import { ROUTES } from '~/enums/routes';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
@@ -27,10 +27,10 @@ const { t } = useTranslations();
     </template>
 
     <IconBtn
-      v-if="route.name !== ROUTES_ENUMS.INDEX"
+      v-if="route.name !== ROUTES.INDEX"
       icon="mdi-home"
       class="mr-2"
-      :to="ROUTES_ENUMS.INDEX"
+      :to="ROUTES.INDEX"
     />
 
     <IconBtn

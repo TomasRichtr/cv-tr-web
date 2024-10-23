@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import SkillTag from '~/components/shared/SkillTag.vue';
 import type { Experience } from '~/types/data.types';
-import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import { ROUTES } from '~/enums/routes';
 import { COLORS, SIZES } from '~/enums/vuetify.enums';
 import { useDatetime } from '~/composables/date.composables';
 import { useString } from '~/composables/string.composables';
@@ -60,7 +60,7 @@ const { resolvePeriodLength } = useString();
     <VCardText class="pt-0">
       <NuxtLink
         class="flex flex-wrap gap-x-2 gap-y-1 cursor-pointer"
-        :to="{ name: ROUTES_ENUMS.SKILLS, query: { skills: props.skills } }"
+        :to="{ name: ROUTES.SKILLS, query: { skills: props.skills } }"
       >
         <SkillTag
           v-for="skill in props.skills"

@@ -3,7 +3,7 @@ import eng from 'assets/images/eng.png';
 import cze from 'assets/images/cze.png';
 import { useUiStore } from '~/store/ui.store';
 import { LANGUAGES } from '~/enums/ui.enums';
-import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
 
 const { language } = storeToRefs(useUiStore());
 </script>
@@ -17,8 +17,8 @@ const { language } = storeToRefs(useUiStore());
   >
     <VBtn
       width="50%"
-      :color="language === LANGUAGES.ENGLISH ? COLORS.PRIMARY : null"
-      :variant="language === LANGUAGES.ENGLISH ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
+      :color="language === LANGUAGES.ENGLISH ? COLORS.PRIMARY : undefined"
+      :variant="language === LANGUAGES.ENGLISH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
       @click="language = LANGUAGES.ENGLISH"
     >
       <div class="flex items-end gap-1">
@@ -33,8 +33,8 @@ const { language } = storeToRefs(useUiStore());
 
     <VBtn
       width="50%"
-      :color="language === LANGUAGES.CZECH ? COLORS.PRIMARY : null"
-      :variant="language === LANGUAGES.CZECH ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
+      :color="language === LANGUAGES.CZECH ? COLORS.PRIMARY : undefined"
+      :variant="language === LANGUAGES.CZECH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
       @click="language = LANGUAGES.CZECH"
     >
       <div class="flex items-end gap-1">

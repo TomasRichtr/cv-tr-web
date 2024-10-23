@@ -2,7 +2,7 @@
 import type { Message } from '~/types/message.types';
 import { useMessageApi } from '~/composables/messages.composables';
 import IconBtn from '~/components/shared/IconBtn.vue';
-import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
 import { useMessagesStore } from '~/store/messages.store';
 import MessageDetailModal from '~/components/admin/MessageDetailModal.vue';
 
@@ -49,14 +49,14 @@ const isDetailVisible = ref<boolean>(false);
     <IconBtn
       v-tooltip:start="t('tooltip.delete')"
       icon="mdi-delete"
-      :variant="VARIANTS.PLAIN"
+      :variant="BTN_VARIANTS.PLAIN"
       :color="COLORS.ERROR"
       @click.once="handleMessageDelete"
     />
     <IconBtn
       v-tooltip:start="t('tooltip.detail')"
       icon="mdi-eye"
-      :variant="VARIANTS.PLAIN"
+      :variant="BTN_VARIANTS.PLAIN"
       :color="COLORS.PRIMARY"
       @click="isDetailVisible = true"
     />

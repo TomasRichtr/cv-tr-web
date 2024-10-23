@@ -4,9 +4,9 @@ export const FORMATS: DeepReadonly<Record<string, string>> = {
   SHORT_MONTH_AND_YEAR: 'MMM YYYY',
 };
 
-export const PERIOD_UNITS: DeepReadonly<Record<string, string>> = {
+export type PeriodUnits = 'month' | 'year';
+
+export const PERIOD_UNITS: DeepReadonly<Record<string, PeriodUnits>> = {
   MONTH: 'month',
   YEAR: 'year',
 };
-
-export type PeriodUnits = typeof PERIOD_UNITS[keyof typeof PERIOD_UNITS];

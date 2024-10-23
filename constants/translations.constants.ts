@@ -131,39 +131,36 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
 };
 
 export const CS: DeepReadonly<Record<string, unknown>> = {
-  name: 'Tomas',
+  name: 'Tomáš',
   surname: 'Richtr',
   description: 'samouk webový vývojář',
-  introduction:
-  `Ahoj,
+  introduction: `
+  Ahoj,
+  <br/><br/> 
+  Jsem Tomáš Richtr, nadšený a všestranný webový vývojář s pevnými zkušenostmi jak ve front-end, tak v back-end vývoji. 
+  <br/><br/> 
+  Specializuji se na Vue.js a různé nástroje, které pohánějí moderní webové aplikace, včetně GraphQL, MySQL a testovacích frameworků jako jsou Jest a Cypress. 
   <br/><br/>
-  Jmenuji se Tomáš Richtr a jsem vášnivý a všestranný webový vývojář s pevnou zkušeností jak ve front-endu, tak i v 
-  back-end vývoji.
+  Moje profesionální cesta mi umožnila pracovat na různorodých projektech, od softwaru pro řízení projektů až po vývoj chatbotů, a při každém projektu jsem zdokonaloval své dovednosti a posouval hranice produktů.
   <br/><br/>
-  Specializuji se na Vue.js a řadu nástrojů, které pohánějí moderní webové aplikace, včetně GraphQL, MySQL a 
-  testovacích frameworků jako jsou Jest a Cypress.
-  <br/><br/>
-  Má profesní cesta mi poskytla příležitost pracovat na různorodých projektech, od softwaru pro řízení projektů až po 
-  vývoj chatbotů, a tím jsem si neustále zdokonaloval své dovednosti a posouval hranice produktů.
-  <br/><br/>
-  Ovládám češtinu i angličtinu, což mi umožňuje efektivně spolupracovat v různorodých týmech. Daří se mi v řešení 
-  složitých výzev, učení se novým technologiím a vytváření řešení, která mají dopad.`,
+  Plynně ovládám češtinu i angličtinu, což mi umožňuje efektivně spolupracovat v různorodých týmech. Daří se mi řešit složité výzvy, učit se nové technologie a vytvářet řešení, která mají dopad.`,
   pageSections: {
     contactForm: 'zanechte zprávu',
     contacts: 'kontakty',
     filters: 'Filtrovat podle',
-    sorters: 'Seřadit podle',
+    sorters: 'Řadit podle',
     skills: 'Vyberte dovednosti',
     skillsOverview: 'Dovednosti',
   },
   buttons: {
-    introduction: 'představení',
+    introduction: 'úvod',
     home: 'domů',
     experience: 'zkušenosti',
     skills: 'dovednosti',
     contacts: 'kontakty',
     submit: 'odeslat',
-    admin: 'admin',
+    admin: 'administrátor',
+    login: 'přihlášení',
   },
   period: {
     month: 'měsíc',
@@ -174,13 +171,19 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
   },
   labels: {
     all: 'vše',
+    id: 'id',
+    read: 'přečteno',
+    yes: 'ano',
+    no: 'ne',
+    search: 'hledat',
+    password: 'heslo',
   },
   size: 'velikost',
   employees: 'zaměstnanci',
-  home: 'domů',
+  home: 'domov',
   skillsDegree: {
     definition: 'jak často používám:',
-    fewTimes: 'několikrát',
+    fewTimes: 'párkrát',
     often: 'často',
     daily: 'denně',
   },
@@ -190,17 +193,19 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
   selections: 'výběry',
   sorting: {
     title: 'řazení',
-    alphabetically: 'název',
+    alphabetically: 'jméno',
   },
   inputLabels: {
     name: 'jméno',
-    email: 'email',
+    email: 'e-mail',
     message: 'zpráva',
-    company: 'firma',
+    company: 'společnost',
     phone: 'telefon',
   },
   placeholders: {
-    phone: 'Vyplňte, pokud preferujete zavolání.',
+    phone: 'Vyplňte, pokud dáváte přednost volání.',
+    search: 'Hledat ve zprávách',
+    password: 'Vyplňte heslo',
   },
   validation: {
     [CONTACT_FORM_INPUTS.NAME]: {
@@ -208,7 +213,7 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
       count: 'Vaše jméno je příliš dlouhé! Maximální délka je 100 znaků.',
     },
     [CONTACT_FORM_INPUTS.COMPANY]: {
-      count: 'Název firmy je příliš dlouhý! Maximální délka je 100 znaků.',
+      count: 'Vaše společnost je příliš dlouhá! Maximální délka je 100 znaků.',
     },
     [CONTACT_FORM_INPUTS.EMAIL]: {
       required: 'Musíte zadat platný e-mail.',
@@ -221,7 +226,7 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
     },
     [CONTACT_FORM_INPUTS.PHONE]: {
       format: 'Musíte zadat platné telefonní číslo.',
-      count: 'Vaše telefonní číslo je příliš dlouhé! Maximální délka je 20 znaků.',
+      count: 'Váš telefon je příliš dlouhý! Maximální délka je 20 znaků.',
     },
   },
   notification: {
@@ -230,9 +235,23 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
     messages: {
       successText: 'Vaše zpráva byla úspěšně odeslána.',
     },
+    admin: {
+      failureText: 'Vaše heslo je nesprávné.',
+    },
   },
   errors: {
     missingInstance: 'Chybí instance aplikace!',
+  },
+  tooltip: {
+    read: 'označit jako přečtené',
+    unread: 'označit jako nepřečtené',
+    delete: 'smazat zprávu',
+    detail: 'zobrazit detaily',
+  },
+  action: 'akce',
+  unLogged: {
+    title: 'Nejste přihlášeni',
+    description: 'Pokračujte na domovskou stránku nebo obnovte stránku.',
   },
 };
 

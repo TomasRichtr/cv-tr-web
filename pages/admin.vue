@@ -2,7 +2,7 @@
 import { useMessageApi } from '~/composables/messages.composables';
 import MessageTable from '~/components/admin/MessageTable.vue';
 import { useMessagesStore } from '~/store/messages.store';
-import { VARIANTS } from '~/enums/vuetify.enums';
+import { INPUT_VARIANTS } from '~/enums/vuetify.enums';
 import LoginModal from '~/components/admin/LoginModal.vue';
 import { useAuthStore } from '~/store/auth.store';
 import NotLogged from '~/components/admin/NotLogged.vue';
@@ -29,7 +29,7 @@ const { t } = useTranslations();
     <template v-if="isAuthenticated">
       <VTextField
         v-model="search"
-        :variant="VARIANTS.OUTLINED"
+        :variant="INPUT_VARIANTS.OUTLINED"
         :placeholder="t('placeholders.search', true)"
         :label="t('labels.search', true)"
       />

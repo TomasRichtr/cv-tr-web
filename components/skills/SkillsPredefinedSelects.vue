@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { VChip } from 'vuetify/components';
 import { uniq, values, isEmpty } from 'lodash-es';
-import { COLORS, DENSITY, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, DENSITY, BTN_VARIANTS } from '~/enums/vuetify.enums';
 import { HEADER_LABELS, SKILLS_DEGREE, SORTING_LABELS } from '~/constants/skills.constants';
 import type { Skills } from '~/enums/skills.enum';
 import { SKILL_DEGREE } from '~/enums/skills.enum';
@@ -30,7 +29,7 @@ const tagColor = (degree: number) => {
   return {
     [SKILL_DEGREE.FEW_TIME]: COLORS.PRIMARY,
     [SKILL_DEGREE.OFTEN]: COLORS.SECONDARY,
-    [SKILL_DEGREE.DAILY]: COLORS.WARNING,
+    [SKILL_DEGREE.DAILY]: COLORS.SUCCESS,
   }[degree];
 };
 
@@ -65,13 +64,13 @@ onBeforeMount(() => {
 });
 
 const isDegreeChipSelected = (degreeUpdate: number) => {
-  if (degreeUpdate === 0 && isEmpty(props.selectedSkills)) return VARIANTS.ELEVATED;
+  if (degreeUpdate === 0 && isEmpty(props.selectedSkills)) return BTN_VARIANTS.ELEVATED;
   const isDegreeUpdateSelected = selectedDegrees.value.includes(degreeUpdate);
   const allSkillDegreesCount = values(SKILLS_DEGREE).filter(degree => degree === degreeUpdate).length;
   const selectedSkillDegreesCount = props.selectedSkills.filter(skill => SKILLS_DEGREE[skill] === degreeUpdate).length;
   return isDegreeUpdateSelected && allSkillDegreesCount === selectedSkillDegreesCount
-    ? VARIANTS.ELEVATED
-    : VARIANTS.OUTLINED;
+    ? BTN_VARIANTS.ELEVATED
+    : BTN_VARIANTS.OUTLINED;
 };
 </script>
 
@@ -100,7 +99,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
       <VChip
         v-for="(label, i) in SORTING_LABELS"
         :key="label"
-        :variant="props.selectedSort === i ? VARIANTS.ELEVATED : VARIANTS.OUTLINED"
+        :variant="props.selectedSort === i ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
         :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"

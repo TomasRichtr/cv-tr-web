@@ -17,7 +17,17 @@ import { DENSITY, SIZES } from '~/enums/vuetify.enums';
       :dot-color="item.color"
       :density="DENSITY.COMPACT"
     >
-      <ExperienceTimelineCard v-bind="item" />
+      <ExperienceTimelineCard
+        :size="item.size"
+        :skills="item.skills"
+        :color="item.color"
+        :start-date="item.startDate"
+        :end-date="item.endDate"
+        :link="item.link"
+        :place="item.place"
+        :position="item.position"
+        :description="item.description"
+      />
     </VTimelineItem>
   </VTimeline>
 </template>

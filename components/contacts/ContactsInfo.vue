@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { capitalize } from 'vue';
 import IconBtn from '~/components/shared/IconBtn.vue';
 import PageSection from '~/components/shared/PageSection.vue';
-import { COLORS, SIZES, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, SIZES, BTN_VARIANTS } from '~/enums/vuetify.enums';
 
 const { t } = useTranslations();
 
@@ -48,7 +47,7 @@ const CONTACTS_INFO = [
     >
       <IconBtn
         :icon="contact.icon"
-        :variant="VARIANTS.ELEVATED"
+        :variant="BTN_VARIANTS.ELEVATED"
         :color="COLORS.PRIMARY"
         :size="contact.size || SIZES.X_SMALL"
         :href="contact.href"
@@ -64,7 +63,7 @@ const CONTACTS_INFO = [
         v-else
         :href="contact.href"
         target="_blank"
-        :variant="VARIANTS.PLAIN"
+        :variant="BTN_VARIANTS.PLAIN"
         class="px-0 ml-2"
       >
         {{ contact.text }}

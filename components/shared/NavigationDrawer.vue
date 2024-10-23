@@ -2,7 +2,7 @@
 import { useUiStore } from '~/store/ui.store';
 import { NAVIGATION_OPTS } from '~/constants/navigation_opts.constants';
 import LanguagePicker from '~/components/shared/LanguagePicker.vue';
-import { LOCATIONS, VARIANTS } from '~/enums/vuetify.enums';
+import { LOCATIONS, BTN_VARIANTS } from '~/enums/vuetify.enums';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
@@ -25,7 +25,7 @@ const { t } = useTranslations();
         >
           <VBtn
             :to="{ name: item.to }"
-            :variant="VARIANTS.PLAIN"
+            :variant="BTN_VARIANTS.PLAIN"
             class="flex items-center w-full"
             :disabled="route.name === item.to"
           >

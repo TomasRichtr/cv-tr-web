@@ -11,6 +11,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
+    "typescript": "nuxt typecheck",
     "lint": "eslint",
     "lint:fix": "eslint . --fix"
   },

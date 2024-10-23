@@ -1,68 +1,69 @@
 import type { DeepReadonly } from 'vue';
-import type { RoutesEnums } from '~/enums/routes.enums';
-import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import type { Routes } from '~/enums/routes';
+import { ROUTES } from '~/enums/routes';
 import type { FooterBtn } from '~/types/ui.types';
-import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
 
-export const FOOTER_BTNS_MAP: DeepReadonly<Record<RoutesEnums, FooterBtn[]>> = {
-  [ROUTES_ENUMS.INDEX]: [
+export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {
+  index: [
     {},
     {
       label: 'buttons.introduction',
       color: COLORS.INFO,
-      to: ROUTES_ENUMS.INTRODUCTION,
-      variant: VARIANTS.ELEVATED,
+      to: ROUTES.INTRODUCTION,
+      variant: BTN_VARIANTS.ELEVATED,
     },
   ],
-  [ROUTES_ENUMS.INTRODUCTION]: [
+  introduction: [
     {
       label: 'buttons.experience',
       color: COLORS.INFO,
-      to: ROUTES_ENUMS.EXPERIENCE,
-      variant: VARIANTS.ELEVATED,
+      to: ROUTES.EXPERIENCE,
+      variant: BTN_VARIANTS.ELEVATED,
     },
     {
       label: 'buttons.home',
-      to: ROUTES_ENUMS.INDEX,
+      to: ROUTES.INDEX,
       color: COLORS.BACKGROUND,
-      variant: VARIANTS.OUTLINED,
+      variant: BTN_VARIANTS.OUTLINED,
     },
   ],
-  [ROUTES_ENUMS.EXPERIENCE]: [
+  experience: [
     {
       label: 'buttons.skills',
       color: COLORS.INFO,
-      to: ROUTES_ENUMS.SKILLS,
-      variant: VARIANTS.ELEVATED,
+      to: ROUTES.SKILLS,
+      variant: BTN_VARIANTS.ELEVATED,
     },
     {
       label: 'buttons.introduction',
-      to: ROUTES_ENUMS.INTRODUCTION,
-      variant: VARIANTS.OUTLINED,
+      to: ROUTES.INTRODUCTION,
+      variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },
   ],
-  [ROUTES_ENUMS.SKILLS]: [
+  skills: [
     {
       label: 'buttons.contacts',
       color: COLORS.INFO,
-      to: ROUTES_ENUMS.CONTACTS,
-      variant: VARIANTS.ELEVATED,
+      to: ROUTES.CONTACTS,
+      variant: BTN_VARIANTS.ELEVATED,
     },
     {
       label: 'buttons.experience',
-      to: ROUTES_ENUMS.EXPERIENCE,
-      variant: VARIANTS.OUTLINED,
+      to: ROUTES.EXPERIENCE,
+      variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },
   ],
-  [ROUTES_ENUMS.CONTACTS]: [
+  contacts: [
     {},
     {
       label: 'buttons.skills',
-      to: ROUTES_ENUMS.SKILLS,
-      variant: VARIANTS.OUTLINED,
+      to: ROUTES.SKILLS,
+      variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },
   ],
+  admin: [],
 };

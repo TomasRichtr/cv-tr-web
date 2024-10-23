@@ -1,15 +1,14 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import type { VChip } from 'vuetify/components';
-import { type Colors, VARIANTS } from '~/enums/vuetify.enums';
+import { type Colors, BTN_VARIANTS } from '~/enums/vuetify.enums';
 import SkillIcon from '~/components/shared/SkillIcon.vue';
 
 interface Props {
   skill: string;
   color: Colors;
-  closable: boolean;
-  hideLabel: boolean;
-  externalLink: string | null;
+  closable?: boolean;
+  hideLabel?: boolean;
+  externalLink?: string | null;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,23 +22,14 @@ interface Emits {
 }
 
 const emit = defineEmits<Emits>();
-
-const tag = ref<ComponentPublicInstance<typeof VChip>>();
 </script>
 
 <template>
-  <VTooltip
-    :text="capitalize(props.skill)"
-    location="top"
-    :disabled="!props.hideLabel"
-    :activator="tag"
-  />
-
   <VChip
-    ref="tag"
+    v-tooltip:top="{ text: capitalize(props.skill), disabled: !props.hideLabel }"
     class="capitalize"
     :class="{ 'cursor-pointer': props.externalLink }"
-    :variant="VARIANTS.OUTLINED"
+    :variant="BTN_VARIANTS.OUTLINED"
     :color="props.color"
     :closable="props.closable"
     :tag="props.externalLink ? 'a' : undefined"

@@ -3,7 +3,7 @@ import { VForm } from 'vuetify/components';
 import PageSection from '~/components/shared/PageSection.vue';
 import { useMessageApi } from '~/composables/messages.composables';
 import { useUiStore } from '~/store/ui.store';
-import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
 import { useContactForm } from '~/composables/contact_form.composables';
 
 const {
@@ -35,7 +35,7 @@ const { contactForm } = useContactForm();
         :key="input.name"
         v-model="form[input.name as never]"
         :label="input.label"
-        :variant="VARIANTS.OUTLINED as never"
+        :variant="BTN_VARIANTS.OUTLINED as never"
         :counter="input.counter"
         :rules="input.rules"
         :type="input.type"
@@ -44,7 +44,7 @@ const { contactForm } = useContactForm();
         :name="input.name"
       />
       <VBtn
-        :variant="VARIANTS.ELEVATED"
+        :variant="BTN_VARIANTS.ELEVATED"
         :disabled="!isValid"
         :color="COLORS.PRIMARY"
         @click="submitNewMessage"

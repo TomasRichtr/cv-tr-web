@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { COLORS, VARIANTS } from '~/enums/vuetify.enums';
+import { COLORS, BTN_VARIANTS, INPUT_VARIANTS } from '~/enums/vuetify.enums';
 import { API_ENDPOINTS } from '~/enums/api.enums';
 import { useEndpoints } from '~/composables/endpoints.composables';
 import type { Auth } from '~/types/auth.types';
@@ -47,14 +47,14 @@ onMounted(() => {
           v-model="password"
           autofocus
           type="password"
-          :variant="VARIANTS.OUTLINED"
+          :variant="INPUT_VARIANTS.OUTLINED"
           :placeholder="t('placeholders.password', true)"
           :label="t('labels.password', true)"
         />
         <VBtn
           append-icon="mdi-login"
           :text="t('buttons.login', true)"
-          :variant="VARIANTS.ELEVATED"
+          :variant="BTN_VARIANTS.ELEVATED"
           :color="COLORS.PRIMARY"
           @click="authenticate"
         />

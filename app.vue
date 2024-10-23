@@ -3,14 +3,14 @@ import { capitalize } from 'vue';
 import FooterBtns from '~/components/shared/FooterBtns.vue';
 import HeaderBar from '~/components/shared/HeaderBar.vue';
 import NavigationDrawer from '~/components/shared/NavigationDrawer.vue';
-import { ROUTES_ENUMS } from '~/enums/routes.enums';
+import { ROUTES } from '~/enums/routes';
 
 const route = useRoute();
 
 const { t } = useTranslations();
 
 watch(() => route.name, () => {
-  const page = route.name === ROUTES_ENUMS.INDEX ? t('home') : route.name;
+  const page = route.name === ROUTES.INDEX ? t('home') : route.name;
   useHead({
     title: `Tomas Richtr / ${capitalize(String(page))}`,
   });
