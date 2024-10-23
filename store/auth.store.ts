@@ -2,10 +2,9 @@ import { ref } from 'vue';
 import { useStorage } from '@vueuse/core';
 
 export const useAuthStore = defineStore('authStore', () => {
-  const isAuthenticatedSession = useStorage<boolean>('is-session-authenticated', false, sessionStorage);
-  const isAuthenticated = ref<boolean>(isAuthenticatedSession.value);
+  const isAuthenticated = useStorage<boolean>('is-authenticated-storage', false);
 
-  const isLoginModalVisible = ref<boolean>(true);
+  const isLoginModalVisible = ref<boolean>(false);
 
   return { isAuthenticated, isLoginModalVisible };
 });

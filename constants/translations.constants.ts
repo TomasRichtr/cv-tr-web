@@ -110,6 +110,9 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     messages: {
       successText: 'Your message has been successfully sent.',
     },
+    admin: {
+      failureText: 'Your password is incorrect.',
+    },
   },
   errors: {
     missingInstance: 'Missing app instance!',
@@ -121,6 +124,10 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     detail: 'see details',
   },
   action: 'actions',
+  unLogged: {
+    title: 'You are not logged in',
+    description: 'Proceed on homepage or reload page.',
+  },
 };
 
 export const CS: DeepReadonly<Record<string, unknown>> = {

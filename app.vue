@@ -31,7 +31,7 @@ onMounted(async () => {
       <NavigationDrawer />
       <template v-if="!isPageLoading">
         <VMain scrollable>
-          <VContainer>
+          <VContainer height="100%">
             <NuxtPage />
           </VContainer>
         </VMain>

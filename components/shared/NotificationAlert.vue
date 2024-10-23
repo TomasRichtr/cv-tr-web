@@ -34,7 +34,7 @@ onMounted(() => {
 <template>
   <div
     ref="alertWrapperRef"
-    class="absolute slide-in-right z-float top-[10%] right-0"
+    class="absolute slide-in-right z-notification top-[10%] right-0"
   >
     <VAlert
       :text="props.text"

@@ -19,6 +19,7 @@ export default {
       zIndex: {
         float: 999,
         drawer: 1000,
+        notification: 3000,
       },
     },
   }, plugins: [],

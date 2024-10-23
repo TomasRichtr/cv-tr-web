@@ -5,28 +5,27 @@ import { useMessagesStore } from '~/store/messages.store';
 import { VARIANTS } from '~/enums/vuetify.enums';
 import LoginModal from '~/components/admin/LoginModal.vue';
 import { useAuthStore } from '~/store/auth.store';
+import NotLogged from '~/components/admin/NotLogged.vue';
+import PageWrapper from '~/components/shared/PageWrapper.vue';
 
 const { getMessages } = useMessageApi();
 
 const { messages } = storeToRefs(useMessagesStore());
 
+const { isAuthenticated, isLoginModalVisible } = storeToRefs(useAuthStore());
+
 onMounted(async () => {
+  isLoginModalVisible.value = !isAuthenticated.value;
   messages.value = await getMessages();
 });
 
 const search = ref<string>('');
 
 const { t } = useTranslations();
-
-definePageMeta({
-  middleware: ['auth'],
-});
-
-const { isAuthenticated, isLoginModalVisible } = storeToRefs(useAuthStore());
 </script>
 
 <template>
-  <div>
+  <PageWrapper>
     <template v-if="isAuthenticated">
       <VTextField
         v-model="search"
@@ -39,6 +38,7 @@ const { isAuthenticated, isLoginModalVisible } = storeToRefs(useAuthStore());
         :search="search"
       />
     </template>
+    <NotLogged v-if="!isAuthenticated && !isLoginModalVisible" />
     <LoginModal v-model:is-visible="isLoginModalVisible" />
-  </div>
+  </PageWrapper>
 </template>
