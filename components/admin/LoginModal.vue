@@ -40,6 +40,7 @@ onMounted(() => {
   <VDialog
     v-model="isVisibleVal"
     max-width="750px"
+    @keydown.enter="authenticate"
   >
     <VCard>
       <VCardText class="flex flex-col">

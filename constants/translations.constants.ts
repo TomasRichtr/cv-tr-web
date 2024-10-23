@@ -45,7 +45,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     today: 'today',
   },
   labels: {
-    all: 'all',
+    all: 'All',
     id: 'id',
     read: 'read',
     yes: 'yes',
@@ -122,6 +122,7 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     unread: 'change to unread',
     delete: 'delete message',
     detail: 'see details',
+    downloadCV: 'download CV',
   },
   action: 'actions',
   unLogged: {
@@ -137,7 +138,7 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
   introduction: `
   Ahoj,
   <br/><br/> 
-  Jsem Tomáš Richtr, nadšený a všestranný webový vývojář s pevnými zkušenostmi jak ve front-end, tak v back-end vývoji. 
+  jsem Tomáš Richtr, nadšený a všestranný webový vývojář s pevnými zkušenostmi jak ve front-end, tak v back-end vývoji. 
   <br/><br/> 
   Specializuji se na Vue.js a různé nástroje, které pohánějí moderní webové aplikace, včetně GraphQL, MySQL a testovacích frameworků jako jsou Jest a Cypress. 
   <br/><br/>
@@ -247,6 +248,7 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
     unread: 'označit jako nepřečtené',
     delete: 'smazat zprávu',
     detail: 'zobrazit detaily',
+    downloadCV: 'stáhnout CV',
   },
   action: 'akce',
   unLogged: {

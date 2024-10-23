@@ -34,6 +34,7 @@ const { t } = useTranslations();
     />
 
     <IconBtn
+      v-tooltip:bottom="t('tooltip.downloadCV', true)"
       icon="mdi-download"
       class="mr-2"
       @click="downloadCV"
