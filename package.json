@@ -34,6 +34,7 @@
     "@nuxt/eslint": "^0.6.1",
     "@nuxt/eslint-config": "^0.6.1",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@types/bcrypt": "^5.0.2",
     "@types/knex": "^0.16.1",
     "@types/node": "^22.8.2",
     "dayjs-nuxt": "^2.1.11",
