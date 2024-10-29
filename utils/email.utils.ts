@@ -4,8 +4,8 @@ import type { Message } from '../types/message.types';
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    user: process.env.emailLogin,
-    pass: process.env.emailPassword,
+    user: process.env.EMAIL_LOGIN,
+    pass: process.env.EMAIL_PASSWORD,
   },
 });
 

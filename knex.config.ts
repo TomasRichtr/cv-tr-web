@@ -1,9 +1,9 @@
 export const CONFIG = {
-  HOST: process.env.database_host || 'localhost',
-  USER: process.env.database_user || 'root',
-  PASSWORD: process.env.database_password || 'password',
-  DATABASE: process.env.database || 'tr_cv_app',
-  PORT: process.env.database_port || 3306,
+  HOST: process.env.DATABASE_HOST || 'localhost',
+  USER: process.env.DATABASE_USER || 'root',
+  PASSWORD: process.env.DATABASE_PASSWORD || 'password',
+  DATABASE: process.env.DATABASE || 'tr_cv_app',
+  PORT: process.env.DATABASE_PORT || 3306,
   CLIENT: 'mysql',
   MIGRATIONS: {
     directory: './server/migrations',
