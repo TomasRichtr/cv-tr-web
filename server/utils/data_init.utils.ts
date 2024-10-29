@@ -1,8 +1,6 @@
 import { create } from '../daos/users.dao';
 import { hashString } from '../../utils/auth.utils';
 
-const config = useRuntimeConfig();
-
 export const initData = async () => {
   try {
     console.log('Adding data...');
