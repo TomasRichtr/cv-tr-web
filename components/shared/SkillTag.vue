@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import { type Colors, BTN_VARIANTS } from '~/enums/vuetify.enums';
-import SkillIcon from '~/components/shared/SkillIcon.vue';
+import type { Colors } from '../../enums/vuetify.enums';
+import { BTN_VARIANTS } from '../../enums/vuetify.enums';
+import SkillIcon from './SkillIcon.vue';
 
 interface Props {
   skill: string;

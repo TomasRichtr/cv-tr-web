@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import { COLORS, BTN_VARIANTS, INPUT_VARIANTS } from '~/enums/vuetify.enums';
-import { API_ENDPOINTS } from '~/enums/api.enums';
-import { useEndpoints } from '~/composables/endpoints.composables';
-import type { Auth } from '~/types/auth.types';
-import { useAuthStore } from '~/store/auth.store';
-import { useShowNotification } from '~/composables/notification_alert.composables';
+import { API_ENDPOINTS } from '../../enums/api.enums';
+import type { Auth } from '../../types/auth.types';
+import { useAuthStore } from '../../store/auth.store';
+import { BTN_VARIANTS, COLORS, INPUT_VARIANTS } from '../../enums/vuetify.enums';
 
 const isVisibleVal = defineModel<boolean>('isVisible');
 

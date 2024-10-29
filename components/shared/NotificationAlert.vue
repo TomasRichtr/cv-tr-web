@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getCurrentInstance } from 'vue';
-import type { NotificationAlertProps } from '~/types/notification_alert.types';
-import { ALERT_TYPES } from '~/enums/vuetify.enums';
+import type { NotificationAlertProps } from '../../types/notification_alert.types';
+import { ALERT_TYPES } from '../../enums/vuetify.enums';
 
 const props = withDefaults(defineProps<NotificationAlertProps>(), {
   type: ALERT_TYPES.SUCCESS,

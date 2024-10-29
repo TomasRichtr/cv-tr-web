@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { useUiStore } from '~/store/ui.store';
-import { NAVIGATION_OPTS } from '~/constants/navigation_opts.constants';
-import LanguagePicker from '~/components/shared/LanguagePicker.vue';
-import { LOCATIONS, BTN_VARIANTS } from '~/enums/vuetify.enums';
+import { useUiStore } from '../../store/ui.store';
+import { BTN_VARIANTS, LOCATIONS } from '../../enums/vuetify.enums';
+import { NAVIGATION_OPTS } from '../../constants/navigation_opts.constants';
+import LanguagePicker from './LanguagePicker.vue';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 

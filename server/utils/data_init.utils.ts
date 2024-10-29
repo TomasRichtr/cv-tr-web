@@ -1,5 +1,5 @@
-import { create } from '~/server/daos/users.dao';
-import { hashString } from '~/utils/auth.utils';
+import { create } from '../daos/users.dao';
+import { hashString } from '../../utils/auth.utils';
 
 const config = useRuntimeConfig();
 

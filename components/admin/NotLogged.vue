@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { COLORS } from '~/enums/vuetify.enums';
-import { ROUTES } from '~/enums/routes';
-import IconBtn from '~/components/shared/IconBtn.vue';
+import { COLORS } from '../../enums/vuetify.enums';
+import { ROUTES } from '../../enums/routes';
+import IconBtn from '../shared/IconBtn.vue';
 
 const refreshPage = () => {
   reloadNuxtApp({

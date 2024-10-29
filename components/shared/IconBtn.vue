@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { BtnVariants, Colors } from '~/enums/vuetify.enums';
-import { SIZES, COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
-import type { Routes } from '~/enums/routes';
+import type { Routes } from '../../enums/routes';
+import type { BtnVariants, Colors } from '../../enums/vuetify.enums';
+import { BTN_VARIANTS, COLORS, SIZES } from '../../enums/vuetify.enums';
 
 interface Props {
   icon: string;

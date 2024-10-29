@@ -2,7 +2,7 @@ import type { Knex } from 'knex';
 import { Tables } from '../../types/db.types';
 import { UserCols } from '../../types/user.types';
 
-exports.up = (knexDB: Knex) => {
+export const up = (knexDB: Knex) => {
   return knexDB.schema
     .createTable(Tables.Users, (table: Knex.TableBuilder) => {
       table.increments(UserCols.Id).primary();
@@ -13,6 +13,6 @@ exports.up = (knexDB: Knex) => {
     });
 };
 
-exports.down = (knexDB: Knex) => {
+export const down = (knexDB: Knex) => {
   return knexDB.schema.dropTable(Tables.Messages);
 };

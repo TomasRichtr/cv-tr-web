@@ -23,6 +23,10 @@
     "moduleResolution": "node",
     "useDefineForClassFields": true,
     "noImplicitThis": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*"]
+    }
   },
 }

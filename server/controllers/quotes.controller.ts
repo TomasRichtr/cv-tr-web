@@ -1,5 +1,5 @@
-import { QUOTES_URL } from '~/constants/quotes.contants';
-import type { Quote } from '~/types/data.types';
+import type { Quote } from '../../types/data.types';
+import { QUOTES_URL } from '../../constants/quotes.contants';
 
 export const getQuote = async () => {
   const [quote] = await $fetch<Quote[]>(QUOTES_URL, {

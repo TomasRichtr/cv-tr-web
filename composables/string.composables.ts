@@ -1,6 +1,7 @@
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
-import { PERIOD_UNITS, type PeriodUnits } from '~/enums/date.enums';
+import type { PeriodUnits } from '../enums/date.enums';
+import { PERIOD_UNITS } from '../enums/date.enums';
 
 export const useString = () => {
   const { t } = useTranslations();

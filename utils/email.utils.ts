@@ -1,5 +1,5 @@
 import nodemailer from 'nodemailer';
-import type { Message } from '~/types/message.types';
+import type { Message } from '../types/message.types';
 
 const config = useRuntimeConfig();
 

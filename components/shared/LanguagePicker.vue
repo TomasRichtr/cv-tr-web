@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import eng from 'assets/images/eng.png';
 import cze from 'assets/images/cze.png';
-import { useUiStore } from '~/store/ui.store';
-import { LANGUAGES } from '~/enums/ui.enums';
-import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
+import { LANGUAGES } from '../../enums/ui.enums';
+import { BTN_VARIANTS, COLORS } from '../../enums/vuetify.enums';
+import { useUiStore } from '../../store/ui.store';
 
 const { language } = storeToRefs(useUiStore());
 </script>

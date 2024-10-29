@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { uniq, values, isEmpty } from 'lodash-es';
-import { COLORS, DENSITY, BTN_VARIANTS } from '~/enums/vuetify.enums';
-import { HEADER_LABELS, SKILLS_DEGREE, SORTING_LABELS } from '~/constants/skills.constants';
-import type { Skills } from '~/enums/skills.enum';
-import { SKILL_DEGREE } from '~/enums/skills.enum';
-import PageSection from '~/components/shared/PageSection.vue';
+import { isEmpty, uniq, values } from 'lodash-es';
+import { BTN_VARIANTS, COLORS, DENSITY } from '../../enums/vuetify.enums';
+import type { Skills } from '../../enums/skills.enum';
+import { SKILL_DEGREE } from '../../enums/skills.enum';
+import { HEADER_LABELS, SKILLS_DEGREE, SORTING_LABELS } from '../../constants/skills.constants';
+import PageSection from '../shared/PageSection.vue';
 
 interface Props {
   selectedSort?: number;

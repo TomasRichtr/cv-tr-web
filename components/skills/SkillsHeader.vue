@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { HEADER_LABELS } from '~/constants/skills.constants';
+import { HEADER_LABELS } from '../../constants/skills.constants';
 
 const { t } = useTranslations();
 </script>

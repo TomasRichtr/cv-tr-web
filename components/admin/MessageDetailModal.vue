@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Message } from '~/types/message.types';
-import LabeledInfo from '~/components/shared/LabeledInfo.vue';
+import type { Message } from '../../types/message.types';
+import LabeledInfo from '../shared/LabeledInfo.vue';
 
 interface Props {
   message: Message;

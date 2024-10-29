@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DEV_ICON_MAP, MATERIAL_ICON_MAP } from '~/constants/icons.constants';
+import { DEV_ICON_MAP, MATERIAL_ICON_MAP } from '../../constants/icons.constants';
 
 interface Props {
   skill: string;

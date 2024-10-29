@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { FOOTER_BTNS_MAP } from '~/constants/footer.constants';
-import { useUiStore } from '~/store/ui.store';
-import { COLORS } from '~/enums/vuetify.enums';
-import type { Routes } from '~/enums/routes';
-import { ROUTES } from '~/enums/routes';
+import type { Routes } from '../../enums/routes';
+import { ROUTES } from '../../enums/routes';
+import { FOOTER_BTNS_MAP } from '../../constants/footer.constants';
+import { COLORS } from '../../enums/vuetify.enums';
+import { useUiStore } from '../../store/ui.store';
 
 const route = useRoute();
 

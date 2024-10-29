@@ -1,4 +1,4 @@
-import { deleteMessage } from '~/server/controllers/messages.controller';
+import { deleteMessage } from '../../../controllers/messages.controller';
 
 export default defineEventHandler(async (event) => {
   const id = getRouterParam(event, 'id');

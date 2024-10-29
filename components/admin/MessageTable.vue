@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { Message } from '~/types/message.types';
-import { useUiStore } from '~/store/ui.store';
-import MessageTableActions from '~/components/admin/MessageTableActions.vue';
-import { ALIGNES } from '~/enums/vuetify.enums';
+import { useUiStore } from '../../store/ui.store';
+import { ALIGNES } from '../../enums/vuetify.enums';
+import type { Message } from '../../types/message.types';
+import MessageTableActions from './MessageTableActions.vue';
 
 interface Props {
   messages: Message[];

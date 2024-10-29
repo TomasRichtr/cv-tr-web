@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { useMessageApi } from '~/composables/messages.composables';
-import MessageTable from '~/components/admin/MessageTable.vue';
-import { useMessagesStore } from '~/store/messages.store';
-import { INPUT_VARIANTS } from '~/enums/vuetify.enums';
-import LoginModal from '~/components/admin/LoginModal.vue';
-import { useAuthStore } from '~/store/auth.store';
-import NotLogged from '~/components/admin/NotLogged.vue';
-import PageWrapper from '~/components/shared/PageWrapper.vue';
+import { useMessagesStore } from '../store/messages.store';
+import { useAuthStore } from '../store/auth.store';
+import { INPUT_VARIANTS } from '../enums/vuetify.enums';
+import PageWrapper from '../components/shared/PageWrapper.vue';
+import MessageTable from '../components/admin/MessageTable.vue';
+import NotLogged from '../components/admin/NotLogged.vue';
+import LoginModal from '../components/admin/LoginModal.vue';
 
 const { getMessages } = useMessageApi();
 

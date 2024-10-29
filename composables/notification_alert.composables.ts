@@ -1,14 +1,13 @@
 import { createApp } from 'vue';
-import AlertComponent from '~/components/shared/NotificationAlert.vue';
-import type { NotificationAlertProps } from '~/types/notification_alert.types';
-import { ALERT_TYPES } from '~/enums/vuetify.enums';
-import { useVuetify } from '~/composables/vuetify.composables';
+import { ALERT_TYPES } from '../enums/vuetify.enums';
+import type { NotificationAlertProps } from '../types/notification_alert.types';
+import NotificationAlert from '../components/shared/NotificationAlert.vue';
 
 export const useShowNotification = () => {
   const { vuetifyInstance } = useVuetify();
 
   const createNotificationAlert = (props: NotificationAlertProps) => {
-    const app = createApp(AlertComponent, {
+    const app = createApp(NotificationAlert, {
       title: props.title,
       text: props.text,
       type: props.type,

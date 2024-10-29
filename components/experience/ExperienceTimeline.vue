@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import ExperienceTimelineCard from '~/components/experience/ExperienceTimelineCard.vue';
-import { EXPERIENCES } from '~/constants/experiences.constants';
-import { DENSITY, SIZES } from '~/enums/vuetify.enums';
+import { DENSITY, SIZES } from '../../enums/vuetify.enums';
+import { EXPERIENCES } from '../../constants/experiences.constants';
+import ExperienceTimelineCard from './ExperienceTimelineCard.vue';
 </script>
 
 <template>

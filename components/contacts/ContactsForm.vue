@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { VForm } from 'vuetify/components';
-import PageSection from '~/components/shared/PageSection.vue';
-import { useMessageApi } from '~/composables/messages.composables';
-import { useUiStore } from '~/store/ui.store';
-import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
-import { useContactForm } from '~/composables/contact_form.composables';
+import { useUiStore } from '../../store/ui.store';
+import { BTN_VARIANTS, COLORS } from '../../enums/vuetify.enums';
+import PageSection from '../shared/PageSection.vue';
 
 const {
   contactFormRef,

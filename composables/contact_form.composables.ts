@@ -1,7 +1,7 @@
 import { VTextarea, VTextField } from 'vuetify/components';
-import type { ContactFormInputs } from '~/enums/contact_form.enums';
-import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
-import inputValidations from '~/utils/input_validations.utils';
+import type { ContactFormInputs } from '../enums/contact_form.enums';
+import { CONTACT_FORM_INPUTS } from '../enums/contact_form.enums';
+import inputValidations from '../utils/input_validations.utils';
 
 interface Input {
   name: ContactFormInputs;

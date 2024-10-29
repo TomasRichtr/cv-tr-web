@@ -1,5 +1,5 @@
 import type { Dayjs } from 'dayjs';
-import { FORMATS } from '~/enums/date.enums';
+import { FORMATS } from '../enums/date.enums';
 
 export const useDatetime = () => {
   const { t } = useTranslations();

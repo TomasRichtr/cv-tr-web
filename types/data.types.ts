@@ -1,6 +1,6 @@
 import type { Dayjs } from 'dayjs';
-import type { Skills } from '~/enums/skills.enum';
-import type { Colors } from '~/enums/vuetify.enums';
+import type { Skills } from '../enums/skills.enum';
+import type { Colors } from '../enums/vuetify.enums';
 
 export interface Experience {
   position: string;

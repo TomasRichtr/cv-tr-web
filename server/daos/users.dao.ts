@@ -1,8 +1,8 @@
-import knexDb from '~/server/db/knex.db';
-import { Tables } from '~/types/db.types';
-import type { User } from '~/types/user.types';
-import { isStringHashEqual } from '~/utils/auth.utils';
-import { UserCols } from '~/types/user.types';
+import knexDb from '../db/knex.db';
+import { Tables } from '../../types/db.types';
+import type { User } from '../../types/user.types';
+import { UserCols } from '../../types/user.types';
+import { isStringHashEqual } from '../../utils/auth.utils';
 
 export const create = async (user: Omit<User, 'id'>) => {
   try {

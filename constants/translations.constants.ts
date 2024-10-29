@@ -1,5 +1,4 @@
 import type { DeepReadonly } from 'vue';
-import { CONTACT_FORM_INPUTS } from '~/enums/contact_form.enums';
 
 export const EN: DeepReadonly<Record<string, unknown>> = {
   name: 'Tomas',
@@ -83,23 +82,23 @@ export const EN: DeepReadonly<Record<string, unknown>> = {
     password: 'Fill a password',
   },
   validation: {
-    [CONTACT_FORM_INPUTS.NAME]: {
+    name: {
       required: 'You must enter name.',
       count: 'Your name is too long! Max length is 100 characters.',
     },
-    [CONTACT_FORM_INPUTS.COMPANY]: {
+    company: {
       count: 'Your phone is too long! Max length is 100 characters.',
     },
-    [CONTACT_FORM_INPUTS.EMAIL]: {
+    email: {
       required: 'You must enter valid email.',
       format: 'You must enter valid email.',
       count: 'Your email is too long! Max length is 100 characters.',
     },
-    [CONTACT_FORM_INPUTS.MESSAGE]: {
+    message: {
       required: 'You must enter a message.',
       count: 'Your message is too long! Max length is 1000 characters.',
     },
-    [CONTACT_FORM_INPUTS.PHONE]: {
+    phone: {
       format: 'You must enter a valid phone number.',
       count: 'Your phone is too long! Max length is 20 characters.',
     },
@@ -209,23 +208,23 @@ export const CS: DeepReadonly<Record<string, unknown>> = {
     password: 'Vyplňte heslo',
   },
   validation: {
-    [CONTACT_FORM_INPUTS.NAME]: {
+    name: {
       required: 'Musíte zadat jméno.',
       count: 'Vaše jméno je příliš dlouhé! Maximální délka je 100 znaků.',
     },
-    [CONTACT_FORM_INPUTS.COMPANY]: {
+    company: {
       count: 'Vaše společnost je příliš dlouhá! Maximální délka je 100 znaků.',
     },
-    [CONTACT_FORM_INPUTS.EMAIL]: {
+    email: {
       required: 'Musíte zadat platný e-mail.',
       format: 'Musíte zadat platný e-mail.',
       count: 'Váš e-mail je příliš dlouhý! Maximální délka je 100 znaků.',
     },
-    [CONTACT_FORM_INPUTS.MESSAGE]: {
+    message: {
       required: 'Musíte zadat zprávu.',
       count: 'Vaše zpráva je příliš dlouhá! Maximální délka je 1000 znaků.',
     },
-    [CONTACT_FORM_INPUTS.PHONE]: {
+    phone: {
       format: 'Musíte zadat platné telefonní číslo.',
       count: 'Váš telefon je příliš dlouhý! Maximální délka je 20 znaků.',
     },

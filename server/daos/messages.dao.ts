@@ -1,7 +1,7 @@
-import { Tables } from '~/types/db.types';
-import knexDb from '~/server/db/knex.db';
-import type { Message } from '~/types/message.types';
-import { MessagesCols } from '~/types/message.types';
+import { Tables } from '../../types/db.types';
+import knexDb from '../db/knex.db';
+import type { Message } from '../../types/message.types';
+import { MessagesCols } from '../../types/message.types';
 
 export const create = async (message: Omit<Message, 'id'>) => {
   try {

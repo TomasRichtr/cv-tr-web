@@ -1,8 +1,7 @@
-import { useUiStore } from '~/store/ui.store';
-import type { ApiEndpoints } from '~/enums/api.enums';
-import { API_METHODS } from '~/enums/api.enums';
-import type { NuxtError } from '#app';
-import { useShowNotification } from '~/composables/notification_alert.composables';
+import type { NuxtError } from 'nuxt/dist/app';
+import { useUiStore } from '../store/ui.store';
+import type { ApiEndpoints } from '../enums/api.enums';
+import { API_METHODS } from '../enums/api.enums';
 
 export const useEndpoints = () => {
   const { loading } = storeToRefs(useUiStore());

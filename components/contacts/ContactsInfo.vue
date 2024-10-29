@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import IconBtn from '~/components/shared/IconBtn.vue';
-import PageSection from '~/components/shared/PageSection.vue';
-import { COLORS, SIZES, BTN_VARIANTS } from '~/enums/vuetify.enums';
+import { BTN_VARIANTS, COLORS, SIZES } from '../../enums/vuetify.enums';
+import IconBtn from '../shared/IconBtn.vue';
+import PageSection from '../shared/PageSection.vue';
 
 const { t } = useTranslations();
 

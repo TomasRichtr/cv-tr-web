@@ -1,10 +1,8 @@
 <script setup lang="ts">
-import SkillTag from '~/components/shared/SkillTag.vue';
-import type { Experience } from '~/types/data.types';
-import { ROUTES } from '~/enums/routes';
-import { COLORS, SIZES } from '~/enums/vuetify.enums';
-import { useDatetime } from '~/composables/date.composables';
-import { useString } from '~/composables/string.composables';
+import SkillTag from '../shared/SkillTag.vue';
+import { ROUTES } from '../../enums/routes';
+import type { Experience } from '../../types/data.types';
+import { COLORS, SIZES } from '../../enums/vuetify.enums';
 
 const props = defineProps<Experience>();
 

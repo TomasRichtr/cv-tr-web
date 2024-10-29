@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import cv from 'assets/files/t_richtr_cv.pdf';
-import IconBtn from '~/components/shared/IconBtn.vue';
-import { COLORS } from '~/enums/vuetify.enums';
-import { useUiStore } from '~/store/ui.store';
-import { ROUTES } from '~/enums/routes';
+import { ROUTES } from '../../enums/routes';
+import { COLORS } from '../../enums/vuetify.enums';
+import { useUiStore } from '../../store/ui.store';
+import IconBtn from './IconBtn.vue';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 

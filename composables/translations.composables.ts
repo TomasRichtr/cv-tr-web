@@ -1,7 +1,7 @@
 import { get } from 'lodash-es';
 import { capitalize } from 'vue';
-import { useUiStore } from '~/store/ui.store';
-import { TRANSLATIONS } from '~/constants/translations.constants';
+import { useUiStore } from '../store/ui.store';
+import { TRANSLATIONS } from '../constants/translations.constants';
 
 export const useTranslations = () => {
   const { language } = storeToRefs(useUiStore());

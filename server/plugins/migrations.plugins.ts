@@ -1,5 +1,5 @@
 import { register } from 'ts-node';
-import knexDb from '~/server/db/knex.db';
+import knexDb from '../db/knex.db';
 
 register();
 

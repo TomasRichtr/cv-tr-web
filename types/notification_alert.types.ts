@@ -1,4 +1,4 @@
-import type { AlertTypes } from '~/enums/vuetify.enums';
+import type { AlertTypes } from '../enums/vuetify.enums';
 
 export interface NotificationAlertProps {
   text?: string;

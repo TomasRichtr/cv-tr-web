@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import FooterBtns from '~/components/shared/FooterBtns.vue';
-import HeaderBar from '~/components/shared/HeaderBar.vue';
-import NavigationDrawer from '~/components/shared/NavigationDrawer.vue';
-import { ROUTES } from '~/enums/routes';
+import { ROUTES } from './enums/routes';
+import HeaderBar from './components/shared/HeaderBar.vue';
+import NavigationDrawer from './components/shared/NavigationDrawer.vue';
+import FooterBtns from './components/shared/FooterBtns.vue';
 
 const route = useRoute();
 

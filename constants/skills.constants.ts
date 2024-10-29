@@ -1,5 +1,5 @@
 import type { DeepReadonly } from 'vue';
-import { SKILL_DEGREE, SKILLS } from '~/enums/skills.enum';
+import { SKILL_DEGREE, SKILLS } from '../enums/skills.enum';
 
 export const SKILLS_DEGREE: DeepReadonly<Record<string, number>> = {
   [SKILLS.CSS]: SKILL_DEGREE.DAILY,

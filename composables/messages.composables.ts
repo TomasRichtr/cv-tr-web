@@ -1,10 +1,8 @@
 import type { VForm } from 'vuetify/components';
 import { cloneDeep } from 'lodash-es';
-import { DEFAULT_FORM } from '~/constants/contact_form.constants';
-import { useShowNotification } from '~/composables/notification_alert.composables';
-import { useEndpoints } from '~/composables/endpoints.composables';
-import { API_ENDPOINTS } from '~/enums/api.enums';
-import type { Message, NewMessage } from '~/types/message.types';
+import type { Message, NewMessage } from '../types/message.types';
+import { DEFAULT_FORM } from '../constants/contact_form.constants';
+import { API_ENDPOINTS } from '../enums/api.enums';
 
 export const useMessageApi = () => {
   const contactFormRef = ref<typeof VForm>();

@@ -1,4 +1,4 @@
-import { updateMessage } from '~/server/controllers/messages.controller';
+import { updateMessage } from '../../../controllers/messages.controller';
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);

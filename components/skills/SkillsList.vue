@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Skills } from '~/enums/skills.enum';
-import SkillRow from '~/components/skills/SkillRow.vue';
+import type { Skills } from '../../enums/skills.enum';
+import SkillRow from './SkillRow.vue';
 
 interface Props {
   skills: Skills[];

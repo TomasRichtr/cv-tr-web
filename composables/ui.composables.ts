@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@vueuse/core';
-import { BREAKPOINTS } from '~/enums/ui.enums';
+import { BREAKPOINTS } from '../enums/ui.enums';
 
 export const useBreakpoints = () => {
   const isSmallScreen = useMediaQuery(`(max-width: ${BREAKPOINTS.SMALL})`);

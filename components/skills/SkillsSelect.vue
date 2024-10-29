@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { values, without } from 'lodash-es';
 import { capitalize } from 'vue';
-import type { Skills } from '~/enums/skills.enum';
-import { SKILLS } from '~/enums/skills.enum';
-import SkillTag from '~/components/shared/SkillTag.vue';
-import { COLORS, DENSITY, INPUT_VARIANTS } from '~/enums/vuetify.enums';
-import SkillIcon from '~/components/shared/SkillIcon.vue';
-import PageSection from '~/components/shared/PageSection.vue';
+import type { Skills } from '../../enums/skills.enum';
+import { SKILLS } from '../../enums/skills.enum';
+import { COLORS, DENSITY, INPUT_VARIANTS } from '../../enums/vuetify.enums';
+import SkillIcon from '../shared/SkillIcon.vue';
+import SkillTag from '../shared/SkillTag.vue';
+import PageSection from '../shared/PageSection.vue';
 
 interface Props {
   modelValue: Skills[];

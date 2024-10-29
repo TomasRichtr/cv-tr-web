@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { COLORS } from '~/enums/vuetify.enums';
-import type { Skills } from '~/enums/skills.enum';
-import { SKILL_DEGREE } from '~/enums/skills.enum';
-import SkillTag from '~/components/shared/SkillTag.vue';
-import { SKILLS_DEGREE } from '~/constants/skills.constants';
+import { SKILLS_DEGREE } from '../../constants/skills.constants';
+import { COLORS } from '../../enums/vuetify.enums';
+import type { Skills } from '../../enums/skills.enum';
+import { SKILL_DEGREE } from '../../enums/skills.enum';
 
 interface Props {
   isFirst: boolean;

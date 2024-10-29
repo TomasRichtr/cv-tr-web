@@ -1,7 +1,7 @@
 import dayjs from 'dayjs';
-import type { Experience } from '~/types/data.types';
-import { COLORS } from '~/enums/vuetify.enums';
-import { SKILLS } from '~/enums/skills.enum';
+import { SKILLS } from '../enums/skills.enum';
+import { COLORS } from '../enums/vuetify.enums';
+import type { Experience } from '../types/data.types';
 
 export const EXPERIENCES: Experience[] = [
   {

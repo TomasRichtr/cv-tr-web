@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { entries, values, sortBy } from 'lodash-es';
+import { entries, sortBy, values } from 'lodash-es';
 import { useStorage } from '@vueuse/core';
-import SkillSelect from '~/components/skills/SkillsSelect.vue';
-import SkillsHeader from '~/components/skills/SkillsHeader.vue';
-import SkillsList from '~/components/skills/SkillsList.vue';
-import SkillsPredefinedSelects from '~/components/skills/SkillsPredefinedSelects.vue';
-import { SKILLS_DEGREE } from '~/constants/skills.constants';
-import type { SkillDegree, Sorts, Skills } from '~/enums/skills.enum';
-import { SKILLS, SORTS } from '~/enums/skills.enum';
-import PageWrapper from '~/components/shared/PageWrapper.vue';
-import PageSection from '~/components/shared/PageSection.vue';
+import type { SkillDegree, Skills, Sorts } from '../enums/skills.enum';
+import { SKILLS, SORTS } from '../enums/skills.enum';
+import { SKILLS_DEGREE } from '../constants/skills.constants';
+import PageWrapper from '../components/shared/PageWrapper.vue';
+import SkillsPredefinedSelects from '../components/skills/SkillsPredefinedSelects.vue';
+import SkillsHeader from '../components/skills/SkillsHeader.vue';
+import SkillsList from '../components/skills/SkillsList.vue';
+import PageSection from '../components/shared/PageSection.vue';
 
 const route = useRoute();
 

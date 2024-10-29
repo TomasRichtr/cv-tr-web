@@ -1,5 +1,5 @@
 import type { DeepReadonly } from 'vue';
-import { SKILLS } from '~/enums/skills.enum';
+import { SKILLS } from '../enums/skills.enum';
 
 export const DEV_ICON_MAP: DeepReadonly<Record<string, string>> = {
   [SKILLS.TAILWIND]: 'tailwindcss',

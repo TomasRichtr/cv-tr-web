@@ -1,5 +1,5 @@
 import type { DeepReadonly } from 'vue';
-import { ROUTES } from '~/enums/routes';
+import { ROUTES } from '../enums/routes';
 
 export const NAVIGATION_OPTS: DeepReadonly<Record<string, string>[]> = [
   { text: 'buttons.home', icon: 'mdi-home', to: ROUTES.INDEX },

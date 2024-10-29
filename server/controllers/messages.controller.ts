@@ -1,6 +1,6 @@
-import { create, list, update, remove } from '../daos/messages.dao';
-import type { Message } from '~/types/message.types';
-import { buildSubject, sendEmail } from '~/utils/email.utils';
+import { create, list, remove, update } from '../daos/messages.dao';
+import type { Message } from '../../types/message.types';
+import { buildSubject, sendEmail } from '../../utils/email.utils';
 
 export const createMessage = async (message: Omit<Message, 'id'>) => {
   const [id] = await create(message);

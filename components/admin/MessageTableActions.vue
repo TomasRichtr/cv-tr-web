@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { Message } from '~/types/message.types';
-import { useMessageApi } from '~/composables/messages.composables';
-import IconBtn from '~/components/shared/IconBtn.vue';
-import { COLORS, BTN_VARIANTS } from '~/enums/vuetify.enums';
-import { useMessagesStore } from '~/store/messages.store';
-import MessageDetailModal from '~/components/admin/MessageDetailModal.vue';
+import { useMessagesStore } from '../../store/messages.store';
+import type { Message } from '../../types/message.types';
+import IconBtn from '../shared/IconBtn.vue';
+import { BTN_VARIANTS, COLORS } from '../../enums/vuetify.enums';
+import MessageDetailModal from './MessageDetailModal.vue';
 
 interface Props {
   message: Message;
