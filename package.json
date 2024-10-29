@@ -7,7 +7,7 @@
   },
   "scripts": {
     "build": "nuxt build",
-    "postbuild": "knex migrate:latest && ts-node --project tsconfig.json server/plugins/migrations.plugins.ts",
+    "postbuild": "knex migrate:latest && ts-node --project tsconfig.json server/bootstrap_data.ts",
     "start": "node .output/server/index.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

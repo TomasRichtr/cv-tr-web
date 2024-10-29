@@ -1,10 +1,10 @@
 import { register } from 'ts-node';
-import { create } from '../../server/daos/users.dao';
-import { hashString } from '../../utils/auth.utils';
+import { hashString } from '../utils/auth.utils';
+import { create } from './daos/users.dao';
 
 register();
 
-const runMigrations = async () => {
+const bootstrapData = async () => {
   try {
     await create({ name: process.env.ADMIN_NAME!, password: hashString(process.env.ADMIN_PASSWORD!) });
   }
@@ -16,5 +16,4 @@ const runMigrations = async () => {
   }
 };
 
-// Execute the function
-runMigrations();
+bootstrapData();
