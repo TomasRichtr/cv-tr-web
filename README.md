@@ -1,75 +1,37 @@
-# Nuxt 3 Minimal Starter
+# README: TR CV APP
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+## development server
 
-Make sure to install the dependencies:
+### node
+specified in package.json
+
+### npm
+specified in package.json
+
+### run development server
 
 ```bash
 # npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
+installs dependencies
+```bash
+# npm
+npm postbuild
+```
+creates admin user and initializes database
 
-## Development Server
+* see knex.config.ts which env variables for database are required
 
-Start the development server on `http://localhost:3000`:
+* for admin creation is required to run command with env variable: `ADMIN_NAME` and `ADMIN_PASSWORD`
 
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
+runs development server
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* for testing of email sending with message creation is needed to run npm run dev with env variable `EMAIL_LOGIN` 
+and `EMAIL_PASSWORD`
