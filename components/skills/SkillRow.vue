@@ -3,6 +3,7 @@ import { SKILLS_DEGREE } from '../../constants/skills.constants';
 import { COLORS } from '../../enums/vuetify.enums';
 import type { Skills } from '../../enums/skills.enum';
 import { SKILL_DEGREE } from '../../enums/skills.enum';
+import SkillTag from '../shared/SkillTag.vue';
 
 interface Props {
   isFirst: boolean;
