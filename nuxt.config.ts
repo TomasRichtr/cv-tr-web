@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   nitro: {
     plugins: [
-      './server/plugins/migrations.plugins.ts',
+      '~/server/plugins/migrations.plugins.ts',
     ],
   },
   eslint: {
