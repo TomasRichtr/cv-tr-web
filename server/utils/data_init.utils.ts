@@ -4,7 +4,7 @@ import { hashString } from '../../utils/auth.utils';
 export const initData = async () => {
   try {
     console.log('Adding data...');
-    await create({ name: process.env.admin_name!, password: hashString(process.env.admin_password!) });
+    await create({ name: process.env.ADMIN_NAME!, password: hashString(process.env.ADMIN_PASSWORD!) });
     console.log('Data added');
   }
   catch (err) {
