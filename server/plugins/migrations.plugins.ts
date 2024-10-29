@@ -1,19 +1,20 @@
 import { register } from 'ts-node';
-import knexDb from '../db/knex.db';
+import { create } from '../../server/daos/users.dao';
+import { hashString } from '../../utils/auth.utils';
 
 register();
 
-export default defineNitroPlugin(async () => {
+const runMigrations = async () => {
   try {
-    console.log('Running migrations...');
-    knexDb.migrate.latest().then(() => {
-      return;
-    }).then(() => {
-      initData();
-    });
-    console.log('Migrations finished');
+    await create({ name: process.env.ADMIN_NAME!, password: hashString(process.env.ADMIN_PASSWORD!) });
   }
   catch (err) {
     console.error('Migration failed', err);
   }
-});
+  finally {
+    process.exit();
+  }
+};
+
+// Execute the function
+runMigrations();

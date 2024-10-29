@@ -13,6 +13,7 @@ export default withNuxt({
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-undef': 'off',
     'semi': ['warn', 'always'],
+    '@typescript-eslint/no-require-imports': 'warn',
     'vue/max-lines-per-block': [
       'warn',
       {
