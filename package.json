@@ -14,7 +14,8 @@
     "postinstall": "nuxt prepare",
     "typescript": "nuxt typecheck",
     "lint": "eslint",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "db:migrate": "knex migrate:latest"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.5",

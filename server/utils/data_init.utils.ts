@@ -6,7 +6,7 @@ const config = useRuntimeConfig();
 export const initData = async () => {
   try {
     console.log('Adding data...');
-    await create({ name: config.public.admin_name, password: hashString(config.public.admin_password) });
+    await create({ name: process.env.admin_name!, password: hashString(process.env.admin_password!) });
     console.log('Data added');
   }
   catch (err) {

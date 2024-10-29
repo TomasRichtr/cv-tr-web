@@ -1,13 +1,11 @@
 import nodemailer from 'nodemailer';
 import type { Message } from '../types/message.types';
 
-const config = useRuntimeConfig();
-
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
-    user: config.public.emailLogin,
-    pass: config.public.emailPassword,
+    user: process.env.emailLogin,
+    pass: process.env.emailPassword,
   },
 });
 

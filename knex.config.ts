@@ -1,25 +1,26 @@
-const config = useRuntimeConfig();
-
-const CONFIG = {
-  HOST: config.public.database_host || 'localhost',
-  USER: config.public.database_user || 'root',
-  PASSWORD: config.public.database_password || 'password',
-  DATABASE: config.public.database || 'tr_cv_app',
-  PORT: config.public.database_port || 3306,
+export const CONFIG = {
+  HOST: process.env.database_host || 'localhost',
+  USER: process.env.database_user || 'root',
+  PASSWORD: process.env.database_password || 'password',
+  DATABASE: process.env.database || 'tr_cv_app',
+  PORT: process.env.database_port || 3306,
+  CLIENT: 'mysql',
+  MIGRATIONS: {
+    directory: './server/migrations',
+    extension: 'ts',
+  },
+  CHARSET: 'utf8mb4',
 };
 
 export default {
-  client: 'mysql',
+  client: CONFIG.CLIENT,
   connection: {
     host: CONFIG.HOST,
     user: CONFIG.USER,
     password: CONFIG.PASSWORD,
     database: CONFIG.DATABASE,
     port: CONFIG.PORT,
-    charset: 'utf8mb4',
+    charset: CONFIG.CHARSET,
   },
-  migrations: {
-    directory: './server/migrations',
-    extension: 'ts',
-  },
+  migrations: CONFIG.MIGRATIONS,
 };
