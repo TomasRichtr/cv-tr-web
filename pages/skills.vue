@@ -8,6 +8,7 @@ import PageWrapper from '../components/shared/PageWrapper.vue';
 import SkillsPredefinedSelects from '../components/skills/SkillsPredefinedSelects.vue';
 import SkillsHeader from '../components/skills/SkillsHeader.vue';
 import SkillsList from '../components/skills/SkillsList.vue';
+import SkillSelect from '../components/skills/SkillsSelect.vue';
 import PageSection from '../components/shared/PageSection.vue';
 
 const route = useRoute();
@@ -71,14 +72,17 @@ const { t } = useTranslations();
 </script>
 
 <template>
-  <PageWrapper>
+  <PageWrapper class="max-w-6xl gap-y-3">
     <SkillsPredefinedSelects
       v-model:selected-sort="selectedSort"
       :selected-skills="selectedSkills"
       @update:selected-degrees="selectSkills"
     />
+
     <SkillSelect v-model="selectedSkills" />
-    <PageSection :title="t('pageSections.skillsOverview')">
+    <PageSection
+      :title="t('pageSections.skillsOverview')"
+    >
       <SkillsHeader />
       <SkillsList :skills="filteredSkills" />
     </PageSection>

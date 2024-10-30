@@ -16,6 +16,7 @@ import ExperienceTimelineCard from './ExperienceTimelineCard.vue';
       :key="item.position"
       :dot-color="item.color"
       :density="DENSITY.COMPACT"
+      width="100%"
     >
       <ExperienceTimelineCard
         :size="item.size"

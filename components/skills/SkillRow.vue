@@ -46,11 +46,13 @@ const iconColor = computed(() => {
         </span>
       </template>
       <template #item="{ icon }">
-        <VIcon
-          :color="iconColor"
-          :icon="icon"
-          class="px-7 md:px-9 cursor-default"
-        />
+        <div class="w-[56px] md:w-[72px] flex justify-center items-center">
+          <VIcon
+            :color="iconColor"
+            :icon="icon"
+            class="cursor-default"
+          />
+        </div>
       </template>
     </VRating>
   </li>

@@ -75,9 +75,9 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-y-3">
+  <div class="flex flex-row gap-x-3">
     <PageSection
-      class="flex flex-row flex-wrap gap-2"
+      class="flex flex-row flex-wrap gap-2 items-center"
       :title="t('pageSections.filters')"
     >
       <VChip
@@ -93,7 +93,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
     </PageSection>
 
     <PageSection
-      class="flex flex-row flex-wrap gap-2"
+      class="flex flex-row flex-wrap gap-2 items-center"
       :title="t('pageSections.sorters')"
     >
       <VChip

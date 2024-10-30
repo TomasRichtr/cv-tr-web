@@ -5,7 +5,7 @@ import ContactsForm from '../components/contacts/ContactsForm.vue';
 </script>
 
 <template>
-  <PageWrapper>
+  <PageWrapper class="min-w-full">
     <ContactsInfo />
     <ContactsForm />
   </PageWrapper>
