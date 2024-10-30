@@ -17,6 +17,8 @@ specified in package.json
 npm install
 ```
 installs dependencies
+
+---
 ```bash
 # npm
 npm postbuild
@@ -27,6 +29,7 @@ creates admin user and initializes database
 
 * for admin creation is required to run command with env variable: `ADMIN_NAME` and `ADMIN_PASSWORD`
 
+---
 ```bash
 # npm
 npm run dev
@@ -35,3 +38,4 @@ runs development server
 
 * for testing of email sending with message creation is needed to run npm run dev with env variable `EMAIL_LOGIN` 
 and `EMAIL_PASSWORD`
+---
