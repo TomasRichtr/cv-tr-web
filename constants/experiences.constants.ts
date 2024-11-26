@@ -6,12 +6,31 @@ import type { Experience } from '../types/data.types';
 export const EXPERIENCES: Experience[] = [
   {
     position: 'Front-end developer',
+    color: COLORS.DESIGNEO,
+    place: 'Designeo / Prague',
+    description: `TBD`,
+    link: 'https://www.designeo.cz/',
+    startDate: dayjs('2024-25-11'),
+    size: 'TBD',
+    skills: [
+      SKILLS.CSS,
+      SKILLS.GIT,
+      SKILLS.HTML,
+      SKILLS.JAVASCRIPT,
+      SKILLS.REST_API,
+      SKILLS.TYPESCRIPT,
+      SKILLS.VUE,
+    ],
+  },
+  {
+    position: 'Front-end developer',
     color: COLORS.EASY,
     place: 'Easy Software / Prague',
     description: `Development of Easy Project, a comprehensive project management tool. Their solutions help 
     organizations manage tasks, resources, and time tracking, enhancing productivity and efficiency.`,
     link: 'https://www.easysoftware.com/',
     startDate: dayjs('2023-10-01'),
+    endDate: dayjs('2023-10-20'),
     size: 80,
     skills: [
       SKILLS.CSS,

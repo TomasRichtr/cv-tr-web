@@ -43,6 +43,7 @@ export const COLORS: DeepReadonly<Record<string, string>> = {
   EASY: 'easy',
   AMIO: 'amio',
   EQUIRADAR: 'equiradar',
+  DESIGNEO: 'designeo',
 };
 
 export const SIZES: DeepReadonly<Record<string, string>> = {

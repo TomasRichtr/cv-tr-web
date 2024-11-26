@@ -9,6 +9,7 @@ export const COLOR_HEX_CODES = {
   easy: '#0D65F2',
   amio: '#2f8fff',
   equiradar: '#aa1932',
+  designeo: '#0068FF',
 };
 
 /** @type {import('tailwindcss').Config} */
