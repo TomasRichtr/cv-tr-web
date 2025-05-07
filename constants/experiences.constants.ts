@@ -11,7 +11,7 @@ export const EXPERIENCES: Experience[] = [
     description: `TBD`,
     link: 'https://www.designeo.cz/',
     startDate: dayjs('2024-25-11'),
-    size: 'TBD',
+    size: 80,
     skills: [
       SKILLS.CSS,
       SKILLS.GIT,
