@@ -5,10 +5,10 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 ## development server
 
 ### node
-specified in package.json
+specified in package.json / nvm use
 
 ### npm
-specified in package.json
+specified in package.json / nvm use
 
 ### run development server
 
