@@ -16,9 +16,6 @@ export default defineNuxtConfig({
     },
   },
   css: ['@/styles/main.scss'],
-  alias: {
-    pinia: '/node_modules/@pinia/nuxt/node_modules/pinia/dist/pinia.mjs',
-  },
   build: {
     transpile: ['vuetify'],
   },

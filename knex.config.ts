@@ -4,7 +4,7 @@ export const CONFIG = {
   PASSWORD: process.env.DATABASE_PASSWORD || 'password',
   DATABASE: process.env.DATABASE || 'tr_cv_app',
   PORT: process.env.DATABASE_PORT || 3306,
-  CLIENT: 'mysql',
+  CLIENT: 'mysql2',
   MIGRATIONS: {
     directory: './server/migrations',
     extension: 'ts',

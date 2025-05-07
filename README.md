@@ -23,9 +23,9 @@ installs dependencies
 # npm
 npm postbuild
 ```
-creates admin user and initializes database
+creates admin user and initializes a database
 
-* see knex.config.ts which env variables for database are required
+* see knex.config.ts which env variables for a database are required
 
 * for admin creation is required to run command with env variable: `ADMIN_NAME` and `ADMIN_PASSWORD`
 
