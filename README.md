@@ -35,7 +35,4 @@ creates admin user and initializes a database
 npm run dev
 ```
 runs development server
-
-* for testing of email sending with message creation is needed to run npm run dev with env variable `EMAIL_LOGIN` 
-and `EMAIL_PASSWORD`
 ---
