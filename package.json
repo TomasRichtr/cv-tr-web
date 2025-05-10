@@ -17,7 +17,7 @@
     "lint": "eslint",
     "lint:fix": "eslint . --fix",
     "migrate": "knex migrate:latest",
-    "playwright": "npx playwright test --project=chromium",
+    "playwright": "npx playwright test",
     "playwright-ui": "npx playwright test --ui"
   },
   "dependencies": {
