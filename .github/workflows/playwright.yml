@@ -4,6 +4,10 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
+
+env: # environment variables (available in any part of the action)
+  NODE_VERSION: 20.19.1
+
 jobs:
   test:
     timeout-minutes: 60
