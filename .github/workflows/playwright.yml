@@ -18,6 +18,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Create database
+      run: npm run postbuild
+
     - name: Create build
       run: npm run build
 
