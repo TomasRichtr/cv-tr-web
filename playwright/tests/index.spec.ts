@@ -25,6 +25,6 @@ test.describe('Index Page', () => {
 
   test('should display the profile image', async () => {
     await expect(indexPage.elements.vImageEl).toBeVisible();
-    expect(indexPage.imgSrc).toBeTruthy();
+    expect(await indexPage.imgSrc()).toBeTruthy();
   });
 });

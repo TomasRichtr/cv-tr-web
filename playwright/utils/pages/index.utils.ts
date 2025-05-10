@@ -10,8 +10,8 @@ export default class IndexPage extends PageUtils {
     };
   }
 
-  public get imgSrc() {
-    return this.elements.imageEl.getAttribute('src');
+  public async imgSrc() {
+    return await this.elements.imageEl.getAttribute('src');
   }
 
   public async descriptionText() {
