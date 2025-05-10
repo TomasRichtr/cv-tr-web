@@ -15,7 +15,7 @@ const { t } = useTranslations();
         class="fixed bottom-0"
         :src="myPhoto"
         :lazy-src="myPhotoLowRes"
-        height="600"
+        height="70dvh"
       />
     </div>
   </div>
