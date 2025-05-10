@@ -9,6 +9,15 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: password
+          MYSQL_DATABASE: tr_cv_app
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -19,18 +28,61 @@ jobs:
       run: npm ci
 
     - name: Create database
+      env:
+        DATABASE_HOST: localhost
+        DATABASE_USER: root
+        DATABASE_PASSWORD: password
+        DATABASE: tr_cv_app
+        DATABASE_PORT: 3306
       run: npm run postbuild
 
     - name: Create build
+      env:
+        DATABASE_HOST: localhost
+        DATABASE_USER: root
+        DATABASE_PASSWORD: password
+        DATABASE: tr_cv_app
+        DATABASE_PORT: 3306
       run: npm run build
 
     - name: Start server
-      run: npm run start
+      env:
+        DATABASE_HOST: localhost
+        DATABASE_USER: root
+        DATABASE_PASSWORD: password
+        DATABASE: tr_cv_app
+        DATABASE_PORT: 3306
+      run: npm run start &
+
+    - name: Wait for server to be ready
+      run: |
+        # Wait for the server to be ready
+        echo "Waiting for server to be ready..."
+        timeout=60
+        while [ $timeout -gt 0 ]; do
+          if curl -s http://localhost:3000 > /dev/null; then
+            echo "Server is ready!"
+            break
+          fi
+          echo "Server not ready yet, waiting..."
+          sleep 1
+          timeout=$((timeout-1))
+        done
+        if [ $timeout -eq 0 ]; then
+          echo "Timed out waiting for server to be ready"
+          exit 1
+        fi
 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
     - name: Run Playwright tests
+      env:
+        DATABASE_HOST: localhost
+        DATABASE_USER: root
+        DATABASE_PASSWORD: password
+        DATABASE: tr_cv_app
+        DATABASE_PORT: 3306
       run: npx playwright test
 
     - uses: actions/upload-artifact@v4
