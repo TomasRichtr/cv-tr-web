@@ -6,6 +6,7 @@ import { COLORS } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';
 
 const route = useRoute();
+const { language } = storeToRefs(useUiStore());
 
 const footerBtnsProps = computed(() => {
   return FOOTER_BTNS_MAP[route.name as Routes];
@@ -31,7 +32,7 @@ const { t } = useTranslations();
         :rounded="true"
         :text="t(btn.label)"
         :color="btn.color"
-        :to="{ name: btn.to }"
+        :to="{ name: btn.to, params: { lang: language } }"
         :variant="btn.variant"
       />
     </template>
