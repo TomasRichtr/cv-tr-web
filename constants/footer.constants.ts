@@ -8,22 +8,22 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {
   index: [
     {},
     {
-      label: 'buttons.introduction',
-      color: COLORS.INFO,
-      to: ROUTES.INTRODUCTION,
-      variant: BTN_VARIANTS.ELEVATED,
-    },
-  ],
-  introduction: [
-    {
       label: 'buttons.experience',
       color: COLORS.INFO,
       to: ROUTES.EXPERIENCE,
       variant: BTN_VARIANTS.ELEVATED,
     },
+  ],
+  introduction: [
     {
-      label: 'buttons.home',
-      to: ROUTES.INDEX,
+      label: 'buttons.contacts',
+      color: COLORS.INFO,
+      to: ROUTES.CONTACTS,
+      variant: BTN_VARIANTS.ELEVATED,
+    },
+    {
+      label: 'buttons.skills',
+      to: ROUTES.SKILLS,
       color: COLORS.BACKGROUND,
       variant: BTN_VARIANTS.OUTLINED,
     },
@@ -36,17 +36,17 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {
       variant: BTN_VARIANTS.ELEVATED,
     },
     {
-      label: 'buttons.introduction',
-      to: ROUTES.INTRODUCTION,
+      label: 'buttons.home',
+      to: ROUTES.INDEX,
       variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },
   ],
   skills: [
     {
-      label: 'buttons.contacts',
+      label: 'buttons.introduction',
       color: COLORS.INFO,
-      to: ROUTES.CONTACTS,
+      to: ROUTES.INTRODUCTION,
       variant: BTN_VARIANTS.ELEVATED,
     },
     {
@@ -59,8 +59,8 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {
   contacts: [
     {},
     {
-      label: 'buttons.skills',
-      to: ROUTES.SKILLS,
+      label: 'buttons.introduction',
+      to: ROUTES.INTRODUCTION,
       variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },

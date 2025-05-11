@@ -8,10 +8,12 @@ export const EXPERIENCES: Experience[] = [
     position: 'Front-end developer',
     color: COLORS.DESIGNEO,
     place: 'Designeo / Prague',
-    description: `TBD`,
+    description: `Development of custom web applications tailored for need of client, e-shops, and web applications for 
+    various clients (Retail, Sport, Business segments). Focused on translating UI/UX designs into responsive, 
+    high-performance, and user-friendly web interfaces.`,
     link: 'https://www.designeo.cz/',
-    startDate: dayjs('2024-25-11'),
-    size: 80,
+    startDate: dayjs('2024-11-01'),
+    size: 30,
     skills: [
       SKILLS.CSS,
       SKILLS.GIT,
@@ -20,6 +22,8 @@ export const EXPERIENCES: Experience[] = [
       SKILLS.REST_API,
       SKILLS.TYPESCRIPT,
       SKILLS.VUE,
+      SKILLS.SASS,
+      SKILLS.TAILWIND,
     ],
   },
   {
