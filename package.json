@@ -21,6 +21,7 @@
     "playwright-ui": "npx playwright test --ui"
   },
   "dependencies": {
+    "@nuxtjs/i18n": "npm:@nuxtjs/i18n-edge",
     "@pinia/nuxt": "^0.11.0",
     "@vueuse/core": "^13.1.0",
     "@vueuse/nuxt": "^13.1.0",

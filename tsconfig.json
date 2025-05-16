@@ -19,7 +19,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "types": [],
+    "types": ["@nuxt/types", "@nuxtjs/i18n"],
     "moduleResolution": "node",
     "useDefineForClassFields": true,
     "noImplicitThis": true,
@@ -27,6 +27,6 @@
     "baseUrl": "./",
     "paths": {
       "*": ["node_modules/*"]
-    }
+    },
   },
 }

@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     'vuetify-nuxt-module',
@@ -8,6 +7,7 @@ export default defineNuxtConfig({
     'dayjs-nuxt',
     'nuxt-lodash',
     '@vueuse/nuxt',
+    '@nuxtjs/i18n',
   ],
   devtools: { enabled: true },
   app: {
@@ -30,6 +30,11 @@ export default defineNuxtConfig({
         semi: true,
       },
     },
+  },
+  i18n: {
+    locales: ['en', 'cs'],
+    defaultLocale: 'en',
+    strategy: 'prefix_and_default',
   },
   pinia: {
     storesDirs: ['./store/**'],

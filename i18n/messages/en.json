@@ -1,0 +1,116 @@
+{
+  "name": "Tomas",
+  "surname": "Richtr",
+  "description": "self-taught web developer",
+  "introduction": "\n  Hello,\n  <br/><br/>\n  I'm Tomas Richtr, a passionate and versatile web developer with a solid track record in both\n  front-end and back-end development.\n  <br/><br/>\n  I specialize in Vue.js, and a variety of tools that power modern web applications, including GraphQL, MySQL,\n  and testing frameworks like Jest and Cypress.\n  <br/><br/>\n  My professional journey has given me the opportunity to work on diverse projects, from project management software\n  to chatbot development, each time honing my expertise and pushing my and product boundaries.\n  <br/><br/>\n  I am fluent in both Czech and English, enabling me to collaborate effectively in diverse teams.\n  I thrive on solving complex challenges, learning new technologies, and creating solutions that make an impact.",
+  "pageSections": {
+    "contactForm": "leave the message",
+    "contacts": "contacts",
+    "filters": "Filter by",
+    "sorters": "Sort by",
+    "skills": "Pick skills",
+    "skillsOverview": "Skills"
+  },
+  "buttons": {
+    "introduction": "introduction",
+    "home": "home",
+    "experience": "experience",
+    "skills": "skills",
+    "contacts": "contacts",
+    "submit": "submit",
+    "admin": "admin",
+    "login": "login"
+  },
+  "period": {
+    "month": "month",
+    "year": "year",
+    "months": "months",
+    "years": "years",
+    "today": "today"
+  },
+  "labels": {
+    "all": "All",
+    "id": "id",
+    "read": "read",
+    "yes": "yes",
+    "no": "no",
+    "search": "search",
+    "password": "password"
+  },
+  "size": "size",
+  "employees": "employees",
+  "home": "home",
+  "skillsDegree": {
+    "definition": "how often I use:",
+    "fewTimes": "few times",
+    "often": "often",
+    "daily": "daily"
+  },
+  "404": {
+    "title": ""
+  },
+  "selections": "selections",
+  "sorting": {
+    "title": "sorting",
+    "alphabetically": "name"
+  },
+  "inputLabels": {
+    "name": "name",
+    "email": "email",
+    "message": "message",
+    "company": "company",
+    "phone": "phone"
+  },
+  "placeholders": {
+    "phone": "Fill, if you prefer to be called.",
+    "search": "Search in messages",
+    "password": "Fill a password"
+  },
+  "validation": {
+    "name": {
+      "required": "You must enter name.",
+      "count": "Your name is too long! Max length is 100 characters."
+    },
+    "company": {
+      "count": "Your phone is too long! Max length is 100 characters."
+    },
+    "email": {
+      "required": "You must enter valid email.",
+      "format": "You must enter valid email.",
+      "count": "Your email is too long! Max length is 100 characters."
+    },
+    "message": {
+      "required": "You must enter a message.",
+      "count": "Your message is too long! Max length is 1000 characters."
+    },
+    "phone": {
+      "format": "You must enter a valid phone number.",
+      "count": "Your phone is too long! Max length is 20 characters."
+    }
+  },
+  "notification": {
+    "success": "Success",
+    "failure": "Failure",
+    "messages": {
+      "successText": "Your message has been successfully sent."
+    },
+    "admin": {
+      "failureText": "Your password is incorrect."
+    }
+  },
+  "errors": {
+    "missingInstance": "Missing app instance!"
+  },
+  "tooltip": {
+    "read": "change to read",
+    "unread": "change to unread",
+    "delete": "delete message",
+    "detail": "see details",
+    "downloadCV": "download CV"
+  },
+  "action": "actions",
+  "unLogged": {
+    "title": "You are not logged in",
+    "description": "Proceed on homepage or reload page."
+  }
+}
