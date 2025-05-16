@@ -4,11 +4,11 @@ import { BTN_VARIANTS, LOCATIONS } from '../../enums/vuetify.enums';
 import { NAVIGATION_OPTS } from '../../constants/navigation_opts.constants';
 import LanguagePicker from './LanguagePicker.vue';
 
-const { showNavDrawer, language } = storeToRefs(useUiStore());
+const { showNavDrawer } = storeToRefs(useUiStore());
 
 const route = useRoute();
 
-const { t } = useTranslations();
+const { t, localePath } = useTranslations();
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const { t } = useTranslations();
           :key="item.to"
         >
           <VBtn
-            :to="{ name: item.to, params: { lang: language } }"
+            :to="localePath({ name: item.to })"
             :variant="BTN_VARIANTS.PLAIN"
             class="flex items-center w-full"
             :disabled="route.name === item.to"

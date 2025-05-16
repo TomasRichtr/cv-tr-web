@@ -8,9 +8,9 @@ export const BREAKPOINTS: DeepReadonly<Record<string, string>> = {
   TWO_XL: '1546px',
 };
 
-export const LANGUAGES: DeepReadonly<Record<string, string>> = {
+export const LOCALES: DeepReadonly<Record<string, string>> = {
   ENGLISH: 'en',
   CZECH: 'cs',
 };
 
-export type Languages = typeof LANGUAGES[keyof typeof LANGUAGES];
+export type Languages = typeof LOCALES[keyof typeof LOCALES];

@@ -1,42 +1,30 @@
 <script setup lang="ts">
 import eng from 'assets/images/eng.png';
 import cze from 'assets/images/cze.png';
-import { LANGUAGES } from '../../enums/ui.enums';
+import type { Languages } from '../../enums/ui.enums';
+import { LOCALES } from '../../enums/ui.enums';
 import { BTN_VARIANTS, COLORS } from '../../enums/vuetify.enums';
-import { useUiStore } from '../../store/ui.store';
 
-const { language } = storeToRefs(useUiStore());
-const route = useRoute();
-const router = useRouter();
+const { setLocale, locale } = useTranslations();
 
-// Function to switch language and update URL
-const switchLanguage = (newLanguage: string) => {
-  // Only navigate if the language is actually changing
-  if (language.value !== newLanguage) {
-    language.value = newLanguage;
-
-    // Get the current route name and params
-    const routeName = route.name as string;
-    const params = { ...route.params, lang: newLanguage };
-
-    // Navigate to the same route but with the new language
-    router.push({ name: routeName, params });
-  }
+const switchLocale = (newLocale: Languages) => {
+  setLocale(newLocale);
 };
 </script>
 
 <template>
   <VBtnGroup
-    v-model="language"
+    v-model="locale"
     mandatory
     class="w-full"
     rounded="xl"
+    @update:model-value="switchLocale"
   >
     <VBtn
       width="50%"
-      :color="language === LANGUAGES.ENGLISH ? COLORS.PRIMARY : undefined"
-      :variant="language === LANGUAGES.ENGLISH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
-      @click="switchLanguage(LANGUAGES.ENGLISH)"
+      :color="locale === LOCALES.ENGLISH ? COLORS.PRIMARY : undefined"
+      :variant="locale === LOCALES.ENGLISH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
+      @click="switchLocale(LOCALES.ENGLISH)"
     >
       <div class="flex items-end gap-1">
         <VImg
@@ -50,9 +38,9 @@ const switchLanguage = (newLanguage: string) => {
 
     <VBtn
       width="50%"
-      :color="language === LANGUAGES.CZECH ? COLORS.PRIMARY : undefined"
-      :variant="language === LANGUAGES.CZECH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
-      @click="switchLanguage(LANGUAGES.CZECH)"
+      :color="locale === LOCALES.CZECH ? COLORS.PRIMARY : undefined"
+      :variant="locale === LOCALES.CZECH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
+      @click="switchLocale(LOCALES.CZECH)"
     >
       <div class="flex items-end gap-1">
         <VImg

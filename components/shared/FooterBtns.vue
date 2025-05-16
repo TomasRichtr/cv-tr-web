@@ -1,20 +1,25 @@
 <script setup lang="ts">
+import { flow, replace } from 'lodash-es';
 import type { Routes } from '../../enums/routes.enums';
-import { ROUTES } from '../../enums/routes.enums';
+import { ROUTE_SUFFIXES, ROUTES } from '../../enums/routes.enums';
 import { FOOTER_BTNS_MAP } from '../../constants/footer.constants';
 import { COLORS } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';
 
 const route = useRoute();
-const { language } = storeToRefs(useUiStore());
 
 const footerBtnsProps = computed(() => {
-  return FOOTER_BTNS_MAP[route.name as Routes];
+  const sanitizedRoute = flow(
+    str => replace(str, ROUTE_SUFFIXES.EN, ''),
+    str => replace(str, ROUTE_SUFFIXES.CS, ''),
+  )(route.name as string);
+
+  return FOOTER_BTNS_MAP[sanitizedRoute as Routes];
 });
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
-const { t } = useTranslations();
+const { t, localePath } = useTranslations();
 </script>
 
 <template>
@@ -32,7 +37,7 @@ const { t } = useTranslations();
         :rounded="true"
         :text="t(btn.label)"
         :color="btn.color"
-        :to="{ name: btn.to, params: { lang: language } }"
+        :to="localePath({ name: btn.to })"
         :variant="btn.variant"
       />
     </template>

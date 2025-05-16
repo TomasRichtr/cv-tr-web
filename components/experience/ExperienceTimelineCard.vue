@@ -3,19 +3,16 @@ import SkillTag from '../shared/SkillTag.vue';
 import { ROUTES } from '../../enums/routes.enums';
 import type { Experience } from '../../types/data.types';
 import { COLORS, SIZES } from '../../enums/vuetify.enums';
-import { useUiStore } from '../../store/ui.store';
 
 const props = defineProps<Experience>();
 
 const { isSmallScreen } = useBreakpoints();
 
-const { t } = useTranslations();
+const { t, localePath } = useTranslations();
 
 const { resolveDateString } = useDatetime();
 
 const { resolvePeriodLength } = useString();
-
-const { language } = storeToRefs(useUiStore());
 </script>
 
 <template>
@@ -39,7 +36,7 @@ const { language } = storeToRefs(useUiStore());
     </VCardText>
 
     <VCardText class="pt-0 pb-1 relative">
-      {{ t('size', true) }}: <span class="absolute bottom-px">~</span>
+      {{ t('size') }}: <span class="absolute bottom-px">~</span>
       <span class="ml-2">{{ `${props.size} ${t('employees')}` }}</span>
     </VCardText>
 
@@ -61,7 +58,7 @@ const { language } = storeToRefs(useUiStore());
     <VCardText class="pt-0">
       <NuxtLink
         class="flex flex-wrap gap-x-2 gap-y-1 cursor-pointer"
-        :to="{ name: ROUTES.SKILLS, params: { lang: language }, query: { skills: props.skills } }"
+        :to="localePath({ name: ROUTES.SKILLS, query: { skills: props.skills } })"
       >
         <SkillTag
           v-for="skill in props.skills"

@@ -1,5 +1,5 @@
 import { useUiStore } from '../store/ui.store';
-import { LANGUAGES } from '../enums/ui.enums';
+import { LOCALES } from '../enums/ui.enums';
 
 export default defineNuxtRouteMiddleware((to, _) => {
   const uiStore = useUiStore();
@@ -7,7 +7,7 @@ export default defineNuxtRouteMiddleware((to, _) => {
 
   const langParam = to.params.lang as string;
   console.log(langParam);
-  const isValidLang = Object.values(LANGUAGES).includes(langParam);
+  const isValidLang = Object.values(LOCALES).includes(langParam);
 
   if (isValidLang) {
     language.value = langParam;

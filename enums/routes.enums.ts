@@ -10,3 +10,8 @@ export const ROUTES: DeepReadonly<Record<string, Routes>> = {
   CONTACTS: 'contacts',
   ADMIN: 'admin',
 };
+
+export const ROUTE_SUFFIXES: DeepReadonly<Record<string, string>> = {
+  CS: '___cs',
+  EN: '___en',
+};

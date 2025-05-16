@@ -2,7 +2,6 @@
 import type { Routes } from '../../enums/routes.enums';
 import type { BtnVariants, Colors } from '../../enums/vuetify.enums';
 import { BTN_VARIANTS, COLORS, SIZES } from '../../enums/vuetify.enums';
-import { useUiStore } from '../../store/ui.store';
 
 interface Props {
   icon: string;
@@ -19,7 +18,7 @@ const props = withDefaults(defineProps<Props>(), {
   href: undefined,
 });
 
-const { language } = storeToRefs(useUiStore());
+const { localePath } = useTranslations();
 </script>
 
 <template>
@@ -29,7 +28,7 @@ const { language } = storeToRefs(useUiStore());
     :variant="props.variant"
     :color="props.color"
     class="icon-btn"
-    :to="props.to && { name: props.to, params: { lang: language } }"
+    :to="props.to && localePath({ name: props.to })"
     :href="props.href"
     :target="props.href ? '_blank' : null"
   >

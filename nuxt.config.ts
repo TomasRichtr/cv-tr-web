@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   i18n: {
     locales: ['en', 'cs'],
     defaultLocale: 'en',
-    strategy: 'prefix_and_default',
+    strategy: 'prefix',
   },
   pinia: {
     storesDirs: ['./store/**'],
