@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { COLORS } from '../../enums/vuetify.enums';
-import { ROUTES } from '../../enums/routes';
+import { ROUTES } from '../../enums/routes.enums';
 import IconBtn from '../shared/IconBtn.vue';
 
 const refreshPage = () => {

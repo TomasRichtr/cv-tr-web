@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import cv from 'assets/files/t_richtr_cv.pdf';
-import { ROUTES } from '../../enums/routes';
+import { ROUTES } from '../../enums/routes.enums';
 import { COLORS } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';
 import IconBtn from './IconBtn.vue';

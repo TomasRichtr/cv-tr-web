@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { Routes } from '../../enums/routes';
-import { ROUTES } from '../../enums/routes';
+import type { Routes } from '../../enums/routes.enums';
+import { ROUTES } from '../../enums/routes.enums';
 import { FOOTER_BTNS_MAP } from '../../constants/footer.constants';
 import { COLORS } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';

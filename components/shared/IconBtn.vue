@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Routes } from '../../enums/routes';
+import type { Routes } from '../../enums/routes.enums';
 import type { BtnVariants, Colors } from '../../enums/vuetify.enums';
 import { BTN_VARIANTS, COLORS, SIZES } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';

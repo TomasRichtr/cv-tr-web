@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { capitalize } from 'vue';
-import { ROUTES } from './enums/routes';
+import { ROUTES } from './enums/routes.enums';
 import HeaderBar from './components/shared/HeaderBar.vue';
 import NavigationDrawer from './components/shared/NavigationDrawer.vue';
 import FooterBtns from './components/shared/FooterBtns.vue';

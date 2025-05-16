@@ -1,7 +1,7 @@
 import type { DeepReadonly } from 'vue';
 import { BTN_VARIANTS, COLORS } from '../enums/vuetify.enums';
-import type { Routes } from '../enums/routes';
-import { ROUTES } from '../enums/routes';
+import type { Routes } from '../enums/routes.enums';
+import { ROUTES } from '../enums/routes.enums';
 import type { FooterBtn } from '../types/ui.types';
 
 export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {

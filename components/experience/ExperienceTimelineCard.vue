@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import SkillTag from '../shared/SkillTag.vue';
-import { ROUTES } from '../../enums/routes';
+import { ROUTES } from '../../enums/routes.enums';
 import type { Experience } from '../../types/data.types';
 import { COLORS, SIZES } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';

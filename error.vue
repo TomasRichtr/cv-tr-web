@@ -2,7 +2,7 @@
 import type { NuxtError } from 'nuxt/dist/app';
 import type { Quote } from './types/data.types';
 import { COLORS } from './enums/vuetify.enums';
-import { ROUTES } from './enums/routes';
+import { ROUTES } from './enums/routes.enums';
 import IconBtn from './components/shared/IconBtn.vue';
 
 interface Props {

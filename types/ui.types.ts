@@ -1,6 +1,6 @@
 import type { VTextarea, VTextField } from 'vuetify/components';
 import type { BtnVariants, Colors } from '../enums/vuetify.enums';
-import type { Routes } from '../enums/routes';
+import type { Routes } from '../enums/routes.enums';
 import type { ContactFormInputs } from '../enums/contact_form.enums';
 
 export interface FooterBtn {
