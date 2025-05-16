@@ -29,8 +29,8 @@ const { t } = useTranslations();
       <VTextField
         v-model="search"
         :variant="INPUT_VARIANTS.OUTLINED"
-        :placeholder="t('placeholders.search', true)"
-        :label="t('labels.search', true)"
+        :placeholder="t('placeholders.search')"
+        :label="t('labels.search')"
       />
       <MessageTable
         :messages="messages"

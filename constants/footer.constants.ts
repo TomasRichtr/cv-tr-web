@@ -57,13 +57,13 @@ export const FOOTER_BTNS_MAP: DeepReadonly<Record<Routes, FooterBtn[]>> = {
     },
   ],
   contacts: [
-    {},
     {
       label: 'buttons.introduction',
       to: ROUTES.INTRODUCTION,
       variant: BTN_VARIANTS.OUTLINED,
       color: COLORS.BACKGROUND,
     },
+    {},
   ],
   admin: [],
 };

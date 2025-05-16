@@ -2,7 +2,7 @@
 import { useUiStore } from '../../store/ui.store';
 import { BTN_VARIANTS, LOCATIONS } from '../../enums/vuetify.enums';
 import { NAVIGATION_OPTS } from '../../constants/navigation_opts.constants';
-import LanguagePicker from './LanguagePicker.vue';
+import LocalePicker from './LocalePicker.vue';
 
 const { showNavDrawer } = storeToRefs(useUiStore());
 
@@ -40,7 +40,7 @@ const { t, localePath } = useTranslations();
         </VListItem>
       </VList>
       <VListItem>
-        <LanguagePicker />
+        <LocalePicker />
       </VListItem>
     </div>
   </VNavigationDrawer>

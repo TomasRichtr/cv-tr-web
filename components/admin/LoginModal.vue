@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { capitalize } from 'vue';
 import { API_ENDPOINTS } from '../../enums/api.enums';
 import type { Auth } from '../../types/auth.types';
 import { useAuthStore } from '../../store/auth.store';
@@ -47,12 +48,12 @@ onMounted(() => {
           autofocus
           type="password"
           :variant="INPUT_VARIANTS.OUTLINED"
-          :placeholder="t('placeholders.password', true)"
-          :label="t('labels.password', true)"
+          :placeholder="capitalize(t('placeholders.password'))"
+          :label="capitalize(t('labels.password'))"
         />
         <VBtn
           append-icon="mdi-login"
-          :text="t('buttons.login', true)"
+          :text="capitalize(t('buttons.login'))"
           :variant="BTN_VARIANTS.ELEVATED"
           :color="COLORS.PRIMARY"
           @click="authenticate"

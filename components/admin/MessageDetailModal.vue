@@ -22,32 +22,32 @@ const { t } = useTranslations();
       <div class="grid grid-cols-2 p-8 gap-8">
         <LabeledInfo
           class="col-span-1"
-          :label="t('labels.id', true)"
+          :label="t('labels.id')"
           :info="props.message.id"
         />
         <LabeledInfo
           class="col-span-1"
-          :label="t('inputLabels.name', true)"
+          :label="t('inputLabels.name')"
           :info="props.message.name"
         />
         <LabeledInfo
           class="col-span-1"
-          :label="t('inputLabels.email', true)"
+          :label="t('inputLabels.email')"
           :info="props.message.email"
         />
         <LabeledInfo
           class="col-span-1"
-          :label="t('inputLabels.phone', true)"
+          :label="t('inputLabels.phone')"
           :info="props.message.phone"
         />
         <LabeledInfo
           class="col-span-1"
-          :label="t('labels.read', true)"
+          :label="t('labels.read')"
           :info="props.message.read ? t('labels.yes') : t('labels.no')"
         />
         <LabeledInfo
           class="col-span-2"
-          :label="t('inputLabels.message', true)"
+          :label="t('inputLabels.message')"
           :info="props.message.message"
         />
       </div>

@@ -26,7 +26,7 @@ const { t, localePath } = useTranslations();
   <VFooter
     v-if="!showNavDrawer"
     class="flex justify-between z-float w-full h-12"
-    :class="route.name === ROUTES.CONTACTS ? 'flex-row' : 'flex-row-reverse'"
+    :class="(route.name as string).startsWith(ROUTES.CONTACTS) ? 'flex-row' : 'flex-row-reverse'"
     :app="true"
     :color="COLORS.PRIMARY"
   >

@@ -81,7 +81,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
       :title="t('pageSections.filters')"
     >
       <VChip
-        v-for="(label, i) in [t('labels.all'), ...HEADER_LABELS.map(key => t(key, true))]"
+        v-for="(label, i) in [t('labels.all'), ...HEADER_LABELS.map(key => t(key))]"
         :key="label"
         :variant="isDegreeChipSelected(i)"
         :density="DENSITY.COMPACT"
@@ -103,7 +103,7 @@ const isDegreeChipSelected = (degreeUpdate: number) => {
         :density="DENSITY.COMPACT"
         :color="tagColor(i)"
         class="cursor-pointer"
-        :text="t(label, true)"
+        :text="t(label)"
         @click="emit('update:selected-sort', i)"
       />
     </PageSection>

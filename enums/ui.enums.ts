@@ -13,4 +13,4 @@ export const LOCALES: DeepReadonly<Record<string, string>> = {
   CZECH: 'cs',
 };
 
-export type Languages = typeof LOCALES[keyof typeof LOCALES];
+export type Locales = 'en' | 'cs';

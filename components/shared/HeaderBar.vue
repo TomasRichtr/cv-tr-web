@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import cv from 'assets/files/t_richtr_cv.pdf';
+import { capitalize } from 'vue';
 import { ROUTES } from '../../enums/routes.enums';
 import { COLORS } from '../../enums/vuetify.enums';
 import { useUiStore } from '../../store/ui.store';
@@ -34,7 +35,7 @@ const { t } = useTranslations();
     />
 
     <IconBtn
-      v-tooltip:bottom="t('tooltip.downloadCV', true)"
+      v-tooltip:bottom="capitalize(t('tooltip.downloadCV'))"
       icon="mdi-download"
       class="mr-2"
       @click="downloadCV"

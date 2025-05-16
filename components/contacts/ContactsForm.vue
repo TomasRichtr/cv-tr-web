@@ -19,7 +19,7 @@ const { contactForm } = useContactForm();
 </script>
 
 <template>
-  <PageSection :title="t('pageSections.contactForm', true)">
+  <PageSection :title="t('pageSections.contactForm')">
     <VForm
       ref="contactFormRef"
       v-model="isValid"

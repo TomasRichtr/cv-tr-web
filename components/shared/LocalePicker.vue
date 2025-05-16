@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import eng from 'assets/images/eng.png';
 import cze from 'assets/images/cze.png';
-import type { Languages } from '../../enums/ui.enums';
+import type { Locales } from '../../enums/ui.enums';
 import { LOCALES } from '../../enums/ui.enums';
 import { BTN_VARIANTS, COLORS } from '../../enums/vuetify.enums';
 
 const { setLocale, locale } = useTranslations();
 
-const switchLocale = (newLocale: Languages) => {
+const switchLocale = (newLocale: Locales) => {
   setLocale(newLocale);
 };
 </script>
@@ -24,7 +24,7 @@ const switchLocale = (newLocale: Languages) => {
       width="50%"
       :color="locale === LOCALES.ENGLISH ? COLORS.PRIMARY : undefined"
       :variant="locale === LOCALES.ENGLISH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
-      @click="switchLocale(LOCALES.ENGLISH)"
+      @click="switchLocale(LOCALES.ENGLISH as Locales)"
     >
       <div class="flex items-end gap-1">
         <VImg
@@ -40,7 +40,7 @@ const switchLocale = (newLocale: Languages) => {
       width="50%"
       :color="locale === LOCALES.CZECH ? COLORS.PRIMARY : undefined"
       :variant="locale === LOCALES.CZECH ? BTN_VARIANTS.ELEVATED : BTN_VARIANTS.OUTLINED"
-      @click="switchLocale(LOCALES.CZECH)"
+      @click="switchLocale(LOCALES.CZECH as Locales)"
     >
       <div class="flex items-end gap-1">
         <VImg

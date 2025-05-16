@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import isNil from 'lodash-es/isNil';
+import { capitalize } from 'vue';
 
 interface Props {
   label: string;
@@ -13,8 +14,10 @@ const props = defineProps<Props>();
   <div class="flex flex-col">
     <span class="text-sm font-semibold">{{ props.label }}</span>
     <span
-      v-if="!isNil(props.label)"
+      v-if="!isNil(props.info)"
       class="text-xl"
-    >{{ props.info }}</span>
+    >
+      {{ capitalize(props.info) }}
+    </span>
   </div>
 </template>

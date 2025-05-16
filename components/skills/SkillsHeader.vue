@@ -7,7 +7,7 @@ const { t } = useTranslations();
 <template>
   <div class="flex items-center justify-between">
     <span>
-      {{ t('skillsDegree.definition', true) }}
+      {{ t('skillsDegree.definition') }}
     </span>
     <span class="flex justify-end text-center">
       <span
@@ -15,7 +15,7 @@ const { t } = useTranslations();
         :key="label"
         class="w-[56px] md:w-[72px] cursor-pointer"
       >
-        {{ t(label, true) }}
+        {{ t(label) }}
       </span>
 
     </span>
